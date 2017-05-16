@@ -13,5 +13,8 @@ extern NSString *const BaseUrl;
 /** 用户登录 */
 extern NSString *const LoginUrl;
 
+/** 功能菜单 */
+extern NSString *const MenuUrl;
 
-
+/** 菜单显示内容 */
+extern NSString *const MenuDetailUrl;

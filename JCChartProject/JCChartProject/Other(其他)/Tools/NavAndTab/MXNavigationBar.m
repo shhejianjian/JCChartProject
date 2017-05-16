@@ -7,8 +7,7 @@
 //
 
 #import "MXNavigationBar.h"
-#import "MXBarButtonItem.h"
-
+#import "MXConstant.h"
 @interface MXNavigationBar ()
 
 @property (strong, nonatomic) UIView *lineView;
@@ -31,11 +30,11 @@
 
 - (void)setUpDefaultAttribute
 {
-    self.backgroundColor = [UIColor colorWithRed:5/255 green:38/255 blue:58/255 alpha:0.5f];
+    self.backgroundColor = topBackgroundColor;
     self.frame = (CGRect){0, 0, [UIScreen mainScreen].bounds.size.width, 64};
     
     self.lineView = [[UIView alloc] initWithFrame:(CGRect){0, 64, [UIScreen mainScreen].bounds.size.width, 0.5}];
-    self.lineView.backgroundColor = [UIColor colorWithRed:5/255 green:38/255 blue:58/255 alpha:0.5f];
+    self.lineView.backgroundColor = topBackgroundColor;
     [self addSubview:self.lineView];
 }
 

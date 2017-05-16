@@ -16,7 +16,8 @@
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json",@"text/javascript",@"text/plain", nil];
     
     NSString *urlStr = [NSString stringWithFormat:@"%@/%@",BaseUrl,url];
-    [manager GET:urlStr parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+    
+    [manager GET:urlStr parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
         if (success) {
             success(responseObject);
         }
@@ -26,6 +27,27 @@
         }
     }];
 }
+
++ (void)get:(NSString *)url params:(NSDictionary *)params jessionid:(NSString *)jessionid success:(void(^)(id json))success failure:(void(^)(NSError *error)) failure{
+    AFHTTPSessionManager  *manager=[AFHTTPSessionManager  manager];
+    manager.responseSerializer=[AFHTTPResponseSerializer serializer];
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"JSESSIONID=%@",jessionid] forHTTPHeaderField:@"Cookie"];
+    
+    NSString *urlStr = [NSString stringWithFormat:@"%@/%@",BaseUrl,url];
+    
+    [manager GET:urlStr parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+        id result = [[NSString alloc] initWithData:responseObject  encoding:NSUTF8StringEncoding];
+        if (success) {
+            success(result);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+
+
 + (void)post:(NSString *)url params:(NSDictionary *)params success:(void(^)(id json))success failure:(void(^)(NSError *error)) failure
 {
     AFHTTPSessionManager  *manager=[AFHTTPSessionManager  manager];
@@ -33,7 +55,7 @@
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     NSString *urlStr = [NSString stringWithFormat:@"%@/%@",BaseUrl,url];
-    [manager POST:urlStr parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+    [manager POST:urlStr parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
         if (success) {
             success(responseObject);
         }

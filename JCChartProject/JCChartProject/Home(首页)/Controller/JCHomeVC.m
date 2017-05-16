@@ -8,17 +8,24 @@
 
 #import "JCHomeVC.h"
 #import "MXConstant.h"
+#import "AppDelegate.h"
+
 @interface JCHomeVC ()
 
 @end
 
 @implementation JCHomeVC
 
+- (void)viewWillAppear:(BOOL)animated {
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.mxNavigationItem.title = @"首页";
     // Do any additional setup after loading the view from its nib.
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

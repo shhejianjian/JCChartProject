@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "JCFuncBaseModel.h"
 @interface JCFuncSecondVC : UIViewController
-
+@property (nonatomic, strong) JCFuncBaseModel *secondFuncModel;
 @end

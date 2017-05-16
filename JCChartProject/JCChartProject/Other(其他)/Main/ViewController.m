@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "MXConstant.h"
+
 @interface ViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *username;
 @property (strong, nonatomic) IBOutlet UITextField *password;
@@ -18,8 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view, typically from a nib.
 }
+
 
 - (IBAction)login:(id)sender {
     
@@ -37,10 +40,12 @@
         //获取headerfields
         NSDictionary *fields = [HTTPResponse allHeaderFields];
         if (fields[@"jsessionid"]) {
-            
-            
-//            MXTabBarController *tabC = [[MXTabBarController alloc] init];
-//            [self presentViewController:tabC animated:YES completion:nil];
+            JCBaseModel *baseModel = [JCBaseModel mj_objectWithKeyValues:fields[@"currentUser"]];
+            NSLog(@"%@",baseModel.userId);
+            [[NSUserDefaults standardUserDefaults]setObject:baseModel.userId forKey:@"userId"];
+            [[NSUserDefaults standardUserDefaults]setObject:fields[@"jsessionid"] forKey:@"jsessionid"];
+            MXTabBarController *tabC = [[MXTabBarController alloc] init];
+            [self presentViewController:tabC animated:YES completion:nil];
         } else {
             
         }
