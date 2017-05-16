@@ -16,5 +16,8 @@ extern NSString *const LoginUrl;
 /** 功能菜单 */
 extern NSString *const MenuUrl;
 
-/** 菜单显示内容 */
+/** 图标配置 */
 extern NSString *const MenuDetailUrl;
+
+/** 图标数据 */
+extern NSString *const ChartDataUrl;

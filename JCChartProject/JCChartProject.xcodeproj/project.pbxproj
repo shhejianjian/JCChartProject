@@ -93,6 +93,56 @@
 		1EC201B31ECAB46E0013E173 /* more_icon_Transfer-@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EC201821ECAB46E0013E173 /* more_icon_Transfer-@3x.png */; };
 		1EC201B41ECAB46E0013E173 /* work-order@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EC201831ECAB46E0013E173 /* work-order@2x.png */; };
 		1EC201B51ECAB46E0013E173 /* work-order@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EC201841ECAB46E0013E173 /* work-order@3x.png */; };
+		1EC201D31ECACAA10013E173 /* JHChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201B91ECACAA10013E173 /* JHChart.m */; };
+		1EC201D41ECACAA10013E173 /* JHColumnChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201BC1ECACAA10013E173 /* JHColumnChart.m */; };
+		1EC201D51ECACAA10013E173 /* JHLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201BE1ECACAA10013E173 /* JHLineChart.m */; };
+		1EC201D61ECACAA10013E173 /* JHPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201C01ECACAA10013E173 /* JHPieChart.m */; };
+		1EC201D71ECACAA10013E173 /* JHPieForeBGView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201C21ECACAA10013E173 /* JHPieForeBGView.m */; };
+		1EC201D81ECACAA10013E173 /* JHPieItemsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201C41ECACAA10013E173 /* JHPieItemsView.m */; };
+		1EC201D91ECACAA10013E173 /* JHRadarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201C61ECACAA10013E173 /* JHRadarChart.m */; };
+		1EC201DA1ECACAA10013E173 /* JHRingChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201C81ECACAA10013E173 /* JHRingChart.m */; };
+		1EC201DB1ECACAA10013E173 /* JHScatterChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201CA1ECACAA10013E173 /* JHScatterChart.m */; };
+		1EC201DC1ECACAA10013E173 /* JHShowInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201CC1ECACAA10013E173 /* JHShowInfoView.m */; };
+		1EC201DD1ECACAA10013E173 /* JHTableChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201CE1ECACAA10013E173 /* JHTableChart.m */; };
+		1EC201DE1ECACAA10013E173 /* JHTableDataRowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201D01ECACAA10013E173 /* JHTableDataRowModel.m */; };
+		1EC201DF1ECACAA10013E173 /* JHWaveChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201D21ECACAA10013E173 /* JHWaveChart.m */; };
+		1EC201E31ECACB370013E173 /* JCFuncChartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201E11ECACB370013E173 /* JCFuncChartVC.m */; };
+		1EC201E41ECACB370013E173 /* JCFuncChartVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EC201E21ECACB370013E173 /* JCFuncChartVC.xib */; };
+		1EC202381ECACF470013E173 /* NSNumber+Zirkfied.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201E81ECACF470013E173 /* NSNumber+Zirkfied.m */; };
+		1EC202391ECACF470013E173 /* NSString+Zirkfied.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201EA1ECACF470013E173 /* NSString+Zirkfied.m */; };
+		1EC2023A1ECACF470013E173 /* UIBezierPath+Zirkfied.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201EC1ECACF470013E173 /* UIBezierPath+Zirkfied.m */; };
+		1EC2023B1ECACF470013E173 /* UIColor+Zirkfied.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201EE1ECACF470013E173 /* UIColor+Zirkfied.m */; };
+		1EC2023C1ECACF470013E173 /* UIView+Zirkfied.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201F01ECACF470013E173 /* UIView+Zirkfied.m */; };
+		1EC2023D1ECACF470013E173 /* ZFLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201F31ECACF470013E173 /* ZFLabel.m */; };
+		1EC2023E1ECACF470013E173 /* ZFPopoverLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201F51ECACF470013E173 /* ZFPopoverLabel.m */; };
+		1EC2023F1ECACF470013E173 /* ZFXAxisLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201F71ECACF470013E173 /* ZFXAxisLine.m */; };
+		1EC202401ECACF470013E173 /* ZFYAxisLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201F91ECACF470013E173 /* ZFYAxisLine.m */; };
+		1EC202411ECACF470013E173 /* ZFCurveAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201FC1ECACF470013E173 /* ZFCurveAttribute.m */; };
+		1EC202421ECACF470013E173 /* ZFGradientAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201FE1ECACF470013E173 /* ZFGradientAttribute.m */; };
+		1EC202431ECACF470013E173 /* ZFConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC202031ECACF470013E173 /* ZFConst.m */; };
+		1EC202441ECACF470013E173 /* ZFMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC202051ECACF470013E173 /* ZFMethod.m */; };
+		1EC202451ECACF470013E173 /* ZFBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC202081ECACF470013E173 /* ZFBar.m */; };
+		1EC202461ECACF470013E173 /* ZFBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC2020A1ECACF470013E173 /* ZFBarChart.m */; };
+		1EC202471ECACF470013E173 /* ZFCirque.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC2020D1ECACF470013E173 /* ZFCirque.m */; };
+		1EC202481ECACF470013E173 /* ZFCirqueChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC2020F1ECACF470013E173 /* ZFCirqueChart.m */; };
+		1EC202491ECACF470013E173 /* ZFGenericAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC202121ECACF470013E173 /* ZFGenericAxis.m */; };
+		1EC2024A1ECACF470013E173 /* ZFGenericChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC202151ECACF470013E173 /* ZFGenericChart.m */; };
+		1EC2024B1ECACF470013E173 /* ZFHorizontalAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC202181ECACF470013E173 /* ZFHorizontalAxis.m */; };
+		1EC2024C1ECACF470013E173 /* ZFHorizontalBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC2021B1ECACF470013E173 /* ZFHorizontalBar.m */; };
+		1EC2024D1ECACF470013E173 /* ZFHorizontalBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC2021D1ECACF470013E173 /* ZFHorizontalBarChart.m */; };
+		1EC2024E1ECACF470013E173 /* ZFCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC202201ECACF470013E173 /* ZFCircle.m */; };
+		1EC2024F1ECACF470013E173 /* ZFLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC202221ECACF470013E173 /* ZFLine.m */; };
+		1EC202501ECACF470013E173 /* ZFLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC202241ECACF470013E173 /* ZFLineChart.m */; };
+		1EC202511ECACF470013E173 /* ZFPie.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC202271ECACF470013E173 /* ZFPie.m */; };
+		1EC202521ECACF470013E173 /* ZFPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC202291ECACF470013E173 /* ZFPieChart.m */; };
+		1EC202531ECACF470013E173 /* ZFTranslucencePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC2022B1ECACF470013E173 /* ZFTranslucencePath.m */; };
+		1EC202541ECACF470013E173 /* ZFPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC2022E1ECACF470013E173 /* ZFPolygon.m */; };
+		1EC202551ECACF470013E173 /* ZFRadar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC202301ECACF470013E173 /* ZFRadar.m */; };
+		1EC202561ECACF470013E173 /* ZFRadarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC202321ECACF470013E173 /* ZFRadarChart.m */; };
+		1EC202571ECACF470013E173 /* ZFWave.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC202351ECACF470013E173 /* ZFWave.m */; };
+		1EC202581ECACF470013E173 /* ZFWaveChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC202371ECACF470013E173 /* ZFWaveChart.m */; };
+		1EC2025B1ECAD28D0013E173 /* JCChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC2025A1ECAD28D0013E173 /* JCChartModel.m */; };
+		1EC2025E1ECAF5D50013E173 /* JCBarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC2025D1ECAF5D50013E173 /* JCBarModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -235,6 +285,108 @@
 		1EC201821ECAB46E0013E173 /* more_icon_Transfer-@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more_icon_Transfer-@3x.png"; sourceTree = "<group>"; };
 		1EC201831ECAB46E0013E173 /* work-order@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "work-order@2x.png"; sourceTree = "<group>"; };
 		1EC201841ECAB46E0013E173 /* work-order@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "work-order@3x.png"; sourceTree = "<group>"; };
+		1EC201B81ECACAA10013E173 /* JHChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHChart.h; sourceTree = "<group>"; };
+		1EC201B91ECACAA10013E173 /* JHChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHChart.m; sourceTree = "<group>"; };
+		1EC201BA1ECACAA10013E173 /* JHChartHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHChartHeader.h; sourceTree = "<group>"; };
+		1EC201BB1ECACAA10013E173 /* JHColumnChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHColumnChart.h; sourceTree = "<group>"; };
+		1EC201BC1ECACAA10013E173 /* JHColumnChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHColumnChart.m; sourceTree = "<group>"; };
+		1EC201BD1ECACAA10013E173 /* JHLineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHLineChart.h; sourceTree = "<group>"; };
+		1EC201BE1ECACAA10013E173 /* JHLineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHLineChart.m; sourceTree = "<group>"; };
+		1EC201BF1ECACAA10013E173 /* JHPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHPieChart.h; sourceTree = "<group>"; };
+		1EC201C01ECACAA10013E173 /* JHPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHPieChart.m; sourceTree = "<group>"; };
+		1EC201C11ECACAA10013E173 /* JHPieForeBGView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHPieForeBGView.h; sourceTree = "<group>"; };
+		1EC201C21ECACAA10013E173 /* JHPieForeBGView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHPieForeBGView.m; sourceTree = "<group>"; };
+		1EC201C31ECACAA10013E173 /* JHPieItemsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHPieItemsView.h; sourceTree = "<group>"; };
+		1EC201C41ECACAA10013E173 /* JHPieItemsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHPieItemsView.m; sourceTree = "<group>"; };
+		1EC201C51ECACAA10013E173 /* JHRadarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHRadarChart.h; sourceTree = "<group>"; };
+		1EC201C61ECACAA10013E173 /* JHRadarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHRadarChart.m; sourceTree = "<group>"; };
+		1EC201C71ECACAA10013E173 /* JHRingChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHRingChart.h; sourceTree = "<group>"; };
+		1EC201C81ECACAA10013E173 /* JHRingChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHRingChart.m; sourceTree = "<group>"; };
+		1EC201C91ECACAA10013E173 /* JHScatterChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHScatterChart.h; sourceTree = "<group>"; };
+		1EC201CA1ECACAA10013E173 /* JHScatterChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHScatterChart.m; sourceTree = "<group>"; };
+		1EC201CB1ECACAA10013E173 /* JHShowInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHShowInfoView.h; sourceTree = "<group>"; };
+		1EC201CC1ECACAA10013E173 /* JHShowInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHShowInfoView.m; sourceTree = "<group>"; };
+		1EC201CD1ECACAA10013E173 /* JHTableChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTableChart.h; sourceTree = "<group>"; };
+		1EC201CE1ECACAA10013E173 /* JHTableChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTableChart.m; sourceTree = "<group>"; };
+		1EC201CF1ECACAA10013E173 /* JHTableDataRowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTableDataRowModel.h; sourceTree = "<group>"; };
+		1EC201D01ECACAA10013E173 /* JHTableDataRowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTableDataRowModel.m; sourceTree = "<group>"; };
+		1EC201D11ECACAA10013E173 /* JHWaveChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHWaveChart.h; sourceTree = "<group>"; };
+		1EC201D21ECACAA10013E173 /* JHWaveChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHWaveChart.m; sourceTree = "<group>"; };
+		1EC201E01ECACB370013E173 /* JCFuncChartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCFuncChartVC.h; sourceTree = "<group>"; };
+		1EC201E11ECACB370013E173 /* JCFuncChartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCFuncChartVC.m; sourceTree = "<group>"; };
+		1EC201E21ECACB370013E173 /* JCFuncChartVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCFuncChartVC.xib; sourceTree = "<group>"; };
+		1EC201E71ECACF470013E173 /* NSNumber+Zirkfied.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Zirkfied.h"; sourceTree = "<group>"; };
+		1EC201E81ECACF470013E173 /* NSNumber+Zirkfied.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Zirkfied.m"; sourceTree = "<group>"; };
+		1EC201E91ECACF470013E173 /* NSString+Zirkfied.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Zirkfied.h"; sourceTree = "<group>"; };
+		1EC201EA1ECACF470013E173 /* NSString+Zirkfied.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Zirkfied.m"; sourceTree = "<group>"; };
+		1EC201EB1ECACF470013E173 /* UIBezierPath+Zirkfied.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+Zirkfied.h"; sourceTree = "<group>"; };
+		1EC201EC1ECACF470013E173 /* UIBezierPath+Zirkfied.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+Zirkfied.m"; sourceTree = "<group>"; };
+		1EC201ED1ECACF470013E173 /* UIColor+Zirkfied.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Zirkfied.h"; sourceTree = "<group>"; };
+		1EC201EE1ECACF470013E173 /* UIColor+Zirkfied.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Zirkfied.m"; sourceTree = "<group>"; };
+		1EC201EF1ECACF470013E173 /* UIView+Zirkfied.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Zirkfied.h"; sourceTree = "<group>"; };
+		1EC201F01ECACF470013E173 /* UIView+Zirkfied.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Zirkfied.m"; sourceTree = "<group>"; };
+		1EC201F21ECACF470013E173 /* ZFLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFLabel.h; sourceTree = "<group>"; };
+		1EC201F31ECACF470013E173 /* ZFLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFLabel.m; sourceTree = "<group>"; };
+		1EC201F41ECACF470013E173 /* ZFPopoverLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFPopoverLabel.h; sourceTree = "<group>"; };
+		1EC201F51ECACF470013E173 /* ZFPopoverLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFPopoverLabel.m; sourceTree = "<group>"; };
+		1EC201F61ECACF470013E173 /* ZFXAxisLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFXAxisLine.h; sourceTree = "<group>"; };
+		1EC201F71ECACF470013E173 /* ZFXAxisLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFXAxisLine.m; sourceTree = "<group>"; };
+		1EC201F81ECACF470013E173 /* ZFYAxisLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFYAxisLine.h; sourceTree = "<group>"; };
+		1EC201F91ECACF470013E173 /* ZFYAxisLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFYAxisLine.m; sourceTree = "<group>"; };
+		1EC201FB1ECACF470013E173 /* ZFCurveAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFCurveAttribute.h; sourceTree = "<group>"; };
+		1EC201FC1ECACF470013E173 /* ZFCurveAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFCurveAttribute.m; sourceTree = "<group>"; };
+		1EC201FD1ECACF470013E173 /* ZFGradientAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFGradientAttribute.h; sourceTree = "<group>"; };
+		1EC201FE1ECACF470013E173 /* ZFGradientAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFGradientAttribute.m; sourceTree = "<group>"; };
+		1EC202001ECACF470013E173 /* ZFChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFChart.h; sourceTree = "<group>"; };
+		1EC202011ECACF470013E173 /* ZFColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFColor.h; sourceTree = "<group>"; };
+		1EC202021ECACF470013E173 /* ZFConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFConst.h; sourceTree = "<group>"; };
+		1EC202031ECACF470013E173 /* ZFConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFConst.m; sourceTree = "<group>"; };
+		1EC202041ECACF470013E173 /* ZFMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFMethod.h; sourceTree = "<group>"; };
+		1EC202051ECACF470013E173 /* ZFMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFMethod.m; sourceTree = "<group>"; };
+		1EC202071ECACF470013E173 /* ZFBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFBar.h; sourceTree = "<group>"; };
+		1EC202081ECACF470013E173 /* ZFBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFBar.m; sourceTree = "<group>"; };
+		1EC202091ECACF470013E173 /* ZFBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFBarChart.h; sourceTree = "<group>"; };
+		1EC2020A1ECACF470013E173 /* ZFBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFBarChart.m; sourceTree = "<group>"; };
+		1EC2020C1ECACF470013E173 /* ZFCirque.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFCirque.h; sourceTree = "<group>"; };
+		1EC2020D1ECACF470013E173 /* ZFCirque.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFCirque.m; sourceTree = "<group>"; };
+		1EC2020E1ECACF470013E173 /* ZFCirqueChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFCirqueChart.h; sourceTree = "<group>"; };
+		1EC2020F1ECACF470013E173 /* ZFCirqueChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFCirqueChart.m; sourceTree = "<group>"; };
+		1EC202111ECACF470013E173 /* ZFGenericAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFGenericAxis.h; sourceTree = "<group>"; };
+		1EC202121ECACF470013E173 /* ZFGenericAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFGenericAxis.m; sourceTree = "<group>"; };
+		1EC202141ECACF470013E173 /* ZFGenericChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFGenericChart.h; sourceTree = "<group>"; };
+		1EC202151ECACF470013E173 /* ZFGenericChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFGenericChart.m; sourceTree = "<group>"; };
+		1EC202171ECACF470013E173 /* ZFHorizontalAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFHorizontalAxis.h; sourceTree = "<group>"; };
+		1EC202181ECACF470013E173 /* ZFHorizontalAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFHorizontalAxis.m; sourceTree = "<group>"; };
+		1EC2021A1ECACF470013E173 /* ZFHorizontalBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFHorizontalBar.h; sourceTree = "<group>"; };
+		1EC2021B1ECACF470013E173 /* ZFHorizontalBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFHorizontalBar.m; sourceTree = "<group>"; };
+		1EC2021C1ECACF470013E173 /* ZFHorizontalBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFHorizontalBarChart.h; sourceTree = "<group>"; };
+		1EC2021D1ECACF470013E173 /* ZFHorizontalBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFHorizontalBarChart.m; sourceTree = "<group>"; };
+		1EC2021F1ECACF470013E173 /* ZFCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFCircle.h; sourceTree = "<group>"; };
+		1EC202201ECACF470013E173 /* ZFCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFCircle.m; sourceTree = "<group>"; };
+		1EC202211ECACF470013E173 /* ZFLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFLine.h; sourceTree = "<group>"; };
+		1EC202221ECACF470013E173 /* ZFLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFLine.m; sourceTree = "<group>"; };
+		1EC202231ECACF470013E173 /* ZFLineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFLineChart.h; sourceTree = "<group>"; };
+		1EC202241ECACF470013E173 /* ZFLineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFLineChart.m; sourceTree = "<group>"; };
+		1EC202261ECACF470013E173 /* ZFPie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFPie.h; sourceTree = "<group>"; };
+		1EC202271ECACF470013E173 /* ZFPie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFPie.m; sourceTree = "<group>"; };
+		1EC202281ECACF470013E173 /* ZFPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFPieChart.h; sourceTree = "<group>"; };
+		1EC202291ECACF470013E173 /* ZFPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFPieChart.m; sourceTree = "<group>"; };
+		1EC2022A1ECACF470013E173 /* ZFTranslucencePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFTranslucencePath.h; sourceTree = "<group>"; };
+		1EC2022B1ECACF470013E173 /* ZFTranslucencePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFTranslucencePath.m; sourceTree = "<group>"; };
+		1EC2022D1ECACF470013E173 /* ZFPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFPolygon.h; sourceTree = "<group>"; };
+		1EC2022E1ECACF470013E173 /* ZFPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFPolygon.m; sourceTree = "<group>"; };
+		1EC2022F1ECACF470013E173 /* ZFRadar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFRadar.h; sourceTree = "<group>"; };
+		1EC202301ECACF470013E173 /* ZFRadar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFRadar.m; sourceTree = "<group>"; };
+		1EC202311ECACF470013E173 /* ZFRadarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFRadarChart.h; sourceTree = "<group>"; };
+		1EC202321ECACF470013E173 /* ZFRadarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFRadarChart.m; sourceTree = "<group>"; };
+		1EC202341ECACF470013E173 /* ZFWave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFWave.h; sourceTree = "<group>"; };
+		1EC202351ECACF470013E173 /* ZFWave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFWave.m; sourceTree = "<group>"; };
+		1EC202361ECACF470013E173 /* ZFWaveChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFWaveChart.h; sourceTree = "<group>"; };
+		1EC202371ECACF470013E173 /* ZFWaveChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFWaveChart.m; sourceTree = "<group>"; };
+		1EC202591ECAD28D0013E173 /* JCChartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCChartModel.h; sourceTree = "<group>"; };
+		1EC2025A1ECAD28D0013E173 /* JCChartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCChartModel.m; sourceTree = "<group>"; };
+		1EC2025C1ECAF5D40013E173 /* JCBarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCBarModel.h; sourceTree = "<group>"; };
+		1EC2025D1ECAF5D50013E173 /* JCBarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCBarModel.m; sourceTree = "<group>"; };
 		6107AB340FFFED4FCC1BBAD2 /* libPods-JCChartProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JCChartProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B40B3194CC02ECD0285EC4 /* Pods-JCChartProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCChartProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-JCChartProject/Pods-JCChartProject.release.xcconfig"; sourceTree = "<group>"; };
 		B61BFE7DE238B953A245FAB9 /* Pods-JCChartProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCChartProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JCChartProject/Pods-JCChartProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -353,6 +505,9 @@
 				1EC201461ECAB3760013E173 /* JCFuncThirdVC.h */,
 				1EC201471ECAB3760013E173 /* JCFuncThirdVC.m */,
 				1EC201481ECAB3760013E173 /* JCFuncThirdVC.xib */,
+				1EC201E01ECACB370013E173 /* JCFuncChartVC.h */,
+				1EC201E11ECACB370013E173 /* JCFuncChartVC.m */,
+				1EC201E21ECACB370013E173 /* JCFuncChartVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -362,6 +517,10 @@
 			children = (
 				1EC2012F1ECA88C10013E173 /* JCFuncBaseModel.h */,
 				1EC201301ECA88C10013E173 /* JCFuncBaseModel.m */,
+				1EC202591ECAD28D0013E173 /* JCChartModel.h */,
+				1EC2025A1ECAD28D0013E173 /* JCChartModel.m */,
+				1EC2025C1ECAF5D40013E173 /* JCBarModel.h */,
+				1EC2025D1ECAF5D50013E173 /* JCBarModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -481,6 +640,8 @@
 		1E21B83D1EC97DF900D69E9D /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				1EC201E51ECACF470013E173 /* ZFChart */,
+				1EC201B71ECACAA10013E173 /* JHChart */,
 				1EC2014B1ECAB46E0013E173 /* GridView */,
 				1EC2013D1ECA9D590013E173 /* Class */,
 				1E21B8471EC97E1F00D69E9D /* NavAndTab */,
@@ -644,6 +805,227 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		1EC201B71ECACAA10013E173 /* JHChart */ = {
+			isa = PBXGroup;
+			children = (
+				1EC201B81ECACAA10013E173 /* JHChart.h */,
+				1EC201B91ECACAA10013E173 /* JHChart.m */,
+				1EC201BA1ECACAA10013E173 /* JHChartHeader.h */,
+				1EC201BB1ECACAA10013E173 /* JHColumnChart.h */,
+				1EC201BC1ECACAA10013E173 /* JHColumnChart.m */,
+				1EC201BD1ECACAA10013E173 /* JHLineChart.h */,
+				1EC201BE1ECACAA10013E173 /* JHLineChart.m */,
+				1EC201BF1ECACAA10013E173 /* JHPieChart.h */,
+				1EC201C01ECACAA10013E173 /* JHPieChart.m */,
+				1EC201C11ECACAA10013E173 /* JHPieForeBGView.h */,
+				1EC201C21ECACAA10013E173 /* JHPieForeBGView.m */,
+				1EC201C31ECACAA10013E173 /* JHPieItemsView.h */,
+				1EC201C41ECACAA10013E173 /* JHPieItemsView.m */,
+				1EC201C51ECACAA10013E173 /* JHRadarChart.h */,
+				1EC201C61ECACAA10013E173 /* JHRadarChart.m */,
+				1EC201C71ECACAA10013E173 /* JHRingChart.h */,
+				1EC201C81ECACAA10013E173 /* JHRingChart.m */,
+				1EC201C91ECACAA10013E173 /* JHScatterChart.h */,
+				1EC201CA1ECACAA10013E173 /* JHScatterChart.m */,
+				1EC201CB1ECACAA10013E173 /* JHShowInfoView.h */,
+				1EC201CC1ECACAA10013E173 /* JHShowInfoView.m */,
+				1EC201CD1ECACAA10013E173 /* JHTableChart.h */,
+				1EC201CE1ECACAA10013E173 /* JHTableChart.m */,
+				1EC201CF1ECACAA10013E173 /* JHTableDataRowModel.h */,
+				1EC201D01ECACAA10013E173 /* JHTableDataRowModel.m */,
+				1EC201D11ECACAA10013E173 /* JHWaveChart.h */,
+				1EC201D21ECACAA10013E173 /* JHWaveChart.m */,
+			);
+			path = JHChart;
+			sourceTree = "<group>";
+		};
+		1EC201E51ECACF470013E173 /* ZFChart */ = {
+			isa = PBXGroup;
+			children = (
+				1EC201E61ECACF470013E173 /* Category */,
+				1EC201F11ECACF470013E173 /* Component */,
+				1EC201FA1ECACF470013E173 /* Model */,
+				1EC201FF1ECACF470013E173 /* Other */,
+				1EC202061ECACF470013E173 /* ZFBarChart */,
+				1EC2020B1ECACF470013E173 /* ZFCirqueChart */,
+				1EC202101ECACF470013E173 /* ZFGenericAxis */,
+				1EC202131ECACF470013E173 /* ZFGenericChart */,
+				1EC202161ECACF470013E173 /* ZFHorizontalAxis */,
+				1EC202191ECACF470013E173 /* ZFHorizontalBarChart */,
+				1EC2021E1ECACF470013E173 /* ZFLineChart */,
+				1EC202251ECACF470013E173 /* ZFPieChart */,
+				1EC2022C1ECACF470013E173 /* ZFRadarChart */,
+				1EC202331ECACF470013E173 /* ZFWaveChart */,
+			);
+			path = ZFChart;
+			sourceTree = "<group>";
+		};
+		1EC201E61ECACF470013E173 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				1EC201E71ECACF470013E173 /* NSNumber+Zirkfied.h */,
+				1EC201E81ECACF470013E173 /* NSNumber+Zirkfied.m */,
+				1EC201E91ECACF470013E173 /* NSString+Zirkfied.h */,
+				1EC201EA1ECACF470013E173 /* NSString+Zirkfied.m */,
+				1EC201EB1ECACF470013E173 /* UIBezierPath+Zirkfied.h */,
+				1EC201EC1ECACF470013E173 /* UIBezierPath+Zirkfied.m */,
+				1EC201ED1ECACF470013E173 /* UIColor+Zirkfied.h */,
+				1EC201EE1ECACF470013E173 /* UIColor+Zirkfied.m */,
+				1EC201EF1ECACF470013E173 /* UIView+Zirkfied.h */,
+				1EC201F01ECACF470013E173 /* UIView+Zirkfied.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		1EC201F11ECACF470013E173 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				1EC201F21ECACF470013E173 /* ZFLabel.h */,
+				1EC201F31ECACF470013E173 /* ZFLabel.m */,
+				1EC201F41ECACF470013E173 /* ZFPopoverLabel.h */,
+				1EC201F51ECACF470013E173 /* ZFPopoverLabel.m */,
+				1EC201F61ECACF470013E173 /* ZFXAxisLine.h */,
+				1EC201F71ECACF470013E173 /* ZFXAxisLine.m */,
+				1EC201F81ECACF470013E173 /* ZFYAxisLine.h */,
+				1EC201F91ECACF470013E173 /* ZFYAxisLine.m */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		1EC201FA1ECACF470013E173 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1EC201FB1ECACF470013E173 /* ZFCurveAttribute.h */,
+				1EC201FC1ECACF470013E173 /* ZFCurveAttribute.m */,
+				1EC201FD1ECACF470013E173 /* ZFGradientAttribute.h */,
+				1EC201FE1ECACF470013E173 /* ZFGradientAttribute.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1EC201FF1ECACF470013E173 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				1EC202001ECACF470013E173 /* ZFChart.h */,
+				1EC202011ECACF470013E173 /* ZFColor.h */,
+				1EC202021ECACF470013E173 /* ZFConst.h */,
+				1EC202031ECACF470013E173 /* ZFConst.m */,
+				1EC202041ECACF470013E173 /* ZFMethod.h */,
+				1EC202051ECACF470013E173 /* ZFMethod.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		1EC202061ECACF470013E173 /* ZFBarChart */ = {
+			isa = PBXGroup;
+			children = (
+				1EC202071ECACF470013E173 /* ZFBar.h */,
+				1EC202081ECACF470013E173 /* ZFBar.m */,
+				1EC202091ECACF470013E173 /* ZFBarChart.h */,
+				1EC2020A1ECACF470013E173 /* ZFBarChart.m */,
+			);
+			path = ZFBarChart;
+			sourceTree = "<group>";
+		};
+		1EC2020B1ECACF470013E173 /* ZFCirqueChart */ = {
+			isa = PBXGroup;
+			children = (
+				1EC2020C1ECACF470013E173 /* ZFCirque.h */,
+				1EC2020D1ECACF470013E173 /* ZFCirque.m */,
+				1EC2020E1ECACF470013E173 /* ZFCirqueChart.h */,
+				1EC2020F1ECACF470013E173 /* ZFCirqueChart.m */,
+			);
+			path = ZFCirqueChart;
+			sourceTree = "<group>";
+		};
+		1EC202101ECACF470013E173 /* ZFGenericAxis */ = {
+			isa = PBXGroup;
+			children = (
+				1EC202111ECACF470013E173 /* ZFGenericAxis.h */,
+				1EC202121ECACF470013E173 /* ZFGenericAxis.m */,
+			);
+			path = ZFGenericAxis;
+			sourceTree = "<group>";
+		};
+		1EC202131ECACF470013E173 /* ZFGenericChart */ = {
+			isa = PBXGroup;
+			children = (
+				1EC202141ECACF470013E173 /* ZFGenericChart.h */,
+				1EC202151ECACF470013E173 /* ZFGenericChart.m */,
+			);
+			path = ZFGenericChart;
+			sourceTree = "<group>";
+		};
+		1EC202161ECACF470013E173 /* ZFHorizontalAxis */ = {
+			isa = PBXGroup;
+			children = (
+				1EC202171ECACF470013E173 /* ZFHorizontalAxis.h */,
+				1EC202181ECACF470013E173 /* ZFHorizontalAxis.m */,
+			);
+			path = ZFHorizontalAxis;
+			sourceTree = "<group>";
+		};
+		1EC202191ECACF470013E173 /* ZFHorizontalBarChart */ = {
+			isa = PBXGroup;
+			children = (
+				1EC2021A1ECACF470013E173 /* ZFHorizontalBar.h */,
+				1EC2021B1ECACF470013E173 /* ZFHorizontalBar.m */,
+				1EC2021C1ECACF470013E173 /* ZFHorizontalBarChart.h */,
+				1EC2021D1ECACF470013E173 /* ZFHorizontalBarChart.m */,
+			);
+			path = ZFHorizontalBarChart;
+			sourceTree = "<group>";
+		};
+		1EC2021E1ECACF470013E173 /* ZFLineChart */ = {
+			isa = PBXGroup;
+			children = (
+				1EC2021F1ECACF470013E173 /* ZFCircle.h */,
+				1EC202201ECACF470013E173 /* ZFCircle.m */,
+				1EC202211ECACF470013E173 /* ZFLine.h */,
+				1EC202221ECACF470013E173 /* ZFLine.m */,
+				1EC202231ECACF470013E173 /* ZFLineChart.h */,
+				1EC202241ECACF470013E173 /* ZFLineChart.m */,
+			);
+			path = ZFLineChart;
+			sourceTree = "<group>";
+		};
+		1EC202251ECACF470013E173 /* ZFPieChart */ = {
+			isa = PBXGroup;
+			children = (
+				1EC202261ECACF470013E173 /* ZFPie.h */,
+				1EC202271ECACF470013E173 /* ZFPie.m */,
+				1EC202281ECACF470013E173 /* ZFPieChart.h */,
+				1EC202291ECACF470013E173 /* ZFPieChart.m */,
+				1EC2022A1ECACF470013E173 /* ZFTranslucencePath.h */,
+				1EC2022B1ECACF470013E173 /* ZFTranslucencePath.m */,
+			);
+			path = ZFPieChart;
+			sourceTree = "<group>";
+		};
+		1EC2022C1ECACF470013E173 /* ZFRadarChart */ = {
+			isa = PBXGroup;
+			children = (
+				1EC2022D1ECACF470013E173 /* ZFPolygon.h */,
+				1EC2022E1ECACF470013E173 /* ZFPolygon.m */,
+				1EC2022F1ECACF470013E173 /* ZFRadar.h */,
+				1EC202301ECACF470013E173 /* ZFRadar.m */,
+				1EC202311ECACF470013E173 /* ZFRadarChart.h */,
+				1EC202321ECACF470013E173 /* ZFRadarChart.m */,
+			);
+			path = ZFRadarChart;
+			sourceTree = "<group>";
+		};
+		1EC202331ECACF470013E173 /* ZFWaveChart */ = {
+			isa = PBXGroup;
+			children = (
+				1EC202341ECACF470013E173 /* ZFWave.h */,
+				1EC202351ECACF470013E173 /* ZFWave.m */,
+				1EC202361ECACF470013E173 /* ZFWaveChart.h */,
+				1EC202371ECACF470013E173 /* ZFWaveChart.m */,
+			);
+			path = ZFWaveChart;
+			sourceTree = "<group>";
+		};
 		A9F5F75D46C72511BFC15148 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -797,6 +1179,7 @@
 				1E21B7EC1EC93A4300D69E9D /* LaunchScreen.storyboard in Resources */,
 				1EC2019C1ECAB46E0013E173 /* more_icon_immediately@2x.png in Resources */,
 				1EC201A81ECAB46E0013E173 /* more_icon_Search@2x.png in Resources */,
+				1EC201E41ECACB370013E173 /* JCFuncChartVC.xib in Resources */,
 				1EC2019F1ECAB46E0013E173 /* more_icon_licai@3x.png in Resources */,
 				1EC201A71ECAB46E0013E173 /* more_icon_Recharge@3x.png in Resources */,
 				1EC201911ECAB46E0013E173 /* app_item_pressed_bg.png in Resources */,
@@ -898,37 +1281,86 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EC201DC1ECACAA10013E173 /* JHShowInfoView.m in Sources */,
+				1EC202561ECACF470013E173 /* ZFRadarChart.m in Sources */,
 				1EC2013B1ECA94620013E173 /* JCFunctionCell.m in Sources */,
+				1EC202511ECACF470013E173 /* ZFPie.m in Sources */,
 				1EC201861ECAB46E0013E173 /* LxButton.m in Sources */,
+				1EC2024C1ECACF470013E173 /* ZFHorizontalBar.m in Sources */,
+				1EC201DF1ECACAA10013E173 /* JHWaveChart.m in Sources */,
+				1EC201D51ECACAA10013E173 /* JHLineChart.m in Sources */,
+				1EC201D41ECACAA10013E173 /* JHColumnChart.m in Sources */,
+				1EC2023D1ECACF470013E173 /* ZFLabel.m in Sources */,
+				1EC201D61ECACAA10013E173 /* JHPieChart.m in Sources */,
 				1E21B8741EC97ECE00D69E9D /* JCMoreVC.m in Sources */,
+				1EC201E31ECACB370013E173 /* JCFuncChartVC.m in Sources */,
+				1EC202551ECACF470013E173 /* ZFRadar.m in Sources */,
+				1EC202461ECACF470013E173 /* ZFBarChart.m in Sources */,
 				1EC201441ECA9D590013E173 /* ContactsGroupModel.m in Sources */,
 				1EC2012E1EC994E50013E173 /* JCBaseModel.m in Sources */,
+				1EC202431ECACF470013E173 /* ZFConst.m in Sources */,
 				1E21B8421EC97DF900D69E9D /* AppDelegate.m in Sources */,
+				1EC202481ECACF470013E173 /* ZFCirqueChart.m in Sources */,
 				1EC2018C1ECAB46E0013E173 /* GridView.m in Sources */,
 				1EC201491ECAB3760013E173 /* JCFuncThirdVC.m in Sources */,
+				1EC201D31ECACAA10013E173 /* JHChart.m in Sources */,
+				1EC201DD1ECACAA10013E173 /* JHTableChart.m in Sources */,
 				1E21B85A1EC97E1F00D69E9D /* MXBarButtonItem.m in Sources */,
+				1EC201DB1ECACAA10013E173 /* JHScatterChart.m in Sources */,
+				1EC2025E1ECAF5D50013E173 /* JCBarModel.m in Sources */,
+				1EC2023B1ECACF470013E173 /* UIColor+Zirkfied.m in Sources */,
+				1EC202581ECACF470013E173 /* ZFWaveChart.m in Sources */,
+				1EC2025B1ECAD28D0013E173 /* JCChartModel.m in Sources */,
+				1EC2024B1ECACF470013E173 /* ZFHorizontalAxis.m in Sources */,
 				1E21B7DE1EC93A4300D69E9D /* main.m in Sources */,
+				1EC2023C1ECACF470013E173 /* UIView+Zirkfied.m in Sources */,
+				1EC202541ECACF470013E173 /* ZFPolygon.m in Sources */,
 				1EC201871ECAB46E0013E173 /* UIColor+Expanded.m in Sources */,
 				1E21B85D1EC97E1F00D69E9D /* MXNavigationItem.m in Sources */,
+				1EC201D71ECACAA10013E173 /* JHPieForeBGView.m in Sources */,
 				1E21B8441EC97DF900D69E9D /* ViewController.m in Sources */,
 				1E21B86A1EC97EA900D69E9D /* JCFunctionVC.m in Sources */,
 				1E21B8791EC9837000D69E9D /* JCFuncSecondVC.m in Sources */,
 				1E21B85C1EC97E1F00D69E9D /* MXNavigationController.m in Sources */,
+				1EC202471ECACF470013E173 /* ZFCirque.m in Sources */,
+				1EC201D91ECACAA10013E173 /* JHRadarChart.m in Sources */,
+				1EC202401ECACF470013E173 /* ZFYAxisLine.m in Sources */,
 				1EC201311ECA88C10013E173 /* JCFuncBaseModel.m in Sources */,
+				1EC202521ECACF470013E173 /* ZFPieChart.m in Sources */,
+				1EC202391ECACF470013E173 /* NSString+Zirkfied.m in Sources */,
+				1EC202451ECACF470013E173 /* ZFBar.m in Sources */,
 				1E21B8461EC97DF900D69E9D /* XHHttpTool.m in Sources */,
+				1EC202571ECACF470013E173 /* ZFWave.m in Sources */,
 				1E21B8431EC97DF900D69E9D /* Foundation+Log.m in Sources */,
+				1EC201DE1ECACAA10013E173 /* JHTableDataRowModel.m in Sources */,
 				1EC2018A1ECAB46E0013E173 /* UIView+Frame.m in Sources */,
+				1EC2024F1ECACF470013E173 /* ZFLine.m in Sources */,
+				1EC2023A1ECACF470013E173 /* UIBezierPath+Zirkfied.m in Sources */,
 				1E21B8601EC97E1F00D69E9D /* UIView+Add.m in Sources */,
+				1EC202381ECACF470013E173 /* NSNumber+Zirkfied.m in Sources */,
+				1EC201DA1ECACAA10013E173 /* JHRingChart.m in Sources */,
 				1E21B8611EC97E1F00D69E9D /* UIViewController+MXNavigation.m in Sources */,
+				1EC202411ECACF470013E173 /* ZFCurveAttribute.m in Sources */,
 				1E21B85B1EC97E1F00D69E9D /* MXNavigationBar.m in Sources */,
 				1EC2018B1ECAB46E0013E173 /* GridButton.m in Sources */,
+				1EC202491ECACF470013E173 /* ZFGenericAxis.m in Sources */,
 				1E21B86F1EC97EBF00D69E9D /* JCStrategyVC.m in Sources */,
 				1EC201451ECA9D590013E173 /* ContactsListHeader.m in Sources */,
+				1EC2024D1ECACF470013E173 /* ZFHorizontalBarChart.m in Sources */,
 				1E21B85F1EC97E1F00D69E9D /* NSString+Add.m in Sources */,
 				1E21B85E1EC97E1F00D69E9D /* MXTabBarController.m in Sources */,
+				1EC202441ECACF470013E173 /* ZFMethod.m in Sources */,
+				1EC201D81ECACAA10013E173 /* JHPieItemsView.m in Sources */,
+				1EC202421ECACF470013E173 /* ZFGradientAttribute.m in Sources */,
+				1EC202501ECACF470013E173 /* ZFLineChart.m in Sources */,
+				1EC2024A1ECACF470013E173 /* ZFGenericChart.m in Sources */,
 				1EC201881ECAB46E0013E173 /* UILabel+LXLabel.m in Sources */,
+				1EC2024E1ECACF470013E173 /* ZFCircle.m in Sources */,
+				1EC202531ECACF470013E173 /* ZFTranslucencePath.m in Sources */,
 				1E21B8651EC97E9B00D69E9D /* JCHomeVC.m in Sources */,
+				1EC2023E1ECACF470013E173 /* ZFPopoverLabel.m in Sources */,
 				1E21B8451EC97DF900D69E9D /* XHConst.m in Sources */,
+				1EC2023F1ECACF470013E173 /* ZFXAxisLine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

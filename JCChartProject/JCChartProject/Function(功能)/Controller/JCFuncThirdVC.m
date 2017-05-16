@@ -10,6 +10,9 @@
 #import "MXConstant.h"
 #import "GridView.h"
 #import "GridButton.h"
+#import "JCFuncChartVC.h"
+
+
 @interface JCFuncThirdVC ()<GridViewDelegate>
 @property(nonatomic,strong)GridView *gridView;
 
@@ -53,28 +56,11 @@
 }
 -(void)clickGridView:(GridButton *)item
 {
-    
-    [self loadMenuDetailWithObjectId:item.objectId];
-    
+    JCFuncChartVC *chartVC = [[JCFuncChartVC alloc]init];
+    chartVC.titleName = item.gridTitle;
+    chartVC.objectId = item.objectId;
+    [self.navigationController pushViewController:chartVC animated:YES];
 }
-
-
-
-
-- (void)loadMenuDetailWithObjectId:(NSString*)objectId{
-    NSString *jsessionid = [[NSUserDefaults standardUserDefaults]objectForKey:@"jsessionid"];
-    NSString *menuDetailUrl = [NSString stringWithFormat:@"%@%@",MenuDetailUrl,objectId];
-    [XHHttpTool get:menuDetailUrl params:nil jessionid:jsessionid success:^(id json) {
-        NSLog(@"--%@",json);
-    } failure:^(NSError *error) {
-        NSLog(@"%@",error);
-    }];
-}
-
-
-
-
-
 
 
 
