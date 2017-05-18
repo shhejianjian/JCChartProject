@@ -42,5 +42,8 @@
 @property (nonatomic, strong) id defaultDateRange;
 @property (nonatomic, strong) id measureUnit;
 
+@property (nonatomic, strong) NSArray *category;
+@property (nonatomic, strong) id values;
+
 
 @end

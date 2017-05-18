@@ -44,7 +44,6 @@
     for (JCFuncBaseModel *thirdModel in thirdArr) {
         [self.showGridTitleArray addObject:thirdModel.name];
         [self.showGridIDArray addObject:thirdModel.objectId];
-        NSLog(@"%@==%@",thirdModel.name,thirdModel.objectId);
     }
 }
 

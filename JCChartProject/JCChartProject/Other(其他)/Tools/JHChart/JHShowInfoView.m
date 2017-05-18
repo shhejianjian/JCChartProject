@@ -39,22 +39,22 @@
     
     
     _showContentString = showContentString;
-    CGSize size = [showContentString boundingRectWithSize:CGSizeMake(50, 100) options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingTruncatesLastVisibleLine attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:8],NSForegroundColorAttributeName:[UIColor darkGrayColor]} context:nil].size;
+    CGSize size = [showContentString boundingRectWithSize:CGSizeMake(50, 100) options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingTruncatesLastVisibleLine attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14],NSForegroundColorAttributeName:[UIColor darkGrayColor]} context:nil].size;
     
-    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, size.width+10, 30);
+    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, size.width+100, 40);
     
     if (_bgLabel==nil) {
         
         _bgLabel = [[UILabel alloc] initWithFrame:self.bounds];
         _bgLabel.center = CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
         _bgLabel.backgroundColor = [UIColor clearColor];
-        _bgLabel.font = [UIFont systemFontOfSize:8];
+        _bgLabel.font = [UIFont systemFontOfSize:14];
         _bgLabel.textColor = [UIColor blackColor];
         _bgLabel.numberOfLines = 2;
         [self addSubview:_bgLabel];
         
     }
-    _bgLabel.frame = CGRectMake(0, 0, size.width, size.height);
+    _bgLabel.frame = CGRectMake(0, 0, size.width+100, size.height);
     _bgLabel.text = _showContentString;
     _bgLabel.center = CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
     

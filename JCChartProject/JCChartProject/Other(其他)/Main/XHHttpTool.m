@@ -31,6 +31,7 @@
 + (void)get:(NSString *)url params:(NSDictionary *)params jessionid:(NSString *)jessionid success:(void(^)(id json))success failure:(void(^)(NSError *error)) failure{
     AFHTTPSessionManager  *manager=[AFHTTPSessionManager  manager];
     manager.responseSerializer=[AFHTTPResponseSerializer serializer];
+    manager.operationQueue.maxConcurrentOperationCount = 1;
     [manager.requestSerializer setValue:[NSString stringWithFormat:@"JSESSIONID=%@",jessionid] forHTTPHeaderField:@"Cookie"];
     
     NSString *urlStr = [NSString stringWithFormat:@"%@/%@",BaseUrl,url];

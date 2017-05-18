@@ -407,7 +407,7 @@
                         UIBezierPath *path = [UIBezierPath bezierPath];
                         
                         for (int32_t m=0;m<_lineValueArray.count;m++) {
-                            NSLog(@"%@",_drawLineValue[m]);
+//                            NSLog(@"%@",_drawLineValue[m]);
                             if (m==0) {
                                 [path moveToPoint:[_drawLineValue[m] CGPointValue]];
                                 
@@ -479,7 +479,7 @@
             
 
                 for (int32_t m=0;m<_lineValueArray.count;m++) {
-                    NSLog(@"%@",_drawLineValue[m]);
+//                    NSLog(@"%@",_drawLineValue[m]);
 
 
                         

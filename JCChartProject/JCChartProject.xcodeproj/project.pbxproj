@@ -143,6 +143,16 @@
 		1EC202581ECACF470013E173 /* ZFWaveChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC202371ECACF470013E173 /* ZFWaveChart.m */; };
 		1EC2025B1ECAD28D0013E173 /* JCChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC2025A1ECAD28D0013E173 /* JCChartModel.m */; };
 		1EC2025E1ECAF5D50013E173 /* JCBarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC2025D1ECAF5D50013E173 /* JCBarModel.m */; };
+		1EC202621ECBD7410013E173 /* JCBarChartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC202601ECBD7410013E173 /* JCBarChartCell.m */; };
+		1EC202631ECBD7410013E173 /* JCBarChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EC202611ECBD7410013E173 /* JCBarChartCell.xib */; };
+		1EC202671ECBD7500013E173 /* JCLineChartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC202651ECBD7500013E173 /* JCLineChartCell.m */; };
+		1EC202681ECBD7500013E173 /* JCLineChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EC202661ECBD7500013E173 /* JCLineChartCell.xib */; };
+		1EC2026C1ECBD75F0013E173 /* JCLineBarChartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC2026A1ECBD75F0013E173 /* JCLineBarChartCell.m */; };
+		1EC2026D1ECBD75F0013E173 /* JCLineBarChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EC2026B1ECBD75F0013E173 /* JCLineBarChartCell.xib */; };
+		1EC202711ECBD76F0013E173 /* JCPieChartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC2026F1ECBD76F0013E173 /* JCPieChartCell.m */; };
+		1EC202721ECBD76F0013E173 /* JCPieChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EC202701ECBD76F0013E173 /* JCPieChartCell.xib */; };
+		1EC202761ECBD7840013E173 /* JCDashboardChartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC202741ECBD7840013E173 /* JCDashboardChartCell.m */; };
+		1EC202771ECBD7840013E173 /* JCDashboardChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EC202751ECBD7840013E173 /* JCDashboardChartCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -387,6 +397,21 @@
 		1EC2025A1ECAD28D0013E173 /* JCChartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCChartModel.m; sourceTree = "<group>"; };
 		1EC2025C1ECAF5D40013E173 /* JCBarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCBarModel.h; sourceTree = "<group>"; };
 		1EC2025D1ECAF5D50013E173 /* JCBarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCBarModel.m; sourceTree = "<group>"; };
+		1EC2025F1ECBD7410013E173 /* JCBarChartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCBarChartCell.h; sourceTree = "<group>"; };
+		1EC202601ECBD7410013E173 /* JCBarChartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCBarChartCell.m; sourceTree = "<group>"; };
+		1EC202611ECBD7410013E173 /* JCBarChartCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCBarChartCell.xib; sourceTree = "<group>"; };
+		1EC202641ECBD7500013E173 /* JCLineChartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCLineChartCell.h; sourceTree = "<group>"; };
+		1EC202651ECBD7500013E173 /* JCLineChartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCLineChartCell.m; sourceTree = "<group>"; };
+		1EC202661ECBD7500013E173 /* JCLineChartCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCLineChartCell.xib; sourceTree = "<group>"; };
+		1EC202691ECBD75F0013E173 /* JCLineBarChartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCLineBarChartCell.h; sourceTree = "<group>"; };
+		1EC2026A1ECBD75F0013E173 /* JCLineBarChartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCLineBarChartCell.m; sourceTree = "<group>"; };
+		1EC2026B1ECBD75F0013E173 /* JCLineBarChartCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCLineBarChartCell.xib; sourceTree = "<group>"; };
+		1EC2026E1ECBD76F0013E173 /* JCPieChartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCPieChartCell.h; sourceTree = "<group>"; };
+		1EC2026F1ECBD76F0013E173 /* JCPieChartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCPieChartCell.m; sourceTree = "<group>"; };
+		1EC202701ECBD76F0013E173 /* JCPieChartCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCPieChartCell.xib; sourceTree = "<group>"; };
+		1EC202731ECBD7840013E173 /* JCDashboardChartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCDashboardChartCell.h; sourceTree = "<group>"; };
+		1EC202741ECBD7840013E173 /* JCDashboardChartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCDashboardChartCell.m; sourceTree = "<group>"; };
+		1EC202751ECBD7840013E173 /* JCDashboardChartCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCDashboardChartCell.xib; sourceTree = "<group>"; };
 		6107AB340FFFED4FCC1BBAD2 /* libPods-JCChartProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JCChartProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B40B3194CC02ECD0285EC4 /* Pods-JCChartProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCChartProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-JCChartProject/Pods-JCChartProject.release.xcconfig"; sourceTree = "<group>"; };
 		B61BFE7DE238B953A245FAB9 /* Pods-JCChartProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCChartProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JCChartProject/Pods-JCChartProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -531,6 +556,21 @@
 				1EC201381ECA94620013E173 /* JCFunctionCell.h */,
 				1EC201391ECA94620013E173 /* JCFunctionCell.m */,
 				1EC2013A1ECA94620013E173 /* JCFunctionCell.xib */,
+				1EC2025F1ECBD7410013E173 /* JCBarChartCell.h */,
+				1EC202601ECBD7410013E173 /* JCBarChartCell.m */,
+				1EC202611ECBD7410013E173 /* JCBarChartCell.xib */,
+				1EC202641ECBD7500013E173 /* JCLineChartCell.h */,
+				1EC202651ECBD7500013E173 /* JCLineChartCell.m */,
+				1EC202661ECBD7500013E173 /* JCLineChartCell.xib */,
+				1EC202691ECBD75F0013E173 /* JCLineBarChartCell.h */,
+				1EC2026A1ECBD75F0013E173 /* JCLineBarChartCell.m */,
+				1EC2026B1ECBD75F0013E173 /* JCLineBarChartCell.xib */,
+				1EC2026E1ECBD76F0013E173 /* JCPieChartCell.h */,
+				1EC2026F1ECBD76F0013E173 /* JCPieChartCell.m */,
+				1EC202701ECBD76F0013E173 /* JCPieChartCell.xib */,
+				1EC202731ECBD7840013E173 /* JCDashboardChartCell.h */,
+				1EC202741ECBD7840013E173 /* JCDashboardChartCell.m */,
+				1EC202751ECBD7840013E173 /* JCDashboardChartCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1163,12 +1203,14 @@
 				1EC201A01ECAB46E0013E173 /* more_icon_Mall@2x.png in Resources */,
 				1EC201AB1ECAB46E0013E173 /* more_icon_Settlement@3x.png in Resources */,
 				1EC201A51ECAB46E0013E173 /* more_icon_Prepaidcard@3x.png in Resources */,
+				1EC202721ECBD76F0013E173 /* JCPieChartCell.xib in Resources */,
 				1EC201931ECAB46E0013E173 /* more_icon_-transfer@3x.png in Resources */,
 				1EC201A91ECAB46E0013E173 /* more_icon_Search@3x.png in Resources */,
 				1EC2014A1ECAB3760013E173 /* JCFuncThirdVC.xib in Resources */,
 				1EC201B01ECAB46E0013E173 /* more_icon_Transaction_flow@2x.png in Resources */,
 				1EC201921ECAB46E0013E173 /* more_icon_-transfer@2x.png in Resources */,
 				1E21B87A1EC9837000D69E9D /* JCFuncSecondVC.xib in Resources */,
+				1EC202681ECBD7500013E173 /* JCLineChartCell.xib in Resources */,
 				1EC201A61ECAB46E0013E173 /* more_icon_Recharge@2x.png in Resources */,
 				1EC201AC1ECAB46E0013E173 /* more_icon_shouyin@2x.png in Resources */,
 				1EC201AE1ECAB46E0013E173 /* more_icon_t0@2x.png in Resources */,
@@ -1176,6 +1218,7 @@
 				1E21B8661EC97E9B00D69E9D /* JCHomeVC.xib in Resources */,
 				1EC2019A1ECAB46E0013E173 /* more_icon_gift@2x.png in Resources */,
 				1EC201B11ECAB46E0013E173 /* more_icon_Transaction_flow@3x.png in Resources */,
+				1EC202771ECBD7840013E173 /* JCDashboardChartCell.xib in Resources */,
 				1E21B7EC1EC93A4300D69E9D /* LaunchScreen.storyboard in Resources */,
 				1EC2019C1ECAB46E0013E173 /* more_icon_immediately@2x.png in Resources */,
 				1EC201A81ECAB46E0013E173 /* more_icon_Search@2x.png in Resources */,
@@ -1190,6 +1233,7 @@
 				1EC201A31ECAB46E0013E173 /* more_icon_Manager@3x.png in Resources */,
 				1EC201B41ECAB46E0013E173 /* work-order@2x.png in Resources */,
 				1EC201951ECAB46E0013E173 /* more_icon_cancle_deal@3x.png in Resources */,
+				1EC2026D1ECBD75F0013E173 /* JCLineBarChartCell.xib in Resources */,
 				1EC201AD1ECAB46E0013E173 /* more_icon_shouyin@3x.png in Resources */,
 				1E21B8701EC97EBF00D69E9D /* JCStrategyVC.xib in Resources */,
 				1EC201A41ECAB46E0013E173 /* more_icon_Prepaid-card@2x.png in Resources */,
@@ -1207,6 +1251,7 @@
 				1E21B7E91EC93A4300D69E9D /* Assets.xcassets in Resources */,
 				1EC2019D1ECAB46E0013E173 /* more_icon_immediately@3x.png in Resources */,
 				1EC2018E1ECAB46E0013E173 /* app_item_add.png in Resources */,
+				1EC202631ECBD7410013E173 /* JCBarChartCell.xib in Resources */,
 				1E21B7E71EC93A4300D69E9D /* Main.storyboard in Resources */,
 				1E21B86B1EC97EA900D69E9D /* JCFunctionVC.xib in Resources */,
 			);
@@ -1288,6 +1333,7 @@
 				1EC201861ECAB46E0013E173 /* LxButton.m in Sources */,
 				1EC2024C1ECACF470013E173 /* ZFHorizontalBar.m in Sources */,
 				1EC201DF1ECACAA10013E173 /* JHWaveChart.m in Sources */,
+				1EC202671ECBD7500013E173 /* JCLineChartCell.m in Sources */,
 				1EC201D51ECACAA10013E173 /* JHLineChart.m in Sources */,
 				1EC201D41ECACAA10013E173 /* JHColumnChart.m in Sources */,
 				1EC2023D1ECACF470013E173 /* ZFLabel.m in Sources */,
@@ -1321,6 +1367,7 @@
 				1E21B8441EC97DF900D69E9D /* ViewController.m in Sources */,
 				1E21B86A1EC97EA900D69E9D /* JCFunctionVC.m in Sources */,
 				1E21B8791EC9837000D69E9D /* JCFuncSecondVC.m in Sources */,
+				1EC2026C1ECBD75F0013E173 /* JCLineBarChartCell.m in Sources */,
 				1E21B85C1EC97E1F00D69E9D /* MXNavigationController.m in Sources */,
 				1EC202471ECACF470013E173 /* ZFCirque.m in Sources */,
 				1EC201D91ECACAA10013E173 /* JHRadarChart.m in Sources */,
@@ -1339,6 +1386,7 @@
 				1E21B8601EC97E1F00D69E9D /* UIView+Add.m in Sources */,
 				1EC202381ECACF470013E173 /* NSNumber+Zirkfied.m in Sources */,
 				1EC201DA1ECACAA10013E173 /* JHRingChart.m in Sources */,
+				1EC202711ECBD76F0013E173 /* JCPieChartCell.m in Sources */,
 				1E21B8611EC97E1F00D69E9D /* UIViewController+MXNavigation.m in Sources */,
 				1EC202411ECACF470013E173 /* ZFCurveAttribute.m in Sources */,
 				1E21B85B1EC97E1F00D69E9D /* MXNavigationBar.m in Sources */,
@@ -1347,7 +1395,9 @@
 				1E21B86F1EC97EBF00D69E9D /* JCStrategyVC.m in Sources */,
 				1EC201451ECA9D590013E173 /* ContactsListHeader.m in Sources */,
 				1EC2024D1ECACF470013E173 /* ZFHorizontalBarChart.m in Sources */,
+				1EC202621ECBD7410013E173 /* JCBarChartCell.m in Sources */,
 				1E21B85F1EC97E1F00D69E9D /* NSString+Add.m in Sources */,
+				1EC202761ECBD7840013E173 /* JCDashboardChartCell.m in Sources */,
 				1E21B85E1EC97E1F00D69E9D /* MXTabBarController.m in Sources */,
 				1EC202441ECACF470013E173 /* ZFMethod.m in Sources */,
 				1EC201D81ECACAA10013E173 /* JHPieItemsView.m in Sources */,

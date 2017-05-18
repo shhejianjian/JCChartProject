@@ -16,4 +16,4 @@ NSString *const MenuUrl = @"api/v1/appService/menu/user/";
 NSString *const MenuDetailUrl = @"api/v1/appService/appCustomMenu/";
 
 /** 图标数据 */
-NSString *const ChartDataUrl = @"api/v1/dpv/fetchByTime/";
+NSString *const ChartDataUrl = @"api/v1/dpv/fetchByTime?";
