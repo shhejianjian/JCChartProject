@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "JCChartModel.h"
+
 @interface JCPieChartCell : UITableViewCell
-@property (nonatomic, strong) NSArray *pieDescArr;
-@property (nonatomic, strong) NSArray *pieValueArr;
+
+@property (nonatomic, strong) JCChartModel *chartModel;
 
 @end

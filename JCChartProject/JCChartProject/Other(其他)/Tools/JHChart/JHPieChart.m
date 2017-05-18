@@ -85,7 +85,7 @@
         
             [self drawQuartWithColor:colors[i%colors.count] andBeginPoint:P_M(15+self.frame.size.width/2*(i%2), 20*(i/2  )+25+_chartArcLength*2) andContext:contex];
             CGFloat present = [_valueArr[i] floatValue]/_allValueCount*100;
-            [self drawText:[NSString stringWithFormat:@"%@ 占比:%.1f%c",_descArr[i],present,'%'] andContext:contex atPoint:P_M(30+self.frame.size.width/2*(i%2), 20*(i/2  )+25+_chartArcLength*2) WithColor:[UIColor blackColor] andTextFontSize:11];
+            [self drawText:[NSString stringWithFormat:@"%@ 占比:%.1f%c",_descArr[i],present,'%'] andContext:contex atPoint:P_M(30+self.frame.size.width/2*(i%2), 20*(i/2  )+25+_chartArcLength*2) WithColor:[UIColor blackColor] andTextFontSize:9];
         }
        
         
