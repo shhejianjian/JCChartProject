@@ -7,17 +7,29 @@
 //
 
 #import "JCPieChartCell.h"
-#import "JHChartHeader.h"
+#import "ZFChart.h"
 #import "MXConstant.h"
 
-@interface JCPieChartCell ()
+@interface JCPieChartCell () <ZFPieChartDataSource, ZFPieChartDelegate>
 @property (nonatomic, strong) NSMutableArray *pieDescrArr;
 @property (nonatomic, strong) NSMutableArray *pieValuArr;
 @property (nonatomic, strong) NSMutableArray *pieObjectIdArr;
-@property (nonatomic, strong) JHPieChart *pieChart;
+@property (nonatomic, strong) NSMutableArray *piePointGroupArr;
+@property (nonatomic, strong) NSMutableArray *subPieChartArr;
+@property (nonatomic, strong) NSMutableArray *pieColorArr;
 
-@property (nonatomic, copy) NSString *checkStr;
+@property (nonatomic, strong) ZFPieChart * pieChart;
+
+
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) IBOutlet UIView *detailView;
+
+@property (nonatomic, copy) NSString *UnitStr;
+@property (nonatomic, assign) NSInteger UnitValueStr;
+@property (nonatomic, copy) NSString *chartTypeStr;
+
+@property (nonatomic, assign) BOOL isDelete;
+
 
 @end
 
@@ -25,30 +37,35 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    self.checkStr = @"0";
-    self.pieChart.frame = CGRectMake(0, 44, KScreenW, 400);
-    self.pieChart.backgroundColor = [UIColor whiteColor];
-    [self.contentView addSubview:self.pieChart];
-    self.pieChart.positionChangeLengthWhenClick = 15;
-    self.pieChart.showDescripotion = YES;
-    
+    self.isDelete = NO;
+    NSArray *colorArr = @[ZFColor(71, 204, 255, 1), ZFColor(253, 203, 76, 1), ZFColor(214, 205, 153, 1), ZFColor(78, 250, 188, 1), ZFColor(16, 140, 39, 1), ZFColor(45, 92, 34, 1)];
+    [self.pieColorArr addObjectsFromArray:colorArr];
+    self.pieChart = [[ZFPieChart alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 300)];    
+    self.pieChart.dataSource = self;
+    self.pieChart.delegate = self;
+    self.pieChart.piePatternType = kPieChartPatternTypeForCircle;
+    self.pieChart.isShadow = NO;
+    self.pieChart.isAnimated = NO;
 }
 
 
 - (void)setChartModel:(JCChartModel *)chartModel {
     _chartModel = chartModel;
-    NSLog(@"chartModel:%@",chartModel.jsonData);
-    
     JCChartModel *jsonDataModel = [JCChartModel mj_objectWithKeyValues:chartModel.jsonData];
-    self.titleLabel.text = [NSString stringWithFormat:@"%@-%@",chartModel.name,jsonDataModel.name];
     JCChartModel *dateRangeModel = [JCChartModel mj_objectWithKeyValues:jsonDataModel.defaultDateRange];
     NSArray *yArr = [JCChartModel mj_objectArrayWithKeyValuesArray:jsonDataModel.dataPoints];
-    [self loadChartDataWithUnit:dateRangeModel.unit AndValue:dateRangeModel.value andChartType:jsonDataModel.chartType andYarr:yArr];
+    self.UnitStr = dateRangeModel.unit;
+    self.UnitValueStr = dateRangeModel.value;
+    self.chartTypeStr = jsonDataModel.chartType;
+    if (self.pieDescrArr.count == 0) {
+        [self loadChartDataWithUnit:self.UnitStr AndValue:self.UnitValueStr andChartType:self.chartTypeStr andYarr:yArr];
+        self.titleLabel.text = [NSString stringWithFormat:@"%@",jsonDataModel.name];
+    }
+    
 }
 
 
-- (void)loadChartDataWithUnit:(NSString *)unit AndValue:(NSInteger)value andChartType:(NSString *)chartType andYarr:(NSArray *)yArr{
-    
+- (void)loadChartDataWithUnit:(NSString *)unit AndValue:(NSInteger)value andChartType:(NSString *)chartType andYarr:(NSArray *)yArr {
     NSString *jsessionid = [[NSUserDefaults standardUserDefaults]objectForKey:@"jsessionid"];
     NSString *starTime = [self getStartDateWithValue:value andUnit:unit];
     NSString *endTIme = @"2017-04-24+00:00:00";
@@ -60,9 +77,12 @@
     }
     [self.pieObjectIdArr removeAllObjects];
     [self.pieDescrArr removeAllObjects];
-    
+    [self.piePointGroupArr removeAllObjects];
     for (JCChartModel *yModel in yArr) {
         [self.pieObjectIdArr addObject:yModel.objectId];
+        if (yModel.drillBy) {
+            [self.piePointGroupArr addObject:yModel.drillBy];
+        }
         [self.pieDescrArr addObject:yModel.name];
     }
     if ([chartType isEqualToString:@"pie"]) {
@@ -90,24 +110,119 @@
                     }
                 }
             }
-            self.pieChart.valueArr = self.pieValuArr;
-            self.pieChart.descArr = self.pieDescrArr;
-            if (![self.checkStr isEqualToString:@"1"]) {
-                [self.pieChart showAnimation];
-                self.checkStr = @"1";
-            }
+            
+            
+            [self loadButtonWithArray:self.pieDescrArr andColoArr:self.pieColorArr];
+            
+            
         } failure:^(NSError *error) {
             
         }];
         
-    } else if ([chartType isEqualToString:@"bar"]){
-        NSLog(@"bar");
-    } else if ([chartType isEqualToString:@"linebar"]){
-        NSLog(@"linebar");
-    } else {
-        return;
     }
     
+}
+#pragma mark - ZFPieChartDataSource
+
+- (NSArray *)valueArrayInPieChart:(ZFPieChart *)chart{
+    return self.pieValuArr;
+}
+
+- (NSArray *)colorArrayInPieChart:(ZFPieChart *)chart{
+    return self.pieColorArr;
+}
+
+#pragma mark - ZFPieChartDelegate
+
+- (void)pieChart:(ZFPieChart *)pieChart didSelectPathAtIndex:(NSInteger)index{
+    self.isDelete = YES;
+        if (self.piePointGroupArr.count > 0) {
+            self.titleLabel.text = [NSString stringWithFormat:@"%@",self.pieDescrArr[index]];
+            NSString *jsessionid = [[NSUserDefaults standardUserDefaults]objectForKey:@"jsessionid"];
+            NSMutableDictionary *params = [NSMutableDictionary dictionary];
+            params[@"dataPointId"] =self.pieObjectIdArr[index];
+            params[@"relationType"] =self.piePointGroupArr[index];
+    
+            [XHHttpTool get:SubChartDetailUrl params:params jessionid:jsessionid success:^(id json) {
+    
+                NSArray *arr = [JCChartModel mj_objectArrayWithKeyValuesArray:json];
+                [self.subPieChartArr removeAllObjects];
+                for (JCChartModel *relationModel in arr) {
+                    JCChartModel *subModel = [JCChartModel mj_objectWithKeyValues:relationModel.relationPoint];
+                    [self.subPieChartArr addObject:subModel];
+                }
+                [self loadChartDataWithUnit:self.UnitStr AndValue:self.UnitValueStr andChartType:self.chartTypeStr andYarr:self.subPieChartArr ];
+    
+            } failure:^(NSError *error) {
+                
+            }];
+        } else{
+            return;
+        }
+}
+
+- (CGFloat)allowToShowMinLimitPercent:(ZFPieChart *)pieChart{
+    return 0.1f;
+}
+
+- (CGFloat)radiusForPieChart:(ZFPieChart *)pieChart{
+    return 120.f;
+}
+
+- (void)loadButtonWithArray:(NSArray *)arr andColoArr:(NSArray *)colorArr{
+    CGFloat w = 0;//保存前一个button的宽以及前一个button距离屏幕边缘的距离
+    CGFloat h = 320;//用来控制button距离父视图的高
+    if (self.isDelete) {
+        for (UILabel *label in self.detailView.subviews) {
+            [label removeFromSuperview];
+        }
+    }
+        for (int i = 0; i < arr.count; i++) {
+            UILabel *label = [[UILabel alloc]init];
+            label.tag = i;
+            label.backgroundColor = colorArr[i];
+            //根据计算文字的大小
+            label.layer.cornerRadius = 5;
+            label.layer.masksToBounds = YES;
+            //为button赋值
+            label.text = arr[i];
+            label.font = [UIFont systemFontOfSize:15];
+            label.textAlignment = NSTextAlignmentCenter;
+            //设置button的frame
+            float width = [self getTextWithWhenDrawWithText:arr[i]];
+            label.frame = CGRectMake(15 + w, h, width+10, 30);
+            //当button的位置超出屏幕边缘时换行 320 只是button所在父视图的宽度
+            if(10 + w + width+10 > KScreenW-20){
+                w = 0; //换行时将w置为0
+                h = h + label.frame.size.height + 10;//距离父视图也变化
+                label.frame = CGRectMake(15 + w, h, width+10, 30);//重设button的frame
+            }
+            w = label.frame.size.width + label.frame.origin.x;
+            
+            [self.detailView addSubview:label];
+        }
+        [self.pieChart strokePath];
+        [self.detailView addSubview:self.pieChart];
+}
+
+
+
+
+
+
+/**
+ *  判断文本宽度
+ *
+ *  @param text 文本内容
+ *
+ *  @return 文本宽度
+ */
+- (CGFloat)getTextWithWhenDrawWithText:(NSString *)text{
+    
+    NSDictionary *attrs = @{NSFontAttributeName : [UIFont boldSystemFontOfSize:15]};
+    CGSize size=[text sizeWithAttributes:attrs];
+    
+    return size.width;
 }
 
 
@@ -245,11 +360,27 @@
 	return _pieObjectIdArr;
 }
 
-- (JHPieChart *)pieChart {
-	if(_pieChart == nil) {
-		_pieChart = [[JHPieChart alloc] init];
+- (NSMutableArray *)piePointGroupArr {
+	if(_piePointGroupArr == nil) {
+		_piePointGroupArr = [[NSMutableArray alloc] init];
 	}
-	return _pieChart;
+	return _piePointGroupArr;
 }
+
+- (NSMutableArray *)subPieChartArr {
+	if(_subPieChartArr == nil) {
+		_subPieChartArr = [[NSMutableArray alloc] init];
+	}
+	return _subPieChartArr;
+}
+
+- (NSMutableArray *)pieColorArr {
+	if(_pieColorArr == nil) {
+		_pieColorArr = [[NSMutableArray alloc] init];
+	}
+	return _pieColorArr;
+}
+
+
 
 @end

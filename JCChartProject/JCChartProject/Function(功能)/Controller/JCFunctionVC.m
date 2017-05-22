@@ -46,9 +46,23 @@ static NSString *ID=@"JCFunctionCell";
     NSString *firstMenuUrl = [NSString stringWithFormat:@"%@%@",MenuUrl,userid];
     
     [XHHttpTool get:firstMenuUrl params:nil jessionid:jsessionid success:^(id json) {
+//        NSLog(@"---%@",json);
         NSArray *mainArr = [JCFuncBaseModel mj_objectArrayWithKeyValuesArray:json];
         for (JCFuncBaseModel *mainModel in mainArr) {
-            //[self.nameArr addObject:mainModel.name];
+
+//            NSLog(@"1级：%@--%@",mainModel.name,mainModel.objectId);
+//            NSArray *subArr = [JCFuncBaseModel mj_objectArrayWithKeyValuesArray:mainModel.childList];
+//            for (JCFuncBaseModel *subModel in subArr) {
+//                NSLog(@"2级：%@",subModel.name);
+//                
+//                NSArray *thirdArr = [JCFuncBaseModel mj_objectArrayWithKeyValuesArray:subModel.childList];
+//                for (JCFuncBaseModel *thirdModel in thirdArr) {
+//                    NSLog(@"3级：%@",thirdModel.name);
+//                    
+//                }
+//                
+//            }
+            
             [self.funcArr addObject:mainModel];
         }
         [self.myTableView reloadData];

@@ -8,7 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "JHChart.h"
+
+@class JHPieChart;
+@protocol JHPieChartDelegate <NSObject>
+
+- (void)didSelect:(JHPieChart *)cell atIndex:(NSInteger)index;
+
+@end
+
 @interface JHPieChart : JHChart
+@property (nonatomic, weak)id<JHPieChartDelegate> delegate;
 
 /**
  *  Need to draw the specific values。Elements can be either NSString or NSNumber type
@@ -39,5 +48,6 @@
  */
 @property (nonatomic,assign) BOOL showDescripotion;
 
+@property (nonatomic, copy) NSString *objectId;
 
 @end

@@ -285,7 +285,10 @@
                         itemsView.center = CGPointMake(weakself.frame.size.width/2+xSpa, 10+wid/2+spa);
                         [weakself.showInfoView updateFrameTo:CGRectMake(p.x, p.y, weakself.showInfoView.frame.size.width, weakself.showInfoView.frame.size.height) andBGColor:colors[i%colors.count] andShowContentString:[NSString stringWithFormat:@" %@  占比:%.1f%c",weakself.descArr[i],present,'%']];
 //                        _showInfoView.frame = C   GRectMake(p.x, p.y, _showInfoView.frame.size.width, _showInfoView.frame.size.height);
-                        
+//                        NSLog(@"111---%@---%ld",self.objectId,(long)i);
+                        if ([self.delegate respondsToSelector:@selector(didSelect:atIndex:)]) {
+                            [self.delegate didSelect:self atIndex:i];
+                        }
                     }else{
                         weakself.showInfoView.hidden = YES;
                         saveItems.center = CGPointMake(self.frame.size.width/2, 10+wid/2);
@@ -298,7 +301,10 @@
                     weakself.showInfoView.hidden = NO;
                     [weakself.showInfoView updateFrameTo:CGRectMake(p.x, p.y, weakself.showInfoView.frame.size.width, weakself.showInfoView.frame.size.height) andBGColor:colors[i%colors.count] andShowContentString:[NSString stringWithFormat:@" %@  占比:%.1f%c",weakself.descArr[i] ,present,'%']];
                     itemsView.center = CGPointMake(weakself.frame.size.width/2+xSpa, 10+wid/2+spa);
-                    
+//                    NSLog(@"222---%@---%ld",self.objectId,(long)i);
+                    if ([self.delegate respondsToSelector:@selector(didSelect:atIndex:)]) {
+                        [self.delegate didSelect:self atIndex:i];
+                    }
                 }
             }];
            

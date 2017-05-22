@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "JCChartModel.h"
 @interface JCLineChartCell : UITableViewCell
+@property (nonatomic, strong) JCChartModel *chartModel;
 
 @end

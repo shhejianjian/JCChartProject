@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JCChartModel.h"
 
 @interface JCBarChartCell : UITableViewCell
 
-@property (nonatomic, strong) NSArray *barDescArr;
+@property (nonatomic, strong) JCChartModel *chartModel;
 
 @end

@@ -21,3 +21,6 @@ extern NSString *const MenuDetailUrl;
 
 /** 图标数据 */
 extern NSString *const ChartDataUrl;
+
+/** 钻取图表配置 */
+extern NSString *const SubChartDetailUrl;

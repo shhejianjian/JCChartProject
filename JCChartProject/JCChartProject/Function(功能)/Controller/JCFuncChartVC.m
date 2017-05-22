@@ -51,7 +51,6 @@ static NSString *dashboardID=@"JCDashboardChartCell";
     [self.myTableView registerNib:[UINib nibWithNibName:@"JCPieChartCell" bundle:nil] forCellReuseIdentifier:pieID];
     [self.myTableView registerNib:[UINib nibWithNibName:@"JCDashboardChartCell" bundle:nil] forCellReuseIdentifier:dashboardID];
     
-    
 }
 
 - (void)loadMenuDetailWithObjectId:(NSString*)objectId{
@@ -59,7 +58,9 @@ static NSString *dashboardID=@"JCDashboardChartCell";
     NSString *jsessionid = [[NSUserDefaults standardUserDefaults]objectForKey:@"jsessionid"];
     NSString *menuDetailUrl = [NSString stringWithFormat:@"%@%@",MenuDetailUrl,objectId];
     [XHHttpTool get:menuDetailUrl params:nil jessionid:jsessionid success:^(id json) {
-        NSLog(@"%@",json);
+        NSLog(@"mainJson:%@",json);
+//        JCChartModel *mainModel = [JCChartModel mj_objectWithKeyValues:json];
+//        NSArray *arr = [JCChartModel mj_objectArrayWithKeyValuesArray:mainModel.appCustomMenuItemList];
         NSArray *arr = [JCChartModel mj_objectArrayWithKeyValuesArray:json];
         for (JCChartModel *chartModel in arr) {
             [self.testArr addObject:chartModel];
@@ -67,25 +68,17 @@ static NSString *dashboardID=@"JCDashboardChartCell";
             [self.chartCountArr addObject:xmodel];
         }
         [self.myTableView reloadData];
-        
     } failure:^(NSError *error) {
         NSLog(@"%@",error);
     }];
 }
-
-
-
-
-
 
 #pragma mark - tableViewDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 
 {
-    
     return self.chartCountArr.count;
-    
 }
 
 
@@ -94,7 +87,6 @@ static NSString *dashboardID=@"JCDashboardChartCell";
 {
     UITableViewCell *cell = nil;
     JCChartModel *chartTypeModel = self.chartCountArr[indexPath.row];
-    NSLog(@"chartType:%@",chartTypeModel.chartType);
     if ([chartTypeModel.chartType isEqualToString:@"bar"]) {
         JCBarChartCell *barCell=[tableView dequeueReusableCellWithIdentifier:barID];
         
@@ -103,7 +95,7 @@ static NSString *dashboardID=@"JCDashboardChartCell";
             barCell=[[JCBarChartCell alloc]init];
             
         }
-        
+        barCell.chartModel = self.testArr[indexPath.row];
         cell = barCell;
     } else if ([chartTypeModel.chartType isEqualToString:@"line"]) {
         JCLineChartCell *lineCell=[tableView dequeueReusableCellWithIdentifier:lineID];
@@ -113,6 +105,7 @@ static NSString *dashboardID=@"JCDashboardChartCell";
             lineCell=[[JCLineChartCell alloc]init];
             
         }
+        lineCell.chartModel = self.testArr[indexPath.row];
         cell = lineCell;
     } else if ([chartTypeModel.chartType isEqualToString:@"linebar"]) {
         JCLineBarChartCell *lineBarCell=[tableView dequeueReusableCellWithIdentifier:lineBarID];
@@ -122,6 +115,7 @@ static NSString *dashboardID=@"JCDashboardChartCell";
             lineBarCell=[[JCLineBarChartCell alloc]init];
             
         }
+        lineBarCell.chartModel = self.testArr[indexPath.row];
         cell = lineBarCell;
     } else if ([chartTypeModel.chartType isEqualToString:@"pie"]) {
         JCPieChartCell *pieCell=[tableView dequeueReusableCellWithIdentifier:pieID];
@@ -150,20 +144,23 @@ static NSString *dashboardID=@"JCDashboardChartCell";
     return cell;
     
 }
-
+//- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath
+//{
+//    JCChartModel *chartTypeModel = self.chartCountArr[indexPath.row];
+//    if ([chartTypeModel.chartType isEqualToString:@"pie"]) {
+//        JCPieChartCell *cell = (JCPieChartCell *)[self tableView:self.myTableView cellForRowAtIndexPath:indexPath];
+//        cell.isShow = YES;
+//    }
+//}
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 
 {
-    
-    return 550;
-    
+    return 500;
 }
 
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    
     
 }
 

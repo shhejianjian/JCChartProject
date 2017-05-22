@@ -8,7 +8,7 @@
 
 #import "JHColumnChart.h"
 
-@interface JHColumnChart ()<CAAnimationDelegate>
+@interface JHColumnChart ()<CAAnimationDelegate,UIGestureRecognizerDelegate>
 
 //背景图
 @property (nonatomic,strong)UIScrollView *BGScrollView;
@@ -361,6 +361,13 @@
             
 
             UIView *itemsView = [UIView new];
+            
+            
+            UITapGestureRecognizer* singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
+            [itemsView addGestureRecognizer:singleTap];
+            singleTap.delegate = self;
+            
+            
             [self.showViewArr addObject:itemsView];
             itemsView.frame = CGRectMake((i * arr.count + j)*_columnWidth + i*_typeSpace+_originSize.x + _typeSpace, CGRectGetHeight(self.frame) - _originSize.y-1, _columnWidth, 0);
             
@@ -423,7 +430,6 @@
                         shaper.frame = self.bounds;
                         shaper.lineWidth = 2.5;
                         shaper.strokeColor = _lineChartPathColor.CGColor;
-                        
                         [self.layerArr addObject:shaper];
                         
                         CABasicAnimation *basic = [CABasicAnimation animationWithKeyPath:NSStringFromSelector(@selector(strokeEnd))];
@@ -479,7 +485,7 @@
             
 
                 for (int32_t m=0;m<_lineValueArray.count;m++) {
-//                    NSLog(@"%@",_drawLineValue[m]);
+//                    NSLog(@"111：%@",_drawLineValue[m]);
 
 
                         
@@ -504,9 +510,23 @@
 }
 
 
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+
+{
+    
+    return YES;
+    
+}
 
 
+-(void)handleSingleTap:(UITapGestureRecognizer *)sender
 
-
+{
+    
+    
+    
+    NSLog(@"handleSingleTap!pointx");
+    
+}
 
 @end

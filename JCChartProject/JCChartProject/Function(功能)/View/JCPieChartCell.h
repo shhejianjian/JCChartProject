@@ -14,4 +14,5 @@
 
 @property (nonatomic, strong) JCChartModel *chartModel;
 
+
 @end

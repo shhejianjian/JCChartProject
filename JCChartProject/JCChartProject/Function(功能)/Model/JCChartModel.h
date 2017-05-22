@@ -31,6 +31,7 @@
 @property (nonatomic, copy) NSString *chartType;
 
 @property (nonatomic, strong) NSArray *dataPoints;
+@property (nonatomic, strong) NSArray *appCustomMenuItemList;
 
 @property (nonatomic, assign) NSInteger value;
 
@@ -38,12 +39,14 @@
 
 @property (nonatomic, copy) NSString *symbol;
 
+@property (nonatomic, copy) NSString *drillBy;
 
 @property (nonatomic, strong) id defaultDateRange;
 @property (nonatomic, strong) id measureUnit;
 
 @property (nonatomic, strong) NSArray *category;
 @property (nonatomic, strong) id values;
+@property (nonatomic, strong) id relationPoint;
 
 
 @end
