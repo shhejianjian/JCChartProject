@@ -10,9 +10,11 @@
 
 #import "JCChartModel.h"
 
+
 @interface JCPieChartCell : UITableViewCell
 
 @property (nonatomic, strong) JCChartModel *chartModel;
+
 
 
 @end

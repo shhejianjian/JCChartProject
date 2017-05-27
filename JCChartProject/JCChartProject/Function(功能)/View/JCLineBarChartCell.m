@@ -65,6 +65,7 @@
     }
     
 }
+
 - (void)loadChartDataWithUnit:(NSString *)unit AndValue:(NSInteger)value andChartType:(NSString *)chartType andYarr:(NSArray *)yArr {
     NSString *jsessionid = [[NSUserDefaults standardUserDefaults]objectForKey:@"jsessionid"];
     NSString *starTime = [self getStartDateWithValue:value andUnit:unit];
@@ -91,7 +92,8 @@
             NSDictionary *olddict = [self changeType:barChartModel.values];
             [self.linebarXValueArr removeAllObjects];
             for (NSString *str in barChartModel.category) {
-                [self.linebarXValueArr addObject:str];
+                NSString *newStr = [str substringFromIndex:10];
+                [self.linebarXValueArr addObject:newStr];
             }
             //字典按照objectid进行排序，否则会和name不对应。
             NSMutableArray *valueArray = [NSMutableArray array];
@@ -149,6 +151,10 @@
     }
     
 }
+
+
+
+
 //四舍五入
 -(NSString *)notRounding:(float)price afterPoint:(int)position{
     NSDecimalNumberHandler* roundingBehavior = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundDown scale:position raiseOnExactness:NO raiseOnOverflow:NO raiseOnUnderflow:NO raiseOnDivideByZero:NO];

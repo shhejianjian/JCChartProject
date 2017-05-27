@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0DE99639B5498B17C0CC5AAD /* libPods-JCChartProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6107AB340FFFED4FCC1BBAD2 /* libPods-JCChartProject.a */; };
 		1E21B7DE1EC93A4300D69E9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E21B7DD1EC93A4300D69E9D /* main.m */; };
 		1E21B7E71EC93A4300D69E9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E21B7E51EC93A4300D69E9D /* Main.storyboard */; };
 		1E21B7E91EC93A4300D69E9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E21B7E81EC93A4300D69E9D /* Assets.xcassets */; };
@@ -37,6 +36,21 @@
 		1E21B8751EC97ECE00D69E9D /* JCMoreVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E21B8731EC97ECE00D69E9D /* JCMoreVC.xib */; };
 		1E21B8791EC9837000D69E9D /* JCFuncSecondVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E21B8771EC9837000D69E9D /* JCFuncSecondVC.m */; };
 		1E21B87A1EC9837000D69E9D /* JCFuncSecondVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E21B8781EC9837000D69E9D /* JCFuncSecondVC.xib */; };
+		1E446D121ED54C5D00346199 /* AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E446D101ED54C5D00346199 /* AlertView.m */; };
+		1E446D131ED54C5D00346199 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E446D111ED54C5D00346199 /* AlertView.xib */; };
+		1E446D211ED54EF300346199 /* ZFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E446D171ED54EF300346199 /* ZFView.m */; };
+		1E446D221ED54EF300346199 /* ZFTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E446D1A1ED54EF300346199 /* ZFTapGestureRecognizer.m */; };
+		1E446D241ED54EF300346199 /* ZFDropDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E446D201ED54EF300346199 /* ZFDropDown.m */; };
+		1E446D2F1ED55A4200346199 /* NSString+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E446D2A1ED55A4200346199 /* NSString+Tools.m */; };
+		1E446D301ED55A4200346199 /* YTDatePick.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E446D2C1ED55A4200346199 /* YTDatePick.m */; };
+		1E446D311ED55A4200346199 /* YTDatePicker_DateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E446D2E1ED55A4200346199 /* YTDatePicker_DateModel.m */; };
+		1E7FBD271ED91E2C00D33EEE /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7FBD241ED91E1600D33EEE /* Charts.framework */; };
+		1E7FBD281ED91E2C00D33EEE /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7FBD241ED91E1600D33EEE /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1E7FBD2C1ED91E4A00D33EEE /* JCChartSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7FBD2B1ED91E4A00D33EEE /* JCChartSwift.swift */; };
+		1EB2309D1ED6C6AA00DF403C /* HCGDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2309A1ED6C6AA00DF403C /* HCGDatePicker.m */; };
+		1EB2309E1ED6C6AA00DF403C /* HCGDatePickerAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2309C1ED6C6AA00DF403C /* HCGDatePickerAppearance.m */; };
+		1EB230A31ED7BA6A00DF403C /* LTPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB230A11ED7BA6A00DF403C /* LTPickerView.m */; };
+		1EB230A41ED7BA6A00DF403C /* LTPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EB230A21ED7BA6A00DF403C /* LTPickerView.xib */; };
 		1EC2012E1EC994E50013E173 /* JCBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC2012D1EC994E50013E173 /* JCBaseModel.m */; };
 		1EC201311ECA88C10013E173 /* JCFuncBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201301ECA88C10013E173 /* JCFuncBaseModel.m */; };
 		1EC2013B1ECA94620013E173 /* JCFunctionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201391ECA94620013E173 /* JCFunctionCell.m */; };
@@ -153,6 +167,9 @@
 		1EC202721ECBD76F0013E173 /* JCPieChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EC202701ECBD76F0013E173 /* JCPieChartCell.xib */; };
 		1EC202761ECBD7840013E173 /* JCDashboardChartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC202741ECBD7840013E173 /* JCDashboardChartCell.m */; };
 		1EC202771ECBD7840013E173 /* JCDashboardChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EC202751ECBD7840013E173 /* JCDashboardChartCell.xib */; };
+		1ED215541ED3C6B1003219D5 /* SFGaugeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED215531ED3C6B1003219D5 /* SFGaugeView.m */; };
+		1ED215581ED3C9ED003219D5 /* WMGaugeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED215571ED3C9ED003219D5 /* WMGaugeView.m */; };
+		EFDF6386875B3A7F2102933C /* Pods_JCChartProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71573704D25BCDB60B7DF22F /* Pods_JCChartProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,7 +187,42 @@
 			remoteGlobalIDString = 1E21B7D81EC93A4300D69E9D;
 			remoteInfo = JCChartProject;
 		};
+		1E7FBD231ED91E1600D33EEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E7FBD1E1ED91E1600D33EEE /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F241D8110E600722320;
+			remoteInfo = Charts;
+		};
+		1E7FBD251ED91E1600D33EEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E7FBD1E1ED91E1600D33EEE /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F2E1D8110E600722320;
+			remoteInfo = ChartsTests;
+		};
+		1E7FBD291ED91E2C00D33EEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E7FBD1E1ED91E1600D33EEE /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 06165F231D8110E600722320;
+			remoteInfo = Charts;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1E38570B1ED917BB0095416C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1E7FBD281ED91E2C00D33EEE /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1E21B7D91EC93A4300D69E9D /* JCChartProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JCChartProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -227,6 +279,31 @@
 		1E21B8761EC9837000D69E9D /* JCFuncSecondVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCFuncSecondVC.h; sourceTree = "<group>"; };
 		1E21B8771EC9837000D69E9D /* JCFuncSecondVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCFuncSecondVC.m; sourceTree = "<group>"; };
 		1E21B8781EC9837000D69E9D /* JCFuncSecondVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCFuncSecondVC.xib; sourceTree = "<group>"; };
+		1E446D0F1ED54C5D00346199 /* AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertView.h; sourceTree = "<group>"; };
+		1E446D101ED54C5D00346199 /* AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertView.m; sourceTree = "<group>"; };
+		1E446D111ED54C5D00346199 /* AlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
+		1E446D161ED54EF300346199 /* ZFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFView.h; sourceTree = "<group>"; };
+		1E446D171ED54EF300346199 /* ZFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFView.m; sourceTree = "<group>"; };
+		1E446D191ED54EF300346199 /* ZFTapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFTapGestureRecognizer.h; sourceTree = "<group>"; };
+		1E446D1A1ED54EF300346199 /* ZFTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFTapGestureRecognizer.m; sourceTree = "<group>"; };
+		1E446D1F1ED54EF300346199 /* ZFDropDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFDropDown.h; sourceTree = "<group>"; };
+		1E446D201ED54EF300346199 /* ZFDropDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFDropDown.m; sourceTree = "<group>"; };
+		1E446D291ED55A4200346199 /* NSString+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Tools.h"; sourceTree = "<group>"; };
+		1E446D2A1ED55A4200346199 /* NSString+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Tools.m"; sourceTree = "<group>"; };
+		1E446D2B1ED55A4200346199 /* YTDatePick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTDatePick.h; sourceTree = "<group>"; };
+		1E446D2C1ED55A4200346199 /* YTDatePick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTDatePick.m; sourceTree = "<group>"; };
+		1E446D2D1ED55A4200346199 /* YTDatePicker_DateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTDatePicker_DateModel.h; sourceTree = "<group>"; };
+		1E446D2E1ED55A4200346199 /* YTDatePicker_DateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTDatePicker_DateModel.m; sourceTree = "<group>"; };
+		1E7FBD1E1ED91E1600D33EEE /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
+		1E7FBD2B1ED91E4A00D33EEE /* JCChartSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCChartSwift.swift; sourceTree = "<group>"; };
+		1E7FBD2D1ED91E6F00D33EEE /* JCChartProject-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JCChartProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		1EB230991ED6C6AA00DF403C /* HCGDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCGDatePicker.h; sourceTree = "<group>"; };
+		1EB2309A1ED6C6AA00DF403C /* HCGDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCGDatePicker.m; sourceTree = "<group>"; };
+		1EB2309B1ED6C6AA00DF403C /* HCGDatePickerAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCGDatePickerAppearance.h; sourceTree = "<group>"; };
+		1EB2309C1ED6C6AA00DF403C /* HCGDatePickerAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCGDatePickerAppearance.m; sourceTree = "<group>"; };
+		1EB230A01ED7BA6A00DF403C /* LTPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTPickerView.h; sourceTree = "<group>"; };
+		1EB230A11ED7BA6A00DF403C /* LTPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTPickerView.m; sourceTree = "<group>"; };
+		1EB230A21ED7BA6A00DF403C /* LTPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LTPickerView.xib; sourceTree = "<group>"; };
 		1EC2012C1EC994E50013E173 /* JCBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCBaseModel.h; sourceTree = "<group>"; };
 		1EC2012D1EC994E50013E173 /* JCBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCBaseModel.m; sourceTree = "<group>"; };
 		1EC2012F1ECA88C10013E173 /* JCFuncBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCFuncBaseModel.h; sourceTree = "<group>"; };
@@ -412,7 +489,11 @@
 		1EC202731ECBD7840013E173 /* JCDashboardChartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCDashboardChartCell.h; sourceTree = "<group>"; };
 		1EC202741ECBD7840013E173 /* JCDashboardChartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCDashboardChartCell.m; sourceTree = "<group>"; };
 		1EC202751ECBD7840013E173 /* JCDashboardChartCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCDashboardChartCell.xib; sourceTree = "<group>"; };
-		6107AB340FFFED4FCC1BBAD2 /* libPods-JCChartProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JCChartProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ED215521ED3C6B1003219D5 /* SFGaugeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFGaugeView.h; sourceTree = "<group>"; };
+		1ED215531ED3C6B1003219D5 /* SFGaugeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFGaugeView.m; sourceTree = "<group>"; };
+		1ED215561ED3C9ED003219D5 /* WMGaugeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMGaugeView.h; sourceTree = "<group>"; };
+		1ED215571ED3C9ED003219D5 /* WMGaugeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMGaugeView.m; sourceTree = "<group>"; };
+		71573704D25BCDB60B7DF22F /* Pods_JCChartProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JCChartProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B40B3194CC02ECD0285EC4 /* Pods-JCChartProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCChartProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-JCChartProject/Pods-JCChartProject.release.xcconfig"; sourceTree = "<group>"; };
 		B61BFE7DE238B953A245FAB9 /* Pods-JCChartProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCChartProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JCChartProject/Pods-JCChartProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -422,7 +503,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DE99639B5498B17C0CC5AAD /* libPods-JCChartProject.a in Frameworks */,
+				EFDF6386875B3A7F2102933C /* Pods_JCChartProject.framework in Frameworks */,
+				1E7FBD271ED91E2C00D33EEE /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,6 +728,7 @@
 		1E21B8311EC97DF900D69E9D /* Other(其他) */ = {
 			isa = PBXGroup;
 			children = (
+				1E446D281ED55A4200346199 /* YTDatePick */,
 				1EC2012B1EC994D20013E173 /* Model */,
 				1E21B8321EC97DF900D69E9D /* Libs */,
 				1E21B8331EC97DF900D69E9D /* Main */,
@@ -657,6 +740,9 @@
 		1E21B8321EC97DF900D69E9D /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				1E7FBD1E1ED91E1600D33EEE /* Charts.xcodeproj */,
+				1E7FBD2B1ED91E4A00D33EEE /* JCChartSwift.swift */,
+				1E7FBD2D1ED91E6F00D33EEE /* JCChartProject-Bridging-Header.h */,
 			);
 			path = Libs;
 			sourceTree = "<group>";
@@ -680,6 +766,12 @@
 		1E21B83D1EC97DF900D69E9D /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				1EB2309F1ED7BA6A00DF403C /* LTPickerView */,
+				1EB230981ED6C6AA00DF403C /* HcgDatePicker */,
+				1E446D141ED54EF300346199 /* ZFDropDown */,
+				1E446D0E1ED54C5D00346199 /* SearchAlert */,
+				1ED215551ED3C9ED003219D5 /* GaugeView */,
+				1ED215511ED3C6B1003219D5 /* SFGaugeView */,
 				1EC201E51ECACF470013E173 /* ZFChart */,
 				1EC201B71ECACAA10013E173 /* JHChart */,
 				1EC2014B1ECAB46E0013E173 /* GridView */,
@@ -746,6 +838,96 @@
 				1E21B8591EC97E1F00D69E9D /* UIViewController+MXNavigation.m */,
 			);
 			path = NavAndTab;
+			sourceTree = "<group>";
+		};
+		1E446D0E1ED54C5D00346199 /* SearchAlert */ = {
+			isa = PBXGroup;
+			children = (
+				1E446D0F1ED54C5D00346199 /* AlertView.h */,
+				1E446D101ED54C5D00346199 /* AlertView.m */,
+				1E446D111ED54C5D00346199 /* AlertView.xib */,
+			);
+			path = SearchAlert;
+			sourceTree = "<group>";
+		};
+		1E446D141ED54EF300346199 /* ZFDropDown */ = {
+			isa = PBXGroup;
+			children = (
+				1E446D151ED54EF300346199 /* Category */,
+				1E446D181ED54EF300346199 /* Component */,
+				1E446D1B1ED54EF300346199 /* Other */,
+				1E446D1F1ED54EF300346199 /* ZFDropDown.h */,
+				1E446D201ED54EF300346199 /* ZFDropDown.m */,
+			);
+			path = ZFDropDown;
+			sourceTree = "<group>";
+		};
+		1E446D151ED54EF300346199 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				1E446D161ED54EF300346199 /* ZFView.h */,
+				1E446D171ED54EF300346199 /* ZFView.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		1E446D181ED54EF300346199 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				1E446D191ED54EF300346199 /* ZFTapGestureRecognizer.h */,
+				1E446D1A1ED54EF300346199 /* ZFTapGestureRecognizer.m */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		1E446D1B1ED54EF300346199 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		1E446D281ED55A4200346199 /* YTDatePick */ = {
+			isa = PBXGroup;
+			children = (
+				1E446D291ED55A4200346199 /* NSString+Tools.h */,
+				1E446D2A1ED55A4200346199 /* NSString+Tools.m */,
+				1E446D2B1ED55A4200346199 /* YTDatePick.h */,
+				1E446D2C1ED55A4200346199 /* YTDatePick.m */,
+				1E446D2D1ED55A4200346199 /* YTDatePicker_DateModel.h */,
+				1E446D2E1ED55A4200346199 /* YTDatePicker_DateModel.m */,
+			);
+			path = YTDatePick;
+			sourceTree = "<group>";
+		};
+		1E7FBD1F1ED91E1600D33EEE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E7FBD241ED91E1600D33EEE /* Charts.framework */,
+				1E7FBD261ED91E1600D33EEE /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1EB230981ED6C6AA00DF403C /* HcgDatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				1EB230991ED6C6AA00DF403C /* HCGDatePicker.h */,
+				1EB2309A1ED6C6AA00DF403C /* HCGDatePicker.m */,
+				1EB2309B1ED6C6AA00DF403C /* HCGDatePickerAppearance.h */,
+				1EB2309C1ED6C6AA00DF403C /* HCGDatePickerAppearance.m */,
+			);
+			path = HcgDatePicker;
+			sourceTree = "<group>";
+		};
+		1EB2309F1ED7BA6A00DF403C /* LTPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				1EB230A01ED7BA6A00DF403C /* LTPickerView.h */,
+				1EB230A11ED7BA6A00DF403C /* LTPickerView.m */,
+				1EB230A21ED7BA6A00DF403C /* LTPickerView.xib */,
+			);
+			path = LTPickerView;
 			sourceTree = "<group>";
 		};
 		1EC2012B1EC994D20013E173 /* Model */ = {
@@ -1066,10 +1248,28 @@
 			path = ZFWaveChart;
 			sourceTree = "<group>";
 		};
+		1ED215511ED3C6B1003219D5 /* SFGaugeView */ = {
+			isa = PBXGroup;
+			children = (
+				1ED215521ED3C6B1003219D5 /* SFGaugeView.h */,
+				1ED215531ED3C6B1003219D5 /* SFGaugeView.m */,
+			);
+			path = SFGaugeView;
+			sourceTree = "<group>";
+		};
+		1ED215551ED3C9ED003219D5 /* GaugeView */ = {
+			isa = PBXGroup;
+			children = (
+				1ED215561ED3C9ED003219D5 /* WMGaugeView.h */,
+				1ED215571ED3C9ED003219D5 /* WMGaugeView.m */,
+			);
+			path = GaugeView;
+			sourceTree = "<group>";
+		};
 		A9F5F75D46C72511BFC15148 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6107AB340FFFED4FCC1BBAD2 /* libPods-JCChartProject.a */,
+				71573704D25BCDB60B7DF22F /* Pods_JCChartProject.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1096,10 +1296,12 @@
 				1E21B7D71EC93A4300D69E9D /* Resources */,
 				10883626A3C61FA89CE17932 /* [CP] Embed Pods Frameworks */,
 				4D7E8B67E422500826AACDD4 /* [CP] Copy Pods Resources */,
+				1E38570B1ED917BB0095416C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1E7FBD2A1ED91E2C00D33EEE /* PBXTargetDependency */,
 			);
 			name = JCChartProject;
 			productName = JCChartProject;
@@ -1155,6 +1357,7 @@
 					1E21B7D81EC93A4300D69E9D = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = XKF9ZBDS63;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					1E21B7F11EC93A4400D69E9D = {
@@ -1182,6 +1385,12 @@
 			mainGroup = 1E21B7D01EC93A4300D69E9D;
 			productRefGroup = 1E21B7DA1EC93A4300D69E9D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1E7FBD1F1ED91E1600D33EEE /* Products */;
+					ProjectRef = 1E7FBD1E1ED91E1600D33EEE /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1E21B7D81EC93A4300D69E9D /* JCChartProject */,
@@ -1190,6 +1399,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1E7FBD241ED91E1600D33EEE /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 1E7FBD231ED91E1600D33EEE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1E7FBD261ED91E1600D33EEE /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 1E7FBD251ED91E1600D33EEE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1E21B7D71EC93A4300D69E9D /* Resources */ = {
@@ -1204,6 +1430,7 @@
 				1EC201AB1ECAB46E0013E173 /* more_icon_Settlement@3x.png in Resources */,
 				1EC201A51ECAB46E0013E173 /* more_icon_Prepaidcard@3x.png in Resources */,
 				1EC202721ECBD76F0013E173 /* JCPieChartCell.xib in Resources */,
+				1E446D131ED54C5D00346199 /* AlertView.xib in Resources */,
 				1EC201931ECAB46E0013E173 /* more_icon_-transfer@3x.png in Resources */,
 				1EC201A91ECAB46E0013E173 /* more_icon_Search@3x.png in Resources */,
 				1EC2014A1ECAB3760013E173 /* JCFuncThirdVC.xib in Resources */,
@@ -1213,6 +1440,7 @@
 				1EC202681ECBD7500013E173 /* JCLineChartCell.xib in Resources */,
 				1EC201A61ECAB46E0013E173 /* more_icon_Recharge@2x.png in Resources */,
 				1EC201AC1ECAB46E0013E173 /* more_icon_shouyin@2x.png in Resources */,
+				1EB230A41ED7BA6A00DF403C /* LTPickerView.xib in Resources */,
 				1EC201AE1ECAB46E0013E173 /* more_icon_t0@2x.png in Resources */,
 				1EC201B21ECAB46E0013E173 /* more_icon_Transfer-@2x.png in Resources */,
 				1E21B8661EC97E9B00D69E9D /* JCHomeVC.xib in Resources */,
@@ -1333,6 +1561,7 @@
 				1EC201861ECAB46E0013E173 /* LxButton.m in Sources */,
 				1EC2024C1ECACF470013E173 /* ZFHorizontalBar.m in Sources */,
 				1EC201DF1ECACAA10013E173 /* JHWaveChart.m in Sources */,
+				1ED215541ED3C6B1003219D5 /* SFGaugeView.m in Sources */,
 				1EC202671ECBD7500013E173 /* JCLineChartCell.m in Sources */,
 				1EC201D51ECACAA10013E173 /* JHLineChart.m in Sources */,
 				1EC201D41ECACAA10013E173 /* JHColumnChart.m in Sources */,
@@ -1341,26 +1570,33 @@
 				1E21B8741EC97ECE00D69E9D /* JCMoreVC.m in Sources */,
 				1EC201E31ECACB370013E173 /* JCFuncChartVC.m in Sources */,
 				1EC202551ECACF470013E173 /* ZFRadar.m in Sources */,
+				1E446D241ED54EF300346199 /* ZFDropDown.m in Sources */,
 				1EC202461ECACF470013E173 /* ZFBarChart.m in Sources */,
 				1EC201441ECA9D590013E173 /* ContactsGroupModel.m in Sources */,
 				1EC2012E1EC994E50013E173 /* JCBaseModel.m in Sources */,
 				1EC202431ECACF470013E173 /* ZFConst.m in Sources */,
 				1E21B8421EC97DF900D69E9D /* AppDelegate.m in Sources */,
 				1EC202481ECACF470013E173 /* ZFCirqueChart.m in Sources */,
+				1E446D2F1ED55A4200346199 /* NSString+Tools.m in Sources */,
+				1E446D211ED54EF300346199 /* ZFView.m in Sources */,
 				1EC2018C1ECAB46E0013E173 /* GridView.m in Sources */,
+				1E446D311ED55A4200346199 /* YTDatePicker_DateModel.m in Sources */,
 				1EC201491ECAB3760013E173 /* JCFuncThirdVC.m in Sources */,
 				1EC201D31ECACAA10013E173 /* JHChart.m in Sources */,
 				1EC201DD1ECACAA10013E173 /* JHTableChart.m in Sources */,
 				1E21B85A1EC97E1F00D69E9D /* MXBarButtonItem.m in Sources */,
 				1EC201DB1ECACAA10013E173 /* JHScatterChart.m in Sources */,
+				1E446D301ED55A4200346199 /* YTDatePick.m in Sources */,
 				1EC2025E1ECAF5D50013E173 /* JCBarModel.m in Sources */,
 				1EC2023B1ECACF470013E173 /* UIColor+Zirkfied.m in Sources */,
 				1EC202581ECACF470013E173 /* ZFWaveChart.m in Sources */,
+				1EB2309D1ED6C6AA00DF403C /* HCGDatePicker.m in Sources */,
 				1EC2025B1ECAD28D0013E173 /* JCChartModel.m in Sources */,
 				1EC2024B1ECACF470013E173 /* ZFHorizontalAxis.m in Sources */,
 				1E21B7DE1EC93A4300D69E9D /* main.m in Sources */,
 				1EC2023C1ECACF470013E173 /* UIView+Zirkfied.m in Sources */,
 				1EC202541ECACF470013E173 /* ZFPolygon.m in Sources */,
+				1E446D221ED54EF300346199 /* ZFTapGestureRecognizer.m in Sources */,
 				1EC201871ECAB46E0013E173 /* UIColor+Expanded.m in Sources */,
 				1E21B85D1EC97E1F00D69E9D /* MXNavigationItem.m in Sources */,
 				1EC201D71ECACAA10013E173 /* JHPieForeBGView.m in Sources */,
@@ -1368,6 +1604,7 @@
 				1E21B86A1EC97EA900D69E9D /* JCFunctionVC.m in Sources */,
 				1E21B8791EC9837000D69E9D /* JCFuncSecondVC.m in Sources */,
 				1EC2026C1ECBD75F0013E173 /* JCLineBarChartCell.m in Sources */,
+				1EB2309E1ED6C6AA00DF403C /* HCGDatePickerAppearance.m in Sources */,
 				1E21B85C1EC97E1F00D69E9D /* MXNavigationController.m in Sources */,
 				1EC202471ECACF470013E173 /* ZFCirque.m in Sources */,
 				1EC201D91ECACAA10013E173 /* JHRadarChart.m in Sources */,
@@ -1380,6 +1617,7 @@
 				1EC202571ECACF470013E173 /* ZFWave.m in Sources */,
 				1E21B8431EC97DF900D69E9D /* Foundation+Log.m in Sources */,
 				1EC201DE1ECACAA10013E173 /* JHTableDataRowModel.m in Sources */,
+				1E7FBD2C1ED91E4A00D33EEE /* JCChartSwift.swift in Sources */,
 				1EC2018A1ECAB46E0013E173 /* UIView+Frame.m in Sources */,
 				1EC2024F1ECACF470013E173 /* ZFLine.m in Sources */,
 				1EC2023A1ECACF470013E173 /* UIBezierPath+Zirkfied.m in Sources */,
@@ -1388,11 +1626,13 @@
 				1EC201DA1ECACAA10013E173 /* JHRingChart.m in Sources */,
 				1EC202711ECBD76F0013E173 /* JCPieChartCell.m in Sources */,
 				1E21B8611EC97E1F00D69E9D /* UIViewController+MXNavigation.m in Sources */,
+				1EB230A31ED7BA6A00DF403C /* LTPickerView.m in Sources */,
 				1EC202411ECACF470013E173 /* ZFCurveAttribute.m in Sources */,
 				1E21B85B1EC97E1F00D69E9D /* MXNavigationBar.m in Sources */,
 				1EC2018B1ECAB46E0013E173 /* GridButton.m in Sources */,
 				1EC202491ECACF470013E173 /* ZFGenericAxis.m in Sources */,
 				1E21B86F1EC97EBF00D69E9D /* JCStrategyVC.m in Sources */,
+				1ED215581ED3C9ED003219D5 /* WMGaugeView.m in Sources */,
 				1EC201451ECA9D590013E173 /* ContactsListHeader.m in Sources */,
 				1EC2024D1ECACF470013E173 /* ZFHorizontalBarChart.m in Sources */,
 				1EC202621ECBD7410013E173 /* JCBarChartCell.m in Sources */,
@@ -1405,6 +1645,7 @@
 				1EC202501ECACF470013E173 /* ZFLineChart.m in Sources */,
 				1EC2024A1ECACF470013E173 /* ZFGenericChart.m in Sources */,
 				1EC201881ECAB46E0013E173 /* UILabel+LXLabel.m in Sources */,
+				1E446D121ED54C5D00346199 /* AlertView.m in Sources */,
 				1EC2024E1ECACF470013E173 /* ZFCircle.m in Sources */,
 				1EC202531ECACF470013E173 /* ZFTranslucencePath.m in Sources */,
 				1E21B8651EC97E9B00D69E9D /* JCHomeVC.m in Sources */,
@@ -1443,6 +1684,11 @@
 			target = 1E21B7D81EC93A4300D69E9D /* JCChartProject */;
 			targetProxy = 1E21B7FE1EC93A4400D69E9D /* PBXContainerItemProxy */;
 		};
+		1E7FBD2A1ED91E2C00D33EEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = 1E7FBD291ED91E2C00D33EEE /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1468,6 +1714,7 @@
 		1E21B8041EC93A4400D69E9D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1516,6 +1763,7 @@
 		1E21B8051EC93A4400D69E9D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1559,12 +1807,22 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B61BFE7DE238B953A245FAB9 /* Pods-JCChartProject.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = XKF9ZBDS63;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = JCChartProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JCChart.www.JCChartProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JCChartProject/Other(其他)/Libs/JCChartProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1572,18 +1830,28 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 92B40B3194CC02ECD0285EC4 /* Pods-JCChartProject.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = XKF9ZBDS63;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = JCChartProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JCChart.www.JCChartProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JCChartProject/Other(其他)/Libs/JCChartProject-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		1E21B80A1EC93A4400D69E9D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = XKF9ZBDS63;
 				INFOPLIST_FILE = JCChartProjectTests/Info.plist;
@@ -1597,6 +1865,7 @@
 		1E21B80B1EC93A4400D69E9D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = XKF9ZBDS63;
 				INFOPLIST_FILE = JCChartProjectTests/Info.plist;
@@ -1610,6 +1879,7 @@
 		1E21B80D1EC93A4400D69E9D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = XKF9ZBDS63;
 				INFOPLIST_FILE = JCChartProjectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1622,6 +1892,7 @@
 		1E21B80E1EC93A4400D69E9D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = XKF9ZBDS63;
 				INFOPLIST_FILE = JCChartProjectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

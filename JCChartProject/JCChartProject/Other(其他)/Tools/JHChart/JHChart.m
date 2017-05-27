@@ -16,7 +16,8 @@
 
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
-        _xDescTextFontSize = _yDescTextFontSize = 8.0;
+        _xDescTextFontSize = 12.0;
+        _yDescTextFontSize = 10;
         self.xAndYLineColor = [UIColor darkGrayColor];
         self.contentInsets = UIEdgeInsetsMake(10, 20, 10, 10);
         self.chartOrigin = P_M(self.contentInsets.left, CGRectGetHeight(self.frame) - self.contentInsets.bottom);

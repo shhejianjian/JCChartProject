@@ -13,4 +13,6 @@
 
 @property (nonatomic, strong) JCChartModel *chartModel;
 
+@property (nonatomic, copy) NSString *firstObjectId;
+
 @end

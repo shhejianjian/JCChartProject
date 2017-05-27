@@ -101,7 +101,8 @@
             NSDictionary *olddict = [self changeType:barChartModel.values];
             [self.lineXValueArr removeAllObjects];
             for (NSString *str in barChartModel.category) {
-                [self.lineXValueArr addObject:str];
+                NSString *newStr = [str substringFromIndex:10];
+                [self.lineXValueArr addObject:newStr];
             }
             //字典按照objectid进行排序，否则会和name不对应。
             NSMutableArray *valueArray = [NSMutableArray array];
@@ -206,7 +207,7 @@
 //}
 
 //- (NSArray *)valuePositionInLineChart:(ZFLineChart *)lineChart{
-//    return @[@(kChartValuePositionOnTop), @(kChartValuePositionDefalut), @(kChartValuePositionOnBelow)];
+//    return @[@(kChartValuePositionOnTop), @(kChartValuePositionDefalut)];
 //}
 
 - (void)lineChart:(ZFLineChart *)lineChart didSelectCircleAtLineIndex:(NSInteger)lineIndex circleIndex:(NSInteger)circleIndex circle:(ZFCircle *)circle popoverLabel:(ZFPopoverLabel *)popoverLabel{
@@ -248,6 +249,11 @@
     //    popoverLabel.textColor = ZFGold;
     //    [popoverLabel strokePath];
 }
+
+
+
+
+
 
 //四舍五入
 -(NSString *)notRounding:(float)price afterPoint:(int)position{

@@ -57,8 +57,8 @@ static NSString *dashboardID=@"JCDashboardChartCell";
     
     NSString *jsessionid = [[NSUserDefaults standardUserDefaults]objectForKey:@"jsessionid"];
     NSString *menuDetailUrl = [NSString stringWithFormat:@"%@%@",MenuDetailUrl,objectId];
+    NSLog(@"objectid:%@",objectId);
     [XHHttpTool get:menuDetailUrl params:nil jessionid:jsessionid success:^(id json) {
-        NSLog(@"mainJson:%@",json);
 //        JCChartModel *mainModel = [JCChartModel mj_objectWithKeyValues:json];
 //        NSArray *arr = [JCChartModel mj_objectArrayWithKeyValuesArray:mainModel.appCustomMenuItemList];
         NSArray *arr = [JCChartModel mj_objectArrayWithKeyValuesArray:json];
@@ -95,6 +95,7 @@ static NSString *dashboardID=@"JCDashboardChartCell";
             barCell=[[JCBarChartCell alloc]init];
             
         }
+        barCell.firstObjectId = self.objectId;
         barCell.chartModel = self.testArr[indexPath.row];
         cell = barCell;
     } else if ([chartTypeModel.chartType isEqualToString:@"line"]) {
@@ -136,6 +137,7 @@ static NSString *dashboardID=@"JCDashboardChartCell";
             dashboardCell=[[JCDashboardChartCell alloc]init];
             
         }
+        dashboardCell.chartModel = self.testArr[indexPath.row];
         cell = dashboardCell;
     }
     

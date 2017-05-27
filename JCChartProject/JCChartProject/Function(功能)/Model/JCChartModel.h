@@ -40,6 +40,7 @@
 @property (nonatomic, copy) NSString *symbol;
 
 @property (nonatomic, copy) NSString *drillBy;
+@property (nonatomic, copy) NSString *maxValue;
 
 @property (nonatomic, strong) id defaultDateRange;
 @property (nonatomic, strong) id measureUnit;

@@ -9,6 +9,7 @@
 #import "JCPieChartCell.h"
 #import "ZFChart.h"
 #import "MXConstant.h"
+#import "AlertView.h"
 
 @interface JCPieChartCell () <ZFPieChartDataSource, ZFPieChartDelegate>
 @property (nonatomic, strong) NSMutableArray *pieDescrArr;
@@ -18,7 +19,10 @@
 @property (nonatomic, strong) NSMutableArray *subPieChartArr;
 @property (nonatomic, strong) NSMutableArray *pieColorArr;
 
+@property (nonatomic, strong) NSArray *searchArr;
+
 @property (nonatomic, strong) ZFPieChart * pieChart;
+@property(nonatomic,strong)UIView *bGView;
 
 
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
@@ -30,6 +34,8 @@
 
 @property (nonatomic, assign) BOOL isDelete;
 
+@property (nonatomic, copy) NSString *startTimeStr;
+@property (nonatomic, copy) NSString *endTimeStr;
 
 @end
 
@@ -54,21 +60,23 @@
     JCChartModel *jsonDataModel = [JCChartModel mj_objectWithKeyValues:chartModel.jsonData];
     JCChartModel *dateRangeModel = [JCChartModel mj_objectWithKeyValues:jsonDataModel.defaultDateRange];
     NSArray *yArr = [JCChartModel mj_objectArrayWithKeyValuesArray:jsonDataModel.dataPoints];
+    self.searchArr = yArr;
     self.UnitStr = dateRangeModel.unit;
     self.UnitValueStr = dateRangeModel.value;
     self.chartTypeStr = jsonDataModel.chartType;
+    self.startTimeStr = [self getStartDateWithValue:self.UnitValueStr andUnit:self.UnitStr];
+    self.endTimeStr = @"2017-04-24+00:00:00";
     if (self.pieDescrArr.count == 0) {
-        [self loadChartDataWithUnit:self.UnitStr AndValue:self.UnitValueStr andChartType:self.chartTypeStr andYarr:yArr];
+        [self loadChartDataWithUnit:self.UnitStr AndValue:self.UnitValueStr andChartType:self.chartTypeStr andYarr:yArr andStartTime:self.startTimeStr andEndTime:self.endTimeStr];
         self.titleLabel.text = [NSString stringWithFormat:@"%@",jsonDataModel.name];
     }
-    
 }
 
 
-- (void)loadChartDataWithUnit:(NSString *)unit AndValue:(NSInteger)value andChartType:(NSString *)chartType andYarr:(NSArray *)yArr {
+- (void)loadChartDataWithUnit:(NSString *)unit AndValue:(NSInteger)value andChartType:(NSString *)chartType andYarr:(NSArray *)yArr andStartTime:(NSString *)startTime andEndTime:(NSString *)endTime{
     NSString *jsessionid = [[NSUserDefaults standardUserDefaults]objectForKey:@"jsessionid"];
-    NSString *starTime = [self getStartDateWithValue:value andUnit:unit];
-    NSString *endTIme = @"2017-04-24+00:00:00";
+    NSString *starTime = startTime;
+    NSString *endTIme = endTime;
     NSString *timeUnit = @"";
     if ([chartType isEqualToString:@"pie"] || [chartType isEqualToString:@"dashboard"]) {
         timeUnit = @"None";
@@ -122,6 +130,46 @@
     }
     
 }
+
+- (IBAction)searchBtnClick:(id)sender {
+    [self createBackgroundView];
+    AlertView *alert = [[AlertView alloc] initWithAlertViewHeight:250];
+    alert.ButtonClick = ^void(UIButton*button){
+        [self.bGView removeFromSuperview];
+        if (button.tag == 2) {
+            self.startTimeStr = alert.startTimeStr;
+            self.endTimeStr = alert.endTimeStr;
+            [self loadChartDataWithUnit:[self checkUnit:alert.timeValueTypeStr] AndValue:self.UnitValueStr andChartType:self.chartTypeStr andYarr:self.searchArr andStartTime:self.startTimeStr andEndTime:self.endTimeStr];
+        }
+    };
+}
+
+- (NSString *)checkUnit:(NSString *)unit{
+    NSString *newUnit;
+    if ([unit isEqualToString:@"时"]) {
+        newUnit = @"Hour";
+    } else if ([unit isEqualToString:@"日"]) {
+        newUnit = @"Day";
+    } else if ([unit isEqualToString:@"周"]) {
+        newUnit = @"Week";
+    } else if ([unit isEqualToString:@"月"]) {
+        newUnit = @"Month";
+    } else if ([unit isEqualToString:@"季"]) {
+        newUnit = @"Quarter";
+    } else if ([unit isEqualToString:@"年"]) {
+        newUnit = @"Year";
+    }
+    return newUnit;
+}
+
+-(void)createBackgroundView{
+    self.bGView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, MAINSCREENwidth, MAINSCREENheight)];
+    self.bGView.backgroundColor = [UIColor blackColor];
+    self.bGView.alpha = 0.5;
+    self.bGView.userInteractionEnabled = YES;
+    [WINDOWFirst addSubview:self.bGView];
+}
+
 #pragma mark - ZFPieChartDataSource
 
 - (NSArray *)valueArrayInPieChart:(ZFPieChart *)chart{
@@ -151,7 +199,7 @@
                     JCChartModel *subModel = [JCChartModel mj_objectWithKeyValues:relationModel.relationPoint];
                     [self.subPieChartArr addObject:subModel];
                 }
-                [self loadChartDataWithUnit:self.UnitStr AndValue:self.UnitValueStr andChartType:self.chartTypeStr andYarr:self.subPieChartArr ];
+                [self loadChartDataWithUnit:self.UnitStr AndValue:self.UnitValueStr andChartType:self.chartTypeStr andYarr:self.subPieChartArr andStartTime:self.startTimeStr andEndTime:self.endTimeStr];
     
             } failure:^(NSError *error) {
                 

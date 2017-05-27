@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="325"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="324"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="324.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="柱状（条形）图" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nY-pn-5MP">
@@ -28,6 +28,14 @@
                         <rect key="frame" x="0.0" y="41" width="320" height="283"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Fd-GD-LjZ">
+                        <rect key="frame" x="29" y="6" width="34" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" title="back"/>
+                        <connections>
+                            <action selector="backBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="uMZ-UV-oJv"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="3nY-pn-5MP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="5Io-nt-ctU"/>
@@ -39,10 +47,11 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="backBtn" destination="4Fd-GD-LjZ" id="217-8Q-eyv"/>
                 <outlet property="detailView" destination="X7R-tm-85M" id="Z6Y-qt-yqJ"/>
                 <outlet property="titleLabel" destination="3nY-pn-5MP" id="lkN-O0-3aV"/>
             </connections>
-            <point key="canvasLocation" x="32" y="-47.5"/>
+            <point key="canvasLocation" x="-250" y="12.5"/>
         </tableViewCell>
     </objects>
 </document>

@@ -10,10 +10,12 @@
 #import "ZFChart.h"
 #import "MXConstant.h"
 
+
 @interface JCBarChartCell ()<ZFGenericChartDataSource, ZFBarChartDelegate>
 @property (nonatomic, strong) ZFBarChart * barChart;
 @property (strong, nonatomic) IBOutlet UIView *detailView;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) IBOutlet UIButton *backBtn;
 
 @property (strong, nonatomic) NSMutableArray *barXValueArr;
 @property (strong, nonatomic) NSMutableArray *barValueArr;
@@ -26,6 +28,9 @@
 @property (nonatomic, assign) NSInteger UnitValueStr;
 @property (nonatomic, copy) NSString *chartTypeStr;
 
+
+@property (nonatomic, assign) int index;
+@property (nonatomic, strong) NSMutableDictionary *checkBackDic;
 @end
 
 @implementation JCBarChartCell
@@ -62,6 +67,14 @@
     self.chartTypeStr = jsonDataModel.chartType;
     self.titleLabel.text = [NSString stringWithFormat:@"%@",jsonDataModel.name];
     if (self.barDescrArr.count == 0) {
+        ////////////////
+        //返回操作
+        self.index = 0;
+        NSMutableArray *firstObjectArr = [NSMutableArray array];
+        [firstObjectArr addObject:self.firstObjectId];
+        [self.checkBackDic setObject:firstObjectArr forKey:@(self.index)];
+        ////////////////
+        
         [self loadChartDataWithUnit:self.UnitStr AndValue:self.UnitValueStr andChartType:self.chartTypeStr andYarr:yArr];
     }
     
@@ -93,7 +106,8 @@
             NSDictionary *olddict = [self changeType:barChartModel.values];
             [self.barXValueArr removeAllObjects];
             for (NSString *str in barChartModel.category) {
-                [self.barXValueArr addObject:str];
+                NSString *newStr = [str substringFromIndex:10];
+                [self.barXValueArr addObject:newStr];
             }
             //字典按照objectid进行排序，否则会和name不对应。
             NSMutableArray *valueArray = [NSMutableArray array];
@@ -188,6 +202,21 @@
 //    NSLog(@"第%ld组========第%ld个",(long)groupIndex,(long)barIndex);
     
     if (self.barPointGroupArr.count > 0) {
+        
+        
+        ////////////////
+        //返回操作
+        self.backBtn.hidden = NO;
+        self.index++;
+        NSMutableArray *secondObjectIdArr = [NSMutableArray array];
+        [secondObjectIdArr addObject:self.barObjectIdArr[groupIndex]];
+        [secondObjectIdArr addObject:self.barPointGroupArr[groupIndex]];
+        [self.checkBackDic setObject:secondObjectIdArr forKey:@(self.index)];
+        //////////////
+        
+        
+        
+        
 //        self.titleLabel.text = [NSString stringWithFormat:@"%@",self.pieDescrArr[index]];
         NSString *jsessionid = [[NSUserDefaults standardUserDefaults]objectForKey:@"jsessionid"];
         NSMutableDictionary *params = [NSMutableDictionary dictionary];
@@ -195,8 +224,6 @@
         params[@"relationType"] =self.barPointGroupArr[groupIndex];
         
         [XHHttpTool get:SubChartDetailUrl params:params jessionid:jsessionid success:^(id json) {
-            
-            NSLog(@"subbar:%@",json);
             NSArray *arr = [JCChartModel mj_objectArrayWithKeyValuesArray:json];
             [self.subBarChartArr removeAllObjects];
             for (JCChartModel *relationModel in arr) {
@@ -213,6 +240,30 @@
     }
     
     
+}
+- (IBAction)backBtnClick:(id)sender {
+    self.index--;
+    if (self.index == 0) {
+        self.backBtn.hidden = YES;
+        NSString *objectid = [self.checkBackDic objectForKey:@(self.index)][0];
+        NSString *jsessionid = [[NSUserDefaults standardUserDefaults]objectForKey:@"jsessionid"];
+        NSString *menuDetailUrl = [NSString stringWithFormat:@"%@%@",MenuDetailUrl,objectid];
+        [XHHttpTool get:menuDetailUrl params:nil jessionid:jsessionid success:^(id json) {
+            //        JCChartModel *mainModel = [JCChartModel mj_objectWithKeyValues:json];
+            //        NSArray *arr = [JCChartModel mj_objectArrayWithKeyValuesArray:mainModel.appCustomMenuItemList];
+            NSArray *arr = [JCChartModel mj_objectArrayWithKeyValuesArray:json];
+            for (JCChartModel *chartModel in arr) {
+                JCChartModel *xmodel = [JCChartModel mj_objectWithKeyValues:chartModel.jsonData];
+                if ([xmodel.chartType isEqualToString:@"bar"]) {
+                    NSArray *yArr = [JCChartModel mj_objectArrayWithKeyValuesArray:xmodel.dataPoints];
+                    [self loadChartDataWithUnit:self.UnitStr AndValue:self.UnitValueStr andChartType:xmodel.chartType andYarr:yArr];
+                }
+            }
+
+        } failure:^(NSError *error) {
+            NSLog(@"%@",error);
+        }];
+    }
 }
 
 - (void)barChart:(ZFBarChart *)barChart didSelectPopoverLabelAtGroupIndex:(NSInteger)groupIndex labelIndex:(NSInteger)labelIndex popoverLabel:(ZFPopoverLabel *)popoverLabel{
@@ -409,6 +460,13 @@
 		_barColorArr = [[NSMutableArray alloc] init];
 	}
 	return _barColorArr;
+}
+
+- (NSMutableDictionary *)checkBackDic {
+	if(_checkBackDic == nil) {
+		_checkBackDic = [[NSMutableDictionary alloc] init];
+	}
+	return _checkBackDic;
 }
 
 @end
