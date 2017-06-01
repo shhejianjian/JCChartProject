@@ -7,11 +7,14 @@
 //
 
 #import "JCLineBarChartCell.h"
-#import "JHChartHeader.h"
 #import "MXConstant.h"
+#import "JCChartProject-Bridging-Header.h"
+#import "JCChartProject-Swift.h"
+#import "JCCombineChart.h"
 
 @interface JCLineBarChartCell ()
-@property (nonatomic, strong) JHColumnChart * linebarChart;
+@property (nonatomic, strong) CombinedChartView *combineChartView;
+
 @property (nonatomic, copy) NSString *UnitStr;
 @property (nonatomic, assign) NSInteger UnitValueStr;
 @property (nonatomic, copy) NSString *chartTypeStr;
@@ -20,9 +23,14 @@
 @property (nonatomic, strong) NSMutableArray *linebarDescrArr;
 @property (nonatomic, strong) NSMutableArray *linebarPointGroupArr;
 @property (nonatomic, strong) NSMutableArray *linebarObjectIdArr;
+
+@property (nonatomic, strong) NSMutableArray *linebarLineIdArr;
+@property (nonatomic, strong) NSMutableArray *linebarBarIdArr;
+@property (nonatomic, strong) NSMutableArray *linebarLineValueArr;
+@property (nonatomic, strong) NSMutableArray *linebarBarValueArr;
+
 @property (nonatomic, strong) NSMutableArray *linebarXValueArr;
-@property (nonatomic, strong) NSMutableArray *linebarValueArr;
-@property (nonatomic, strong) NSMutableArray *barValueArr;
+
 
 @end
 
@@ -30,24 +38,12 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    self.linebarChart = [[JHColumnChart alloc] initWithFrame:CGRectMake(0, 44, KScreenW, 320)];
+    CombinedChartView *combine = [[CombinedChartView alloc] init];
+    self.combineChartView = combine;
+    combine.frame = CGRectMake(0, 64, KScreenW, 400);
+    combine.backgroundColor = [UIColor whiteColor];
+    [self.contentView addSubview:combine];
     
-    self.linebarChart.originSize = CGPointMake(30, 20);
-    self.linebarChart.drawFromOriginX = 20;
-    self.linebarChart.typeSpace = 20;
-    self.linebarChart.isShowYLine = YES;
-    self.linebarChart.columnWidth = 20;
-    self.linebarChart.bgVewBackgoundColor = [UIColor whiteColor];
-    self.linebarChart.drawTextColorForX_Y = [UIColor blackColor];
-    self.linebarChart.colorForXYLine = [UIColor darkGrayColor];
-    self.linebarChart.columnBGcolorsArr = @[[UIColor colorWithRed:72/256.0 green:200.0/256 blue:255.0/256 alpha:1],[UIColor greenColor],[UIColor orangeColor]];
-    
-    self.linebarChart.isShowLineChart = YES;
-    
-    
-    /*       Start animation        */
-    
-    [self.contentView addSubview:self.linebarChart];
 }
 
 - (void)setChartModel:(JCChartModel *)chartModel{
@@ -75,48 +71,70 @@
     [self.linebarPointGroupArr removeAllObjects];
     [self.linebarObjectIdArr removeAllObjects];
     [self.linebarDescrArr removeAllObjects];
+    [self.linebarLineIdArr removeAllObjects];
+    [self.linebarBarIdArr removeAllObjects];
     for (JCChartModel *yModel in yArr) {
         [self.linebarObjectIdArr addObject:yModel.objectId];
         if (yModel.drillBy) {
             [self.linebarPointGroupArr addObject:yModel.drillBy];
         }
         [self.linebarDescrArr addObject:yModel.name];
+        if ([chartType isEqualToString:@"linebar"]) {
+            if ([yModel.group isEqualToString:@"bar"]) {
+                [self.linebarBarIdArr addObject:yModel.objectId];
+            }
+            if ([yModel.group isEqualToString:@"line"]){
+                [self.linebarLineIdArr addObject:yModel.objectId];
+            }
+        }
     }
-    if ([chartType isEqualToString:@"linebar"]) {
-        NSString *string = [self.linebarObjectIdArr componentsJoinedByString:@"&dataPoints="];
-        
-        NSString *getUrl = [NSString stringWithFormat:@"%@dataPoints=%@&startTime=%@&endTime=%@&timeUnit=%@",ChartDataUrl,string,starTime,endTIme,timeUnit];
-        [XHHttpTool get:getUrl params:nil jessionid:jsessionid success:^(id json) {
-            NSLog(@"json:%@",json);
+    NSString *barString = [self.linebarBarIdArr componentsJoinedByString:@"&dataPoints="];
+    NSString *bargetUrl = [NSString stringWithFormat:@"%@dataPoints=%@&startTime=%@&endTime=%@&timeUnit=%@",ChartDataUrl,barString,starTime,endTIme,timeUnit];
+    [self getJsonDataWithUrl:bargetUrl andJesId:jsessionid andType:@"bar" andIdArr:self.linebarBarIdArr];
+    NSString *lineString = [self.linebarLineIdArr componentsJoinedByString:@"&dataPoints="];
+    NSString *linegetUrl = [NSString stringWithFormat:@"%@dataPoints=%@&startTime=%@&endTime=%@&timeUnit=%@",ChartDataUrl,lineString,starTime,endTIme,timeUnit];
+    [self getJsonDataWithUrl:linegetUrl andJesId:jsessionid andType:@"line" andIdArr:self.linebarLineIdArr];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        JCCombineChart *helper = [[JCCombineChart alloc] init];
+        helper.lineValueArr =self.linebarLineValueArr;
+        helper.XValueArr =self.linebarXValueArr;
+        helper.barValueArr =self.linebarBarValueArr;
+        [helper setCombineBarChart:self.combineChartView lineTitle:@"line" bar1Title:@"bar1"];
+    });
+
+    
+}
+
+- (void)getJsonDataWithUrl:(NSString *)url andJesId:(NSString *)jesId andType:(NSString *)type andIdArr:(NSArray *)idArr{
+    if ([type isEqualToString:@"bar"]) {
+        NSMutableArray *barValueArr = [NSMutableArray array];
+        [XHHttpTool get:url params:nil jessionid:jesId success:^(id json) {
+            NSLog(@"barjson:%@",json);
             JCChartModel *barChartModel = [JCChartModel mj_objectWithKeyValues:json];
             NSDictionary *olddict = [self changeType:barChartModel.values];
             [self.linebarXValueArr removeAllObjects];
-            for (NSString *str in barChartModel.category) {
-                NSString *newStr = [str substringFromIndex:10];
-                [self.linebarXValueArr addObject:newStr];
+            if ([self.UnitStr isEqualToString:@"Hour"]) {
+                for (NSString *str in barChartModel.category) {
+                    NSString *newStr = [str substringFromIndex:10];
+                    [self.linebarXValueArr addObject:newStr];
+                }
+            } else {
+                for (NSString *str in barChartModel.category) {
+                    [self.linebarXValueArr addObject:str];
+                }
             }
+            [self.linebarBarValueArr removeAllObjects];
             //字典按照objectid进行排序，否则会和name不对应。
             NSMutableArray *valueArray = [NSMutableArray array];
-            for (NSString *sortString in self.linebarObjectIdArr) {
+            for (NSString *sortString in idArr) {
                 [valueArray addObject:[olddict objectForKey:sortString]];
             }
             NSMutableDictionary *valueDic=[[NSMutableDictionary alloc]init];
             for (int i = 0; i < valueArray.count; i++) {
                 [valueDic setObject:valueArray[i] forKey:[NSString stringWithFormat:@"%d",i]];
             }
-            [self.linebarValueArr removeAllObjects];
-            NSLog(@"%ld",valueDic.count);
             for (NSString *firstStr in valueDic) {
-                if (valueDic.count == 1) {
-                    for (NSArray *secondStr in valueDic[firstStr]) {
-                        for (int i = 0; i < secondStr.count; i++) {
-                            if (i == 0) {
-                                NSString *str = [self notRounding:[secondStr[i] floatValue] afterPoint:0];
-                                [self.linebarValueArr addObject:str];
-                            }
-                        }
-                    }
-                } else {
                     NSMutableArray *subArr = [NSMutableArray array];;
                     for (NSArray *secondStr in valueDic[firstStr]) {
                         for (int i = 0; i < secondStr.count; i++) {
@@ -126,33 +144,71 @@
                             }
                         }
                     }
-                    [self.linebarValueArr addObject:subArr];
-                }
+                [barValueArr addObject:subArr];
             }
-            for (int i = 0; i < self.linebarValueArr.count; i++) {
-                if (i == 0) {
-                    for (NSString *str in self.linebarValueArr[i]) {
-                        NSArray *barNumArr = @[str];
-                        [self.barValueArr addObject:barNumArr];
-                    }
-                }
-            }
-            self.linebarChart.valueArr = self.barValueArr;
-            self.linebarChart.lineValueArray =  self.linebarValueArr.lastObject;
-            self.linebarChart.xShowInfoText = self.linebarXValueArr;
-            [self.linebarChart showAnimation];
-            //            [self loadButtonWithArray:self.pieDescrArr andColoArr:self.pieColorArr];
-            
+            [self performSelectorOnMainThread:@selector(getDataList:)
+                                   withObject:barValueArr // 将局部变量dataList作为参数传出去
+                                waitUntilDone:YES];
             
         } failure:^(NSError *error) {
             
         }];
-        
     }
     
+    if ([type isEqualToString:@"line"]) {
+        [XHHttpTool get:url params:nil jessionid:jesId success:^(id json) {
+            NSLog(@"linejson:%@",json);
+            JCChartModel *barChartModel = [JCChartModel mj_objectWithKeyValues:json];
+            NSDictionary *olddict = [self changeType:barChartModel.values];
+            [self.linebarXValueArr removeAllObjects];
+            if ([self.UnitStr isEqualToString:@"Hour"]) {
+                for (NSString *str in barChartModel.category) {
+                    NSString *newStr = [str substringFromIndex:10];
+                    [self.linebarXValueArr addObject:newStr];
+                }
+            } else {
+                for (NSString *str in barChartModel.category) {
+                    [self.linebarXValueArr addObject:str];
+                }
+            }
+            [self.linebarLineValueArr removeAllObjects];
+            //字典按照objectid进行排序，否则会和name不对应。
+            NSMutableArray *valueArray = [NSMutableArray array];
+            for (NSString *sortString in idArr) {
+                [valueArray addObject:[olddict objectForKey:sortString]];
+            }
+            NSMutableDictionary *valueDic=[[NSMutableDictionary alloc]init];
+            for (int i = 0; i < valueArray.count; i++) {
+                [valueDic setObject:valueArray[i] forKey:[NSString stringWithFormat:@"%d",i]];
+            }
+            for (NSString *firstStr in valueDic) {
+                NSMutableArray *subArr = [NSMutableArray array];;
+                for (NSArray *secondStr in valueDic[firstStr]) {
+                    for (int i = 0; i < secondStr.count; i++) {
+                        if (i == 0) {
+                            NSString *str = [self notRounding:[secondStr[i] floatValue] afterPoint:0];
+                            [subArr addObject:str];
+                        }
+                    }
+                }
+                [self.linebarLineValueArr addObject:subArr];
+            }
+            
+        } failure:^(NSError *error) {
+            
+        }];
+    }
+    
+    
+        
 }
 
 
+-(void)getDataList:(id)sender {
+    NSMutableArray * dataList = (NSMutableArray *)sender;
+    self.linebarBarValueArr = dataList;
+    
+}
 
 
 //四舍五入
@@ -320,18 +376,34 @@
 	return _linebarXValueArr;
 }
 
-- (NSMutableArray *)linebarValueArr {
-	if(_linebarValueArr == nil) {
-		_linebarValueArr = [[NSMutableArray alloc] init];
+
+
+- (NSMutableArray *)linebarLineIdArr {
+	if(_linebarLineIdArr == nil) {
+		_linebarLineIdArr = [[NSMutableArray alloc] init];
 	}
-	return _linebarValueArr;
+	return _linebarLineIdArr;
 }
 
-- (NSMutableArray *)barValueArr {
-	if(_barValueArr == nil) {
-		_barValueArr = [[NSMutableArray alloc] init];
+- (NSMutableArray *)linebarBarIdArr {
+	if(_linebarBarIdArr == nil) {
+		_linebarBarIdArr = [[NSMutableArray alloc] init];
 	}
-	return _barValueArr;
+	return _linebarBarIdArr;
+}
+
+- (NSMutableArray *)linebarLineValueArr {
+	if(_linebarLineValueArr == nil) {
+		_linebarLineValueArr = [[NSMutableArray alloc] init];
+	}
+	return _linebarLineValueArr;
+}
+
+- (NSMutableArray *)linebarBarValueArr {
+	if(_linebarBarValueArr == nil) {
+		_linebarBarValueArr = [[NSMutableArray alloc] init];
+	}
+	return _linebarBarValueArr;
 }
 
 @end

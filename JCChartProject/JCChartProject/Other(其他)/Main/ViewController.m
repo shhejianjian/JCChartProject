@@ -8,10 +8,13 @@
 
 #import "ViewController.h"
 #import "MXConstant.h"
+#import "CityViewController.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *username;
 @property (strong, nonatomic) IBOutlet UITextField *password;
+@property (strong, nonatomic) IBOutlet UIButton *loginBtn;
+@property (strong, nonatomic) IBOutlet UIButton *selectAirportBtn;
 
 @end
 
@@ -19,8 +22,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    self.loginBtn.layer.cornerRadius = 5;
     // Do any additional setup after loading the view, typically from a nib.
+}
+- (IBAction)selectAirportClick:(id)sender {
+    CityViewController *controller = [[CityViewController alloc] init];
+    controller.selectString = ^(NSString *string){
+        [self.selectAirportBtn setTitle:string forState:UIControlStateNormal];
+    };
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 

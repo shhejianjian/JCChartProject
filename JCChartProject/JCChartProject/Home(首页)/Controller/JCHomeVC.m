@@ -8,12 +8,9 @@
 
 #import "JCHomeVC.h"
 #import "MXConstant.h"
-#import "JCChartProject-Bridging-Header.h"
-#import "JCChartProject-Swift.h"
 
 
 @interface JCHomeVC ()
-
 @end
 
 @implementation JCHomeVC
@@ -25,8 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.mxNavigationItem.title = @"首页";
-    BarChartView *chatView = [[BarChartView alloc] initWithFrame:CGRectMake(10, 100, 300, 300)];
-    [self.view addSubview:chatView];
+    
+
     // Do any additional setup after loading the view from its nib.
 }
 

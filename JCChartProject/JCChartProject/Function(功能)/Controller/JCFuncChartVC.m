@@ -57,8 +57,8 @@ static NSString *dashboardID=@"JCDashboardChartCell";
     
     NSString *jsessionid = [[NSUserDefaults standardUserDefaults]objectForKey:@"jsessionid"];
     NSString *menuDetailUrl = [NSString stringWithFormat:@"%@%@",MenuDetailUrl,objectId];
-    NSLog(@"objectid:%@",objectId);
     [XHHttpTool get:menuDetailUrl params:nil jessionid:jsessionid success:^(id json) {
+        NSLog(@"jsonLL::::%@",json);
 //        JCChartModel *mainModel = [JCChartModel mj_objectWithKeyValues:json];
 //        NSArray *arr = [JCChartModel mj_objectArrayWithKeyValuesArray:mainModel.appCustomMenuItemList];
         NSArray *arr = [JCChartModel mj_objectArrayWithKeyValuesArray:json];

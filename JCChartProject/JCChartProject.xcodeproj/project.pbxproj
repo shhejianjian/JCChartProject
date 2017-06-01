@@ -47,6 +47,15 @@
 		1E7FBD271ED91E2C00D33EEE /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7FBD241ED91E1600D33EEE /* Charts.framework */; };
 		1E7FBD281ED91E2C00D33EEE /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7FBD241ED91E1600D33EEE /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1E7FBD2C1ED91E4A00D33EEE /* JCChartSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7FBD2B1ED91E4A00D33EEE /* JCChartSwift.swift */; };
+		1E80EE951EDE4EFE00BEE91B /* JCCombineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E80EE941EDE4EFE00BEE91B /* JCCombineChart.m */; };
+		1E80EEAA1EDFAC0400BEE91B /* cancelBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E80EE991EDFAC0400BEE91B /* cancelBtn@2x.png */; };
+		1E80EEAB1EDFAC0400BEE91B /* citydict.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E80EE9A1EDFAC0400BEE91B /* citydict.plist */; };
+		1E80EEAC1EDFAC0400BEE91B /* CityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E80EE9D1EDFAC0400BEE91B /* CityViewController.m */; };
+		1E80EEAD1EDFAC0400BEE91B /* ResultCityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E80EE9F1EDFAC0400BEE91B /* ResultCityController.m */; };
+		1E80EEAE1EDFAC0400BEE91B /* CityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E80EEA21EDFAC0400BEE91B /* CityModel.m */; };
+		1E80EEAF1EDFAC0400BEE91B /* CityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E80EEA51EDFAC0400BEE91B /* CityTableViewCell.m */; };
+		1E80EEB01EDFAC0400BEE91B /* CustomSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E80EEA71EDFAC0400BEE91B /* CustomSearchView.m */; };
+		1E80EEB11EDFAC0400BEE91B /* CustomTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E80EEA91EDFAC0400BEE91B /* CustomTopView.m */; };
 		1EB2309D1ED6C6AA00DF403C /* HCGDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2309A1ED6C6AA00DF403C /* HCGDatePicker.m */; };
 		1EB2309E1ED6C6AA00DF403C /* HCGDatePickerAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2309C1ED6C6AA00DF403C /* HCGDatePickerAppearance.m */; };
 		1EB230A31ED7BA6A00DF403C /* LTPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB230A11ED7BA6A00DF403C /* LTPickerView.m */; };
@@ -297,6 +306,22 @@
 		1E7FBD1E1ED91E1600D33EEE /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 		1E7FBD2B1ED91E4A00D33EEE /* JCChartSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCChartSwift.swift; sourceTree = "<group>"; };
 		1E7FBD2D1ED91E6F00D33EEE /* JCChartProject-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JCChartProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		1E80EE931EDE4EFE00BEE91B /* JCCombineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCCombineChart.h; sourceTree = "<group>"; };
+		1E80EE941EDE4EFE00BEE91B /* JCCombineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCCombineChart.m; sourceTree = "<group>"; };
+		1E80EE991EDFAC0400BEE91B /* cancelBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancelBtn@2x.png"; sourceTree = "<group>"; };
+		1E80EE9A1EDFAC0400BEE91B /* citydict.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = citydict.plist; sourceTree = "<group>"; };
+		1E80EE9C1EDFAC0400BEE91B /* CityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityViewController.h; sourceTree = "<group>"; };
+		1E80EE9D1EDFAC0400BEE91B /* CityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityViewController.m; sourceTree = "<group>"; };
+		1E80EE9E1EDFAC0400BEE91B /* ResultCityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultCityController.h; sourceTree = "<group>"; };
+		1E80EE9F1EDFAC0400BEE91B /* ResultCityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultCityController.m; sourceTree = "<group>"; };
+		1E80EEA11EDFAC0400BEE91B /* CityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityModel.h; sourceTree = "<group>"; };
+		1E80EEA21EDFAC0400BEE91B /* CityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityModel.m; sourceTree = "<group>"; };
+		1E80EEA41EDFAC0400BEE91B /* CityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityTableViewCell.h; sourceTree = "<group>"; };
+		1E80EEA51EDFAC0400BEE91B /* CityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityTableViewCell.m; sourceTree = "<group>"; };
+		1E80EEA61EDFAC0400BEE91B /* CustomSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSearchView.h; sourceTree = "<group>"; };
+		1E80EEA71EDFAC0400BEE91B /* CustomSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSearchView.m; sourceTree = "<group>"; };
+		1E80EEA81EDFAC0400BEE91B /* CustomTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTopView.h; sourceTree = "<group>"; };
+		1E80EEA91EDFAC0400BEE91B /* CustomTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTopView.m; sourceTree = "<group>"; };
 		1EB230991ED6C6AA00DF403C /* HCGDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCGDatePicker.h; sourceTree = "<group>"; };
 		1EB2309A1ED6C6AA00DF403C /* HCGDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCGDatePicker.m; sourceTree = "<group>"; };
 		1EB2309B1ED6C6AA00DF403C /* HCGDatePickerAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCGDatePickerAppearance.h; sourceTree = "<group>"; };
@@ -766,6 +791,8 @@
 		1E21B83D1EC97DF900D69E9D /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				1E80EE981EDFAC0400BEE91B /* selectCity */,
+				1E80EE911EDE4EE300BEE91B /* CombineChartTool */,
 				1EB2309F1ED7BA6A00DF403C /* LTPickerView */,
 				1EB230981ED6C6AA00DF403C /* HcgDatePicker */,
 				1E446D141ED54EF300346199 /* ZFDropDown */,
@@ -907,6 +934,60 @@
 				1E7FBD261ED91E1600D33EEE /* ChartsTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1E80EE911EDE4EE300BEE91B /* CombineChartTool */ = {
+			isa = PBXGroup;
+			children = (
+				1E80EE931EDE4EFE00BEE91B /* JCCombineChart.h */,
+				1E80EE941EDE4EFE00BEE91B /* JCCombineChart.m */,
+			);
+			path = CombineChartTool;
+			sourceTree = "<group>";
+		};
+		1E80EE981EDFAC0400BEE91B /* selectCity */ = {
+			isa = PBXGroup;
+			children = (
+				1E80EE991EDFAC0400BEE91B /* cancelBtn@2x.png */,
+				1E80EE9A1EDFAC0400BEE91B /* citydict.plist */,
+				1E80EE9B1EDFAC0400BEE91B /* Controller */,
+				1E80EEA01EDFAC0400BEE91B /* Model */,
+				1E80EEA31EDFAC0400BEE91B /* View */,
+			);
+			path = selectCity;
+			sourceTree = "<group>";
+		};
+		1E80EE9B1EDFAC0400BEE91B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1E80EE9C1EDFAC0400BEE91B /* CityViewController.h */,
+				1E80EE9D1EDFAC0400BEE91B /* CityViewController.m */,
+				1E80EE9E1EDFAC0400BEE91B /* ResultCityController.h */,
+				1E80EE9F1EDFAC0400BEE91B /* ResultCityController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1E80EEA01EDFAC0400BEE91B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1E80EEA11EDFAC0400BEE91B /* CityModel.h */,
+				1E80EEA21EDFAC0400BEE91B /* CityModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1E80EEA31EDFAC0400BEE91B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1E80EEA41EDFAC0400BEE91B /* CityTableViewCell.h */,
+				1E80EEA51EDFAC0400BEE91B /* CityTableViewCell.m */,
+				1E80EEA61EDFAC0400BEE91B /* CustomSearchView.h */,
+				1E80EEA71EDFAC0400BEE91B /* CustomSearchView.m */,
+				1E80EEA81EDFAC0400BEE91B /* CustomTopView.h */,
+				1E80EEA91EDFAC0400BEE91B /* CustomTopView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		1EB230981ED6C6AA00DF403C /* HcgDatePicker */ = {
@@ -1450,6 +1531,7 @@
 				1E21B7EC1EC93A4300D69E9D /* LaunchScreen.storyboard in Resources */,
 				1EC2019C1ECAB46E0013E173 /* more_icon_immediately@2x.png in Resources */,
 				1EC201A81ECAB46E0013E173 /* more_icon_Search@2x.png in Resources */,
+				1E80EEAA1EDFAC0400BEE91B /* cancelBtn@2x.png in Resources */,
 				1EC201E41ECACB370013E173 /* JCFuncChartVC.xib in Resources */,
 				1EC2019F1ECAB46E0013E173 /* more_icon_licai@3x.png in Resources */,
 				1EC201A71ECAB46E0013E173 /* more_icon_Recharge@3x.png in Resources */,
@@ -1472,6 +1554,7 @@
 				1EC201991ECAB46E0013E173 /* more_icon_d1@3x.png in Resources */,
 				1EC201B31ECAB46E0013E173 /* more_icon_Transfer-@3x.png in Resources */,
 				1EC2019E1ECAB46E0013E173 /* more_icon_licai@2x.png in Resources */,
+				1E80EEAB1EDFAC0400BEE91B /* citydict.plist in Resources */,
 				1EC201B51ECAB46E0013E173 /* work-order@3x.png in Resources */,
 				1EC2018F1ECAB46E0013E173 /* app_item_bg.png in Resources */,
 				1EC201941ECAB46E0013E173 /* more_icon_cancle_deal@2x.png in Resources */,
@@ -1555,6 +1638,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EC201DC1ECACAA10013E173 /* JHShowInfoView.m in Sources */,
+				1E80EEB01EDFAC0400BEE91B /* CustomSearchView.m in Sources */,
 				1EC202561ECACF470013E173 /* ZFRadarChart.m in Sources */,
 				1EC2013B1ECA94620013E173 /* JCFunctionCell.m in Sources */,
 				1EC202511ECACF470013E173 /* ZFPie.m in Sources */,
@@ -1596,11 +1680,14 @@
 				1E21B7DE1EC93A4300D69E9D /* main.m in Sources */,
 				1EC2023C1ECACF470013E173 /* UIView+Zirkfied.m in Sources */,
 				1EC202541ECACF470013E173 /* ZFPolygon.m in Sources */,
+				1E80EEAD1EDFAC0400BEE91B /* ResultCityController.m in Sources */,
 				1E446D221ED54EF300346199 /* ZFTapGestureRecognizer.m in Sources */,
 				1EC201871ECAB46E0013E173 /* UIColor+Expanded.m in Sources */,
 				1E21B85D1EC97E1F00D69E9D /* MXNavigationItem.m in Sources */,
 				1EC201D71ECACAA10013E173 /* JHPieForeBGView.m in Sources */,
 				1E21B8441EC97DF900D69E9D /* ViewController.m in Sources */,
+				1E80EEAC1EDFAC0400BEE91B /* CityViewController.m in Sources */,
+				1E80EEAF1EDFAC0400BEE91B /* CityTableViewCell.m in Sources */,
 				1E21B86A1EC97EA900D69E9D /* JCFunctionVC.m in Sources */,
 				1E21B8791EC9837000D69E9D /* JCFuncSecondVC.m in Sources */,
 				1EC2026C1ECBD75F0013E173 /* JCLineBarChartCell.m in Sources */,
@@ -1628,11 +1715,13 @@
 				1E21B8611EC97E1F00D69E9D /* UIViewController+MXNavigation.m in Sources */,
 				1EB230A31ED7BA6A00DF403C /* LTPickerView.m in Sources */,
 				1EC202411ECACF470013E173 /* ZFCurveAttribute.m in Sources */,
+				1E80EEAE1EDFAC0400BEE91B /* CityModel.m in Sources */,
 				1E21B85B1EC97E1F00D69E9D /* MXNavigationBar.m in Sources */,
 				1EC2018B1ECAB46E0013E173 /* GridButton.m in Sources */,
 				1EC202491ECACF470013E173 /* ZFGenericAxis.m in Sources */,
 				1E21B86F1EC97EBF00D69E9D /* JCStrategyVC.m in Sources */,
 				1ED215581ED3C9ED003219D5 /* WMGaugeView.m in Sources */,
+				1E80EE951EDE4EFE00BEE91B /* JCCombineChart.m in Sources */,
 				1EC201451ECA9D590013E173 /* ContactsListHeader.m in Sources */,
 				1EC2024D1ECACF470013E173 /* ZFHorizontalBarChart.m in Sources */,
 				1EC202621ECBD7410013E173 /* JCBarChartCell.m in Sources */,
@@ -1650,6 +1739,7 @@
 				1EC202531ECACF470013E173 /* ZFTranslucencePath.m in Sources */,
 				1E21B8651EC97E9B00D69E9D /* JCHomeVC.m in Sources */,
 				1EC2023E1ECACF470013E173 /* ZFPopoverLabel.m in Sources */,
+				1E80EEB11EDFAC0400BEE91B /* CustomTopView.m in Sources */,
 				1E21B8451EC97DF900D69E9D /* XHConst.m in Sources */,
 				1EC2023F1ECACF470013E173 /* ZFXAxisLine.m in Sources */,
 			);
