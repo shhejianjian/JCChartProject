@@ -56,6 +56,14 @@
 		1E80EEAF1EDFAC0400BEE91B /* CityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E80EEA51EDFAC0400BEE91B /* CityTableViewCell.m */; };
 		1E80EEB01EDFAC0400BEE91B /* CustomSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E80EEA71EDFAC0400BEE91B /* CustomSearchView.m */; };
 		1E80EEB11EDFAC0400BEE91B /* CustomTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E80EEA91EDFAC0400BEE91B /* CustomTopView.m */; };
+		1E80EEBF1EDFE12A00BEE91B /* LXScollTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E80EEBA1EDFE12A00BEE91B /* LXScollTitleView.m */; };
+		1E80EEC01EDFE12A00BEE91B /* LXScrollContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E80EEBC1EDFE12A00BEE91B /* LXScrollContentView.m */; };
+		1E80EEC11EDFE12A00BEE91B /* LXTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E80EEBE1EDFE12A00BEE91B /* LXTestViewController.m */; };
+		1E80EEC51EDFE17800BEE91B /* JCFuncVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E80EEC31EDFE17800BEE91B /* JCFuncVC.m */; };
+		1E80EEC61EDFE17800BEE91B /* JCFuncVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E80EEC41EDFE17800BEE91B /* JCFuncVC.xib */; };
+		1E80EECD1EDFE79300BEE91B /* GFMCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E80EEC91EDFE79300BEE91B /* GFMCTableViewCell.m */; };
+		1E80EECE1EDFE79300BEE91B /* GFMCTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E80EECA1EDFE79300BEE91B /* GFMCTableViewCell.xib */; };
+		1E80EECF1EDFE79300BEE91B /* GFMultipleColumnsTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E80EECC1EDFE79300BEE91B /* GFMultipleColumnsTVCell.m */; };
 		1EB2309D1ED6C6AA00DF403C /* HCGDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2309A1ED6C6AA00DF403C /* HCGDatePicker.m */; };
 		1EB2309E1ED6C6AA00DF403C /* HCGDatePickerAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2309C1ED6C6AA00DF403C /* HCGDatePickerAppearance.m */; };
 		1EB230A31ED7BA6A00DF403C /* LTPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB230A11ED7BA6A00DF403C /* LTPickerView.m */; };
@@ -322,6 +330,20 @@
 		1E80EEA71EDFAC0400BEE91B /* CustomSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSearchView.m; sourceTree = "<group>"; };
 		1E80EEA81EDFAC0400BEE91B /* CustomTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTopView.h; sourceTree = "<group>"; };
 		1E80EEA91EDFAC0400BEE91B /* CustomTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTopView.m; sourceTree = "<group>"; };
+		1E80EEB91EDFE12A00BEE91B /* LXScollTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXScollTitleView.h; sourceTree = "<group>"; };
+		1E80EEBA1EDFE12A00BEE91B /* LXScollTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXScollTitleView.m; sourceTree = "<group>"; };
+		1E80EEBB1EDFE12A00BEE91B /* LXScrollContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXScrollContentView.h; sourceTree = "<group>"; };
+		1E80EEBC1EDFE12A00BEE91B /* LXScrollContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXScrollContentView.m; sourceTree = "<group>"; };
+		1E80EEBD1EDFE12A00BEE91B /* LXTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXTestViewController.h; sourceTree = "<group>"; };
+		1E80EEBE1EDFE12A00BEE91B /* LXTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTestViewController.m; sourceTree = "<group>"; };
+		1E80EEC21EDFE17800BEE91B /* JCFuncVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCFuncVC.h; sourceTree = "<group>"; };
+		1E80EEC31EDFE17800BEE91B /* JCFuncVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCFuncVC.m; sourceTree = "<group>"; };
+		1E80EEC41EDFE17800BEE91B /* JCFuncVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCFuncVC.xib; sourceTree = "<group>"; };
+		1E80EEC81EDFE79300BEE91B /* GFMCTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFMCTableViewCell.h; sourceTree = "<group>"; };
+		1E80EEC91EDFE79300BEE91B /* GFMCTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFMCTableViewCell.m; sourceTree = "<group>"; };
+		1E80EECA1EDFE79300BEE91B /* GFMCTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GFMCTableViewCell.xib; sourceTree = "<group>"; };
+		1E80EECB1EDFE79300BEE91B /* GFMultipleColumnsTVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFMultipleColumnsTVCell.h; sourceTree = "<group>"; };
+		1E80EECC1EDFE79300BEE91B /* GFMultipleColumnsTVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFMultipleColumnsTVCell.m; sourceTree = "<group>"; };
 		1EB230991ED6C6AA00DF403C /* HCGDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCGDatePicker.h; sourceTree = "<group>"; };
 		1EB2309A1ED6C6AA00DF403C /* HCGDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCGDatePicker.m; sourceTree = "<group>"; };
 		1EB2309B1ED6C6AA00DF403C /* HCGDatePickerAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCGDatePickerAppearance.h; sourceTree = "<group>"; };
@@ -640,6 +662,9 @@
 				1EC201E01ECACB370013E173 /* JCFuncChartVC.h */,
 				1EC201E11ECACB370013E173 /* JCFuncChartVC.m */,
 				1EC201E21ECACB370013E173 /* JCFuncChartVC.xib */,
+				1E80EEC21EDFE17800BEE91B /* JCFuncVC.h */,
+				1E80EEC31EDFE17800BEE91B /* JCFuncVC.m */,
+				1E80EEC41EDFE17800BEE91B /* JCFuncVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -791,6 +816,8 @@
 		1E21B83D1EC97DF900D69E9D /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				1E80EEC71EDFE79300BEE91B /* MultipleColumns */,
+				1E80EEB81EDFE12A00BEE91B /* LXScrollContentViewLib */,
 				1E80EE981EDFAC0400BEE91B /* selectCity */,
 				1E80EE911EDE4EE300BEE91B /* CombineChartTool */,
 				1EB2309F1ED7BA6A00DF403C /* LTPickerView */,
@@ -988,6 +1015,31 @@
 				1E80EEA91EDFAC0400BEE91B /* CustomTopView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		1E80EEB81EDFE12A00BEE91B /* LXScrollContentViewLib */ = {
+			isa = PBXGroup;
+			children = (
+				1E80EEB91EDFE12A00BEE91B /* LXScollTitleView.h */,
+				1E80EEBA1EDFE12A00BEE91B /* LXScollTitleView.m */,
+				1E80EEBB1EDFE12A00BEE91B /* LXScrollContentView.h */,
+				1E80EEBC1EDFE12A00BEE91B /* LXScrollContentView.m */,
+				1E80EEBD1EDFE12A00BEE91B /* LXTestViewController.h */,
+				1E80EEBE1EDFE12A00BEE91B /* LXTestViewController.m */,
+			);
+			path = LXScrollContentViewLib;
+			sourceTree = "<group>";
+		};
+		1E80EEC71EDFE79300BEE91B /* MultipleColumns */ = {
+			isa = PBXGroup;
+			children = (
+				1E80EEC81EDFE79300BEE91B /* GFMCTableViewCell.h */,
+				1E80EEC91EDFE79300BEE91B /* GFMCTableViewCell.m */,
+				1E80EECA1EDFE79300BEE91B /* GFMCTableViewCell.xib */,
+				1E80EECB1EDFE79300BEE91B /* GFMultipleColumnsTVCell.h */,
+				1E80EECC1EDFE79300BEE91B /* GFMultipleColumnsTVCell.m */,
+			);
+			path = MultipleColumns;
 			sourceTree = "<group>";
 		};
 		1EB230981ED6C6AA00DF403C /* HcgDatePicker */ = {
@@ -1541,6 +1593,7 @@
 				1EC201971ECAB46E0013E173 /* more_icon_Credit-card-@3x.png in Resources */,
 				1EC201431ECA9D590013E173 /* buddy_header_arrow@2x.png in Resources */,
 				1EC201A31ECAB46E0013E173 /* more_icon_Manager@3x.png in Resources */,
+				1E80EECE1EDFE79300BEE91B /* GFMCTableViewCell.xib in Resources */,
 				1EC201B41ECAB46E0013E173 /* work-order@2x.png in Resources */,
 				1EC201951ECAB46E0013E173 /* more_icon_cancle_deal@3x.png in Resources */,
 				1EC2026D1ECBD75F0013E173 /* JCLineBarChartCell.xib in Resources */,
@@ -1559,6 +1612,7 @@
 				1EC2018F1ECAB46E0013E173 /* app_item_bg.png in Resources */,
 				1EC201941ECAB46E0013E173 /* more_icon_cancle_deal@2x.png in Resources */,
 				1EC201961ECAB46E0013E173 /* more_icon_Credit-card-@2x.png in Resources */,
+				1E80EEC61EDFE17800BEE91B /* JCFuncVC.xib in Resources */,
 				1E21B7E91EC93A4300D69E9D /* Assets.xcassets in Resources */,
 				1EC2019D1ECAB46E0013E173 /* more_icon_immediately@3x.png in Resources */,
 				1EC2018E1ECAB46E0013E173 /* app_item_add.png in Resources */,
@@ -1644,6 +1698,7 @@
 				1EC202511ECACF470013E173 /* ZFPie.m in Sources */,
 				1EC201861ECAB46E0013E173 /* LxButton.m in Sources */,
 				1EC2024C1ECACF470013E173 /* ZFHorizontalBar.m in Sources */,
+				1E80EEBF1EDFE12A00BEE91B /* LXScollTitleView.m in Sources */,
 				1EC201DF1ECACAA10013E173 /* JHWaveChart.m in Sources */,
 				1ED215541ED3C6B1003219D5 /* SFGaugeView.m in Sources */,
 				1EC202671ECBD7500013E173 /* JCLineChartCell.m in Sources */,
@@ -1653,6 +1708,7 @@
 				1EC201D61ECACAA10013E173 /* JHPieChart.m in Sources */,
 				1E21B8741EC97ECE00D69E9D /* JCMoreVC.m in Sources */,
 				1EC201E31ECACB370013E173 /* JCFuncChartVC.m in Sources */,
+				1E80EECF1EDFE79300BEE91B /* GFMultipleColumnsTVCell.m in Sources */,
 				1EC202551ECACF470013E173 /* ZFRadar.m in Sources */,
 				1E446D241ED54EF300346199 /* ZFDropDown.m in Sources */,
 				1EC202461ECACF470013E173 /* ZFBarChart.m in Sources */,
@@ -1663,6 +1719,7 @@
 				1EC202481ECACF470013E173 /* ZFCirqueChart.m in Sources */,
 				1E446D2F1ED55A4200346199 /* NSString+Tools.m in Sources */,
 				1E446D211ED54EF300346199 /* ZFView.m in Sources */,
+				1E80EEC51EDFE17800BEE91B /* JCFuncVC.m in Sources */,
 				1EC2018C1ECAB46E0013E173 /* GridView.m in Sources */,
 				1E446D311ED55A4200346199 /* YTDatePicker_DateModel.m in Sources */,
 				1EC201491ECAB3760013E173 /* JCFuncThirdVC.m in Sources */,
@@ -1672,6 +1729,7 @@
 				1EC201DB1ECACAA10013E173 /* JHScatterChart.m in Sources */,
 				1E446D301ED55A4200346199 /* YTDatePick.m in Sources */,
 				1EC2025E1ECAF5D50013E173 /* JCBarModel.m in Sources */,
+				1E80EEC11EDFE12A00BEE91B /* LXTestViewController.m in Sources */,
 				1EC2023B1ECACF470013E173 /* UIColor+Zirkfied.m in Sources */,
 				1EC202581ECACF470013E173 /* ZFWaveChart.m in Sources */,
 				1EB2309D1ED6C6AA00DF403C /* HCGDatePicker.m in Sources */,
@@ -1686,6 +1744,7 @@
 				1E21B85D1EC97E1F00D69E9D /* MXNavigationItem.m in Sources */,
 				1EC201D71ECACAA10013E173 /* JHPieForeBGView.m in Sources */,
 				1E21B8441EC97DF900D69E9D /* ViewController.m in Sources */,
+				1E80EECD1EDFE79300BEE91B /* GFMCTableViewCell.m in Sources */,
 				1E80EEAC1EDFAC0400BEE91B /* CityViewController.m in Sources */,
 				1E80EEAF1EDFAC0400BEE91B /* CityTableViewCell.m in Sources */,
 				1E21B86A1EC97EA900D69E9D /* JCFunctionVC.m in Sources */,
@@ -1721,6 +1780,7 @@
 				1EC202491ECACF470013E173 /* ZFGenericAxis.m in Sources */,
 				1E21B86F1EC97EBF00D69E9D /* JCStrategyVC.m in Sources */,
 				1ED215581ED3C9ED003219D5 /* WMGaugeView.m in Sources */,
+				1E80EEC01EDFE12A00BEE91B /* LXScrollContentView.m in Sources */,
 				1E80EE951EDE4EFE00BEE91B /* JCCombineChart.m in Sources */,
 				1EC201451ECA9D590013E173 /* ContactsListHeader.m in Sources */,
 				1EC2024D1ECACF470013E173 /* ZFHorizontalBarChart.m in Sources */,

@@ -12,6 +12,7 @@
 #import "JCFunctionVC.h"
 #import "JCStrategyVC.h"
 #import "JCMoreVC.h"
+#import "JCFuncVC.h"
 
 
 @interface MXTabBarController ()
@@ -34,7 +35,7 @@
     MXNavigationController *firstNaC = [[MXNavigationController alloc] initWithRootViewController:homeC];
     homeC.title = @"首页";
     
-    JCFunctionVC *FunctionVC = [[JCFunctionVC alloc] init];
+    JCFuncVC *FunctionVC = [[JCFuncVC alloc] init];
     MXNavigationController *secondNaC = [[MXNavigationController alloc] initWithRootViewController:FunctionVC];
     FunctionVC.title = @"功能";
     

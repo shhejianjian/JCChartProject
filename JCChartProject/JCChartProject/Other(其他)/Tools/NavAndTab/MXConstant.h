@@ -19,6 +19,9 @@
 #define LBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 #define topBackgroundColor LBColor(8,68,100)
 #define globalColor LBColor(36,151,136)
+#define grayColor LBColor(100,100,100)
+#define cleargrayColor LBColor(240,240,240)
+#define whitegrayColor LBColor(251,251,251)
 
 
 #define LBRandomColor LBColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
