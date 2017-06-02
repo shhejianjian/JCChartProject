@@ -40,7 +40,6 @@
         NSArray *mainArr = [JCFuncBaseModel mj_objectArrayWithKeyValuesArray:json];
         NSMutableArray *firstMenuArr = [NSMutableArray array];
         for (JCFuncBaseModel *mainModel in mainArr) {
-//            NSLog(@"1级：%@--%@",mainModel.name,mainModel.objectId);
             [firstMenuArr addObject:mainModel.name];
             [self.menuArr addObject:mainModel];
         }

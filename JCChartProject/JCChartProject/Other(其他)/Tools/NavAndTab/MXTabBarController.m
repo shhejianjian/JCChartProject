@@ -9,7 +9,6 @@
 #import "MXTabBarController.h"
 #import "MXNavigationController.h"
 #import "JCHomeVC.h"
-#import "JCFunctionVC.h"
 #import "JCStrategyVC.h"
 #import "JCMoreVC.h"
 #import "JCFuncVC.h"

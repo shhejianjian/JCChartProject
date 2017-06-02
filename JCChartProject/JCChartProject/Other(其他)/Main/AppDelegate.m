@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-//#import "MXTabBarController.h"
+#import "AppDelegate+Jpush.h"
 @interface AppDelegate ()
 
 @end
@@ -21,10 +21,11 @@
 //    MXTabBarController *tabC = [[MXTabBarController alloc] init];
 //    self.window.rootViewController = tabC;
 //    [self.window makeKeyAndVisible];
-    
+    [self setupJpush:launchOptions];
     
     return YES;
 }
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

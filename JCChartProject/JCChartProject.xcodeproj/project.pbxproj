@@ -28,14 +28,10 @@
 		1E21B8611EC97E1F00D69E9D /* UIViewController+MXNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E21B8591EC97E1F00D69E9D /* UIViewController+MXNavigation.m */; };
 		1E21B8651EC97E9B00D69E9D /* JCHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E21B8631EC97E9B00D69E9D /* JCHomeVC.m */; };
 		1E21B8661EC97E9B00D69E9D /* JCHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E21B8641EC97E9B00D69E9D /* JCHomeVC.xib */; };
-		1E21B86A1EC97EA900D69E9D /* JCFunctionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E21B8681EC97EA900D69E9D /* JCFunctionVC.m */; };
-		1E21B86B1EC97EA900D69E9D /* JCFunctionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E21B8691EC97EA900D69E9D /* JCFunctionVC.xib */; };
 		1E21B86F1EC97EBF00D69E9D /* JCStrategyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E21B86D1EC97EBF00D69E9D /* JCStrategyVC.m */; };
 		1E21B8701EC97EBF00D69E9D /* JCStrategyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E21B86E1EC97EBF00D69E9D /* JCStrategyVC.xib */; };
 		1E21B8741EC97ECE00D69E9D /* JCMoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E21B8721EC97ECE00D69E9D /* JCMoreVC.m */; };
 		1E21B8751EC97ECE00D69E9D /* JCMoreVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E21B8731EC97ECE00D69E9D /* JCMoreVC.xib */; };
-		1E21B8791EC9837000D69E9D /* JCFuncSecondVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E21B8771EC9837000D69E9D /* JCFuncSecondVC.m */; };
-		1E21B87A1EC9837000D69E9D /* JCFuncSecondVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E21B8781EC9837000D69E9D /* JCFuncSecondVC.xib */; };
 		1E446D121ED54C5D00346199 /* AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E446D101ED54C5D00346199 /* AlertView.m */; };
 		1E446D131ED54C5D00346199 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E446D111ED54C5D00346199 /* AlertView.xib */; };
 		1E446D211ED54EF300346199 /* ZFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E446D171ED54EF300346199 /* ZFView.m */; };
@@ -75,8 +71,6 @@
 		1EC201431ECA9D590013E173 /* buddy_header_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EC2013E1ECA9D590013E173 /* buddy_header_arrow@2x.png */; };
 		1EC201441ECA9D590013E173 /* ContactsGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201401ECA9D590013E173 /* ContactsGroupModel.m */; };
 		1EC201451ECA9D590013E173 /* ContactsListHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201421ECA9D590013E173 /* ContactsListHeader.m */; };
-		1EC201491ECAB3760013E173 /* JCFuncThirdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201471ECAB3760013E173 /* JCFuncThirdVC.m */; };
-		1EC2014A1ECAB3760013E173 /* JCFuncThirdVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EC201481ECAB3760013E173 /* JCFuncThirdVC.xib */; };
 		1EC201861ECAB46E0013E173 /* LxButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC2014E1ECAB46E0013E173 /* LxButton.m */; };
 		1EC201871ECAB46E0013E173 /* UIColor+Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201501ECAB46E0013E173 /* UIColor+Expanded.m */; };
 		1EC201881ECAB46E0013E173 /* UILabel+LXLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC201521ECAB46E0013E173 /* UILabel+LXLabel.m */; };
@@ -184,6 +178,21 @@
 		1EC202721ECBD76F0013E173 /* JCPieChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EC202701ECBD76F0013E173 /* JCPieChartCell.xib */; };
 		1EC202761ECBD7840013E173 /* JCDashboardChartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC202741ECBD7840013E173 /* JCDashboardChartCell.m */; };
 		1EC202771ECBD7840013E173 /* JCDashboardChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EC202751ECBD7840013E173 /* JCDashboardChartCell.xib */; };
+		1EC4044A1EE1468300A9259B /* jcore-ios-1.1.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC404471EE1468300A9259B /* jcore-ios-1.1.3.a */; };
+		1EC4044B1EE1468300A9259B /* jpush-ios-3.0.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC404481EE1468300A9259B /* jpush-ios-3.0.5.a */; };
+		1EC4044D1EE1469D00A9259B /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC4044C1EE1469D00A9259B /* libresolv.tbd */; };
+		1EC4044F1EE146A700A9259B /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC4044E1EE146A700A9259B /* UserNotifications.framework */; };
+		1EC404511EE146B000A9259B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC404501EE146B000A9259B /* AdSupport.framework */; };
+		1EC404531EE146BC00A9259B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC404521EE146BC00A9259B /* libz.tbd */; };
+		1EC404551EE146C400A9259B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC404541EE146C400A9259B /* Security.framework */; };
+		1EC404571EE146CD00A9259B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC404561EE146CD00A9259B /* SystemConfiguration.framework */; };
+		1EC404591EE146D600A9259B /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC404581EE146D600A9259B /* CoreTelephony.framework */; };
+		1EC4045B1EE146E400A9259B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC4045A1EE146E400A9259B /* CoreFoundation.framework */; };
+		1EC4045D1EE146EF00A9259B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC4045C1EE146EF00A9259B /* CFNetwork.framework */; };
+		1EC4045F1EE146F700A9259B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC4045E1EE146F700A9259B /* UIKit.framework */; };
+		1EC404611EE1470200A9259B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC404601EE1470200A9259B /* Foundation.framework */; };
+		1EC404631EE1470D00A9259B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC404621EE1470D00A9259B /* CoreGraphics.framework */; };
+		1EC4046C1EE14CD500A9259B /* AppDelegate+Jpush.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4046B1EE14CD500A9259B /* AppDelegate+Jpush.m */; };
 		1ED215541ED3C6B1003219D5 /* SFGaugeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED215531ED3C6B1003219D5 /* SFGaugeView.m */; };
 		1ED215581ED3C9ED003219D5 /* WMGaugeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED215571ED3C9ED003219D5 /* WMGaugeView.m */; };
 		EFDF6386875B3A7F2102933C /* Pods_JCChartProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71573704D25BCDB60B7DF22F /* Pods_JCChartProject.framework */; };
@@ -284,18 +293,12 @@
 		1E21B8621EC97E9B00D69E9D /* JCHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCHomeVC.h; sourceTree = "<group>"; };
 		1E21B8631EC97E9B00D69E9D /* JCHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCHomeVC.m; sourceTree = "<group>"; };
 		1E21B8641EC97E9B00D69E9D /* JCHomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCHomeVC.xib; sourceTree = "<group>"; };
-		1E21B8671EC97EA900D69E9D /* JCFunctionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCFunctionVC.h; sourceTree = "<group>"; };
-		1E21B8681EC97EA900D69E9D /* JCFunctionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCFunctionVC.m; sourceTree = "<group>"; };
-		1E21B8691EC97EA900D69E9D /* JCFunctionVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCFunctionVC.xib; sourceTree = "<group>"; };
 		1E21B86C1EC97EBF00D69E9D /* JCStrategyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCStrategyVC.h; sourceTree = "<group>"; };
 		1E21B86D1EC97EBF00D69E9D /* JCStrategyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCStrategyVC.m; sourceTree = "<group>"; };
 		1E21B86E1EC97EBF00D69E9D /* JCStrategyVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCStrategyVC.xib; sourceTree = "<group>"; };
 		1E21B8711EC97ECE00D69E9D /* JCMoreVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCMoreVC.h; sourceTree = "<group>"; };
 		1E21B8721EC97ECE00D69E9D /* JCMoreVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCMoreVC.m; sourceTree = "<group>"; };
 		1E21B8731EC97ECE00D69E9D /* JCMoreVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCMoreVC.xib; sourceTree = "<group>"; };
-		1E21B8761EC9837000D69E9D /* JCFuncSecondVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCFuncSecondVC.h; sourceTree = "<group>"; };
-		1E21B8771EC9837000D69E9D /* JCFuncSecondVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCFuncSecondVC.m; sourceTree = "<group>"; };
-		1E21B8781EC9837000D69E9D /* JCFuncSecondVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCFuncSecondVC.xib; sourceTree = "<group>"; };
 		1E446D0F1ED54C5D00346199 /* AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertView.h; sourceTree = "<group>"; };
 		1E446D101ED54C5D00346199 /* AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertView.m; sourceTree = "<group>"; };
 		1E446D111ED54C5D00346199 /* AlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
@@ -363,9 +366,6 @@
 		1EC201401ECA9D590013E173 /* ContactsGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsGroupModel.m; sourceTree = "<group>"; };
 		1EC201411ECA9D590013E173 /* ContactsListHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsListHeader.h; sourceTree = "<group>"; };
 		1EC201421ECA9D590013E173 /* ContactsListHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsListHeader.m; sourceTree = "<group>"; };
-		1EC201461ECAB3760013E173 /* JCFuncThirdVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCFuncThirdVC.h; sourceTree = "<group>"; };
-		1EC201471ECAB3760013E173 /* JCFuncThirdVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCFuncThirdVC.m; sourceTree = "<group>"; };
-		1EC201481ECAB3760013E173 /* JCFuncThirdVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCFuncThirdVC.xib; sourceTree = "<group>"; };
 		1EC2014D1ECAB46E0013E173 /* LxButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxButton.h; sourceTree = "<group>"; };
 		1EC2014E1ECAB46E0013E173 /* LxButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LxButton.m; sourceTree = "<group>"; };
 		1EC2014F1ECAB46E0013E173 /* UIColor+Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Expanded.h"; sourceTree = "<group>"; };
@@ -536,6 +536,24 @@
 		1EC202731ECBD7840013E173 /* JCDashboardChartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCDashboardChartCell.h; sourceTree = "<group>"; };
 		1EC202741ECBD7840013E173 /* JCDashboardChartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCDashboardChartCell.m; sourceTree = "<group>"; };
 		1EC202751ECBD7840013E173 /* JCDashboardChartCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCDashboardChartCell.xib; sourceTree = "<group>"; };
+		1EC404471EE1468300A9259B /* jcore-ios-1.1.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jcore-ios-1.1.3.a"; sourceTree = "<group>"; };
+		1EC404481EE1468300A9259B /* jpush-ios-3.0.5.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-3.0.5.a"; sourceTree = "<group>"; };
+		1EC404491EE1468300A9259B /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
+		1EC4044C1EE1469D00A9259B /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		1EC4044E1EE146A700A9259B /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		1EC404501EE146B000A9259B /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		1EC404521EE146BC00A9259B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		1EC404541EE146C400A9259B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		1EC404561EE146CD00A9259B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1EC404581EE146D600A9259B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		1EC4045A1EE146E400A9259B /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		1EC4045C1EE146EF00A9259B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		1EC4045E1EE146F700A9259B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1EC404601EE1470200A9259B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1EC404621EE1470D00A9259B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1EC4046A1EE14CD500A9259B /* AppDelegate+Jpush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Jpush.h"; sourceTree = "<group>"; };
+		1EC4046B1EE14CD500A9259B /* AppDelegate+Jpush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Jpush.m"; sourceTree = "<group>"; };
+		1EC4046D1EE14D5D00A9259B /* JCChartProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JCChartProject.entitlements; sourceTree = "<group>"; };
 		1ED215521ED3C6B1003219D5 /* SFGaugeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFGaugeView.h; sourceTree = "<group>"; };
 		1ED215531ED3C6B1003219D5 /* SFGaugeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFGaugeView.m; sourceTree = "<group>"; };
 		1ED215561ED3C9ED003219D5 /* WMGaugeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMGaugeView.h; sourceTree = "<group>"; };
@@ -550,8 +568,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EC404631EE1470D00A9259B /* CoreGraphics.framework in Frameworks */,
+				1EC404611EE1470200A9259B /* Foundation.framework in Frameworks */,
+				1EC4045F1EE146F700A9259B /* UIKit.framework in Frameworks */,
+				1EC4045D1EE146EF00A9259B /* CFNetwork.framework in Frameworks */,
+				1EC4045B1EE146E400A9259B /* CoreFoundation.framework in Frameworks */,
+				1EC404591EE146D600A9259B /* CoreTelephony.framework in Frameworks */,
+				1EC404571EE146CD00A9259B /* SystemConfiguration.framework in Frameworks */,
+				1EC404551EE146C400A9259B /* Security.framework in Frameworks */,
+				1EC404531EE146BC00A9259B /* libz.tbd in Frameworks */,
+				1EC404511EE146B000A9259B /* AdSupport.framework in Frameworks */,
+				1EC4044F1EE146A700A9259B /* UserNotifications.framework in Frameworks */,
+				1EC4044D1EE1469D00A9259B /* libresolv.tbd in Frameworks */,
 				EFDF6386875B3A7F2102933C /* Pods_JCChartProject.framework in Frameworks */,
+				1EC4044A1EE1468300A9259B /* jcore-ios-1.1.3.a in Frameworks */,
 				1E7FBD271ED91E2C00D33EEE /* Charts.framework in Frameworks */,
+				1EC4044B1EE1468300A9259B /* jpush-ios-3.0.5.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,6 +629,7 @@
 		1E21B7DB1EC93A4300D69E9D /* JCChartProject */ = {
 			isa = PBXGroup;
 			children = (
+				1EC4046D1EE14D5D00A9259B /* JCChartProject.entitlements */,
 				1E21B8291EC97DF900D69E9D /* Home(首页) */,
 				1E21B8251EC97DF900D69E9D /* Function(功能) */,
 				1E21B83E1EC97DF900D69E9D /* Strategy(策略) */,
@@ -650,15 +683,6 @@
 		1E21B8261EC97DF900D69E9D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1E21B8671EC97EA900D69E9D /* JCFunctionVC.h */,
-				1E21B8681EC97EA900D69E9D /* JCFunctionVC.m */,
-				1E21B8691EC97EA900D69E9D /* JCFunctionVC.xib */,
-				1E21B8761EC9837000D69E9D /* JCFuncSecondVC.h */,
-				1E21B8771EC9837000D69E9D /* JCFuncSecondVC.m */,
-				1E21B8781EC9837000D69E9D /* JCFuncSecondVC.xib */,
-				1EC201461ECAB3760013E173 /* JCFuncThirdVC.h */,
-				1EC201471ECAB3760013E173 /* JCFuncThirdVC.m */,
-				1EC201481ECAB3760013E173 /* JCFuncThirdVC.xib */,
 				1EC201E01ECACB370013E173 /* JCFuncChartVC.h */,
 				1EC201E11ECACB370013E173 /* JCFuncChartVC.m */,
 				1EC201E21ECACB370013E173 /* JCFuncChartVC.xib */,
@@ -816,6 +840,7 @@
 		1E21B83D1EC97DF900D69E9D /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				1EC404451EE1467000A9259B /* JpushLib */,
 				1E80EEC71EDFE79300BEE91B /* MultipleColumns */,
 				1E80EEB81EDFE12A00BEE91B /* LXScrollContentViewLib */,
 				1E80EE981EDFAC0400BEE91B /* selectCity */,
@@ -1381,6 +1406,18 @@
 			path = ZFWaveChart;
 			sourceTree = "<group>";
 		};
+		1EC404451EE1467000A9259B /* JpushLib */ = {
+			isa = PBXGroup;
+			children = (
+				1EC404471EE1468300A9259B /* jcore-ios-1.1.3.a */,
+				1EC404481EE1468300A9259B /* jpush-ios-3.0.5.a */,
+				1EC404491EE1468300A9259B /* JPUSHService.h */,
+				1EC4046A1EE14CD500A9259B /* AppDelegate+Jpush.h */,
+				1EC4046B1EE14CD500A9259B /* AppDelegate+Jpush.m */,
+			);
+			path = JpushLib;
+			sourceTree = "<group>";
+		};
 		1ED215511ED3C6B1003219D5 /* SFGaugeView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1402,6 +1439,18 @@
 		A9F5F75D46C72511BFC15148 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1EC404621EE1470D00A9259B /* CoreGraphics.framework */,
+				1EC404601EE1470200A9259B /* Foundation.framework */,
+				1EC4045E1EE146F700A9259B /* UIKit.framework */,
+				1EC4045C1EE146EF00A9259B /* CFNetwork.framework */,
+				1EC4045A1EE146E400A9259B /* CoreFoundation.framework */,
+				1EC404581EE146D600A9259B /* CoreTelephony.framework */,
+				1EC404561EE146CD00A9259B /* SystemConfiguration.framework */,
+				1EC404541EE146C400A9259B /* Security.framework */,
+				1EC404521EE146BC00A9259B /* libz.tbd */,
+				1EC404501EE146B000A9259B /* AdSupport.framework */,
+				1EC4044E1EE146A700A9259B /* UserNotifications.framework */,
+				1EC4044C1EE1469D00A9259B /* libresolv.tbd */,
 				71573704D25BCDB60B7DF22F /* Pods_JCChartProject.framework */,
 			);
 			name = Frameworks;
@@ -1489,9 +1538,14 @@
 				TargetAttributes = {
 					1E21B7D81EC93A4300D69E9D = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = XKF9ZBDS63;
+						DevelopmentTeam = JQ9MC7KJ4J;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					1E21B7F11EC93A4400D69E9D = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -1566,10 +1620,8 @@
 				1E446D131ED54C5D00346199 /* AlertView.xib in Resources */,
 				1EC201931ECAB46E0013E173 /* more_icon_-transfer@3x.png in Resources */,
 				1EC201A91ECAB46E0013E173 /* more_icon_Search@3x.png in Resources */,
-				1EC2014A1ECAB3760013E173 /* JCFuncThirdVC.xib in Resources */,
 				1EC201B01ECAB46E0013E173 /* more_icon_Transaction_flow@2x.png in Resources */,
 				1EC201921ECAB46E0013E173 /* more_icon_-transfer@2x.png in Resources */,
-				1E21B87A1EC9837000D69E9D /* JCFuncSecondVC.xib in Resources */,
 				1EC202681ECBD7500013E173 /* JCLineChartCell.xib in Resources */,
 				1EC201A61ECAB46E0013E173 /* more_icon_Recharge@2x.png in Resources */,
 				1EC201AC1ECAB46E0013E173 /* more_icon_shouyin@2x.png in Resources */,
@@ -1618,7 +1670,6 @@
 				1EC2018E1ECAB46E0013E173 /* app_item_add.png in Resources */,
 				1EC202631ECBD7410013E173 /* JCBarChartCell.xib in Resources */,
 				1E21B7E71EC93A4300D69E9D /* Main.storyboard in Resources */,
-				1E21B86B1EC97EA900D69E9D /* JCFunctionVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1722,7 +1773,6 @@
 				1E80EEC51EDFE17800BEE91B /* JCFuncVC.m in Sources */,
 				1EC2018C1ECAB46E0013E173 /* GridView.m in Sources */,
 				1E446D311ED55A4200346199 /* YTDatePicker_DateModel.m in Sources */,
-				1EC201491ECAB3760013E173 /* JCFuncThirdVC.m in Sources */,
 				1EC201D31ECACAA10013E173 /* JHChart.m in Sources */,
 				1EC201DD1ECACAA10013E173 /* JHTableChart.m in Sources */,
 				1E21B85A1EC97E1F00D69E9D /* MXBarButtonItem.m in Sources */,
@@ -1747,8 +1797,6 @@
 				1E80EECD1EDFE79300BEE91B /* GFMCTableViewCell.m in Sources */,
 				1E80EEAC1EDFAC0400BEE91B /* CityViewController.m in Sources */,
 				1E80EEAF1EDFAC0400BEE91B /* CityTableViewCell.m in Sources */,
-				1E21B86A1EC97EA900D69E9D /* JCFunctionVC.m in Sources */,
-				1E21B8791EC9837000D69E9D /* JCFuncSecondVC.m in Sources */,
 				1EC2026C1ECBD75F0013E173 /* JCLineBarChartCell.m in Sources */,
 				1EB2309E1ED6C6AA00DF403C /* HCGDatePickerAppearance.m in Sources */,
 				1E21B85C1EC97E1F00D69E9D /* MXNavigationController.m in Sources */,
@@ -1786,6 +1834,7 @@
 				1EC2024D1ECACF470013E173 /* ZFHorizontalBarChart.m in Sources */,
 				1EC202621ECBD7410013E173 /* JCBarChartCell.m in Sources */,
 				1E21B85F1EC97E1F00D69E9D /* NSString+Add.m in Sources */,
+				1EC4046C1EE14CD500A9259B /* AppDelegate+Jpush.m in Sources */,
 				1EC202761ECBD7840013E173 /* JCDashboardChartCell.m in Sources */,
 				1E21B85E1EC97E1F00D69E9D /* MXTabBarController.m in Sources */,
 				1EC202441ECACF470013E173 /* ZFMethod.m in Sources */,
@@ -1960,14 +2009,19 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = XKF9ZBDS63;
+				CODE_SIGN_ENTITLEMENTS = JCChartProject/JCChartProject.entitlements;
+				DEVELOPMENT_TEAM = JQ9MC7KJ4J;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = JCChartProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.JCChart.www.JCChartProject;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JCChartProject/Other(其他)/Tools/JpushLib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.JCChartProject.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "JCChartProject/Other(其他)/Libs/JCChartProject-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1983,14 +2037,19 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = XKF9ZBDS63;
+				CODE_SIGN_ENTITLEMENTS = JCChartProject/JCChartProject.entitlements;
+				DEVELOPMENT_TEAM = JQ9MC7KJ4J;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = JCChartProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.JCChart.www.JCChartProject;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JCChartProject/Other(其他)/Tools/JpushLib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.JCChartProject.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "JCChartProject/Other(其他)/Libs/JCChartProject-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
