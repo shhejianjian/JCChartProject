@@ -7,13 +7,10 @@
 //
 
 #import "JCBarChartCell.h"
-#import "ZFChart.h"
 #import "MXConstant.h"
 
 
 @interface JCBarChartCell ()<ZFGenericChartDataSource, ZFBarChartDelegate>
-@property (nonatomic, strong) ZFBarChart * barChart;
-@property (strong, nonatomic) IBOutlet UIView *detailView;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UIButton *backBtn;
 
@@ -27,6 +24,7 @@
 @property (nonatomic, copy) NSString *UnitStr;
 @property (nonatomic, assign) NSInteger UnitValueStr;
 @property (nonatomic, copy) NSString *chartTypeStr;
+@property (nonatomic, assign) BOOL isDelete;
 
 
 @property (nonatomic, assign) int index;
@@ -37,6 +35,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.isDelete = NO;
     NSArray *colorArr = @[ZFColor(71, 204, 255, 1), ZFColor(253, 203, 76, 1), ZFColor(214, 205, 153, 1), ZFColor(78, 250, 188, 1), ZFColor(16, 140, 39, 1), ZFColor(45, 92, 34, 1),ZFGrassGreen,ZFGold];
     [self.barColorArr addObjectsFromArray:colorArr];
     self.barChart = [[ZFBarChart alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 400)];
@@ -144,7 +143,7 @@
             }
             [self.barChart strokePath];
             
-//            [self loadButtonWithArray:self.pieDescrArr andColoArr:self.pieColorArr];
+            [self loadButtonWithArray:self.barDescrArr andColoArr:self.barColorArr];
             
             
         } failure:^(NSError *error) {
@@ -198,9 +197,7 @@
 }
 
 - (void)barChart:(ZFBarChart *)barChart didSelectBarAtGroupIndex:(NSInteger)groupIndex barIndex:(NSInteger)barIndex bar:(ZFBar *)bar popoverLabel:(ZFPopoverLabel *)popoverLabel{
-    
-//    NSLog(@"第%ld组========第%ld个",(long)groupIndex,(long)barIndex);
-    
+    self.isDelete = YES;
     if (self.barPointGroupArr.count > 0) {
         
         
@@ -266,6 +263,57 @@
     }
 }
 
+- (void)loadButtonWithArray:(NSArray *)arr andColoArr:(NSArray *)colorArr{
+    CGFloat w = 0;//保存前一个button的宽以及前一个button距离屏幕边缘的距离
+    self.barCellHeight = 401;//用来控制button距离父视图的高
+    if (self.isDelete) {
+        for (UIView *view in self.detailView.subviews) {
+            [view removeFromSuperview];
+        }
+    }
+    for (int i = 0; i < arr.count; i++) {
+        UIView *label = [[UIView alloc]init];
+        label.tag = i;
+        label.layer.cornerRadius = 5;
+        label.layer.masksToBounds = YES;
+        float width = [self getTextWithWhenDrawWithText:arr[i]];
+        label.frame = CGRectMake(15 + w, self.barCellHeight, width+28, 30);
+        //当button的位置超出屏幕边缘时换行 320 只是button所在父视图的宽度
+        if(10 + w + width+28 > KScreenW-20){
+            w = 0; //换行时将w置为0
+            self.barCellHeight = self.barCellHeight + label.frame.size.height + 5;//距离父视图也变化
+            label.frame = CGRectMake(15 + w, self.barCellHeight, width+28, 30);//重设button的frame
+        }
+        w = label.frame.size.width + label.frame.origin.x;
+        
+        UILabel *title = [[UILabel alloc]initWithFrame:CGRectMake(18, 0, width, 25)];
+        title.text = arr[i];
+        title.font = [UIFont systemFontOfSize:13];
+        title.textAlignment = NSTextAlignmentCenter;
+        [label addSubview:title];
+        
+        UIView *colorView = [[UIView alloc]initWithFrame:CGRectMake(0, 6, 13, 13)];
+        colorView.backgroundColor = colorArr[i];
+        [label addSubview:colorView];
+        
+        [self.detailView addSubview:label];
+    }
+    [self.barChart strokePath];
+    [self.detailView addSubview:self.barChart];
+    
+    if ([self.delegate respondsToSelector:@selector(passValueForCellHeight:)]) {
+        [self.delegate passValueForCellHeight:self.barCellHeight];
+    }
+}
+
+
+
+
+
+
+
+
+
 - (void)barChart:(ZFBarChart *)barChart didSelectPopoverLabelAtGroupIndex:(NSInteger)groupIndex labelIndex:(NSInteger)labelIndex popoverLabel:(ZFPopoverLabel *)popoverLabel{
     NSLog(@"第%ld组========第%ld个",(long)groupIndex,(long)labelIndex);
     
@@ -294,7 +342,7 @@
  */
 - (CGFloat)getTextWithWhenDrawWithText:(NSString *)text{
     
-    NSDictionary *attrs = @{NSFontAttributeName : [UIFont boldSystemFontOfSize:15]};
+    NSDictionary *attrs = @{NSFontAttributeName : [UIFont boldSystemFontOfSize:13]};
     CGSize size=[text sizeWithAttributes:attrs];
     
     return size.width;

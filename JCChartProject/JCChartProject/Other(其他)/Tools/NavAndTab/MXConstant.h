@@ -20,6 +20,7 @@
 #define topBackgroundColor LBColor(8,68,100)
 #define globalColor LBColor(36,151,136)
 #define grayColor LBColor(100,100,100)
+#define middlegrayColor LBColor(210,210,210)
 #define cleargrayColor LBColor(240,240,240)
 #define whitegrayColor LBColor(251,251,251)
 

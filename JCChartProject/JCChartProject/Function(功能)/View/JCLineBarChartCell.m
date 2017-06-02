@@ -110,7 +110,6 @@
     if ([type isEqualToString:@"bar"]) {
         NSMutableArray *barValueArr = [NSMutableArray array];
         [XHHttpTool get:url params:nil jessionid:jesId success:^(id json) {
-            NSLog(@"barjson:%@",json);
             JCChartModel *barChartModel = [JCChartModel mj_objectWithKeyValues:json];
             NSDictionary *olddict = [self changeType:barChartModel.values];
             [self.linebarXValueArr removeAllObjects];
@@ -157,7 +156,6 @@
     
     if ([type isEqualToString:@"line"]) {
         [XHHttpTool get:url params:nil jessionid:jesId success:^(id json) {
-            NSLog(@"linejson:%@",json);
             JCChartModel *barChartModel = [JCChartModel mj_objectWithKeyValues:json];
             NSDictionary *olddict = [self changeType:barChartModel.values];
             [self.linebarXValueArr removeAllObjects];

@@ -10,12 +10,16 @@
 #import "GFMCTableViewCell.h"
 #import "GFMultipleColumnsTVCell.h"
 #import "MXConstant.h"
+#import "JCFuncChartVC.h"
+
 static NSString *kCellIdentifier = @"kCellIdentifier";
 
 @interface LXTestViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic,strong) NSMutableDictionary * dataDictionary;
+@property (nonatomic,strong) NSMutableDictionary * objectIdDictionary;
+
 @property (nonatomic,strong) NSMutableArray * allkeys;
 @property (nonatomic,strong) NSMutableArray * secondMenuArr;
 
@@ -38,12 +42,16 @@ static NSString *kCellIdentifier = @"kCellIdentifier";
     }
     
     self.dataDictionary = [NSMutableDictionary dictionary];
+    self.objectIdDictionary = [NSMutableDictionary dictionary];
     for (JCFuncBaseModel *subModel in subArr) {
         NSArray *arr = [JCFuncBaseModel mj_objectArrayWithKeyValuesArray:subModel.childList];
         NSMutableArray * array = [NSMutableArray array];
+        NSMutableArray *objectidArr = [NSMutableArray array];
         for (JCFuncBaseModel *thirdModel in arr) {
             [array addObject:thirdModel.name];
+            [objectidArr addObject:thirdModel.objectId];
         }
+        [self.objectIdDictionary setObject:objectidArr forKey:subModel.name];
         [self.dataDictionary setObject:array forKey:subModel.name];
     }
     
@@ -82,8 +90,13 @@ static NSString *kCellIdentifier = @"kCellIdentifier";
     NSString * keyStr = self.allkeys[indexPath.section];
     NSArray * array = [self.dataDictionary objectForKey:keyStr];
     cell.dataArray = array;
+    NSString * IdkeyStr = self.allkeys[indexPath.section];
+    NSArray * Idarray = [self.objectIdDictionary objectForKey:IdkeyStr];
     cell.tvCellView.ReturnClickItemIndex = ^(NSIndexPath * itemtIP ,NSInteger itemIndex){
-        NSLog(@"----###----###---(%ld,%ld)----##---%ld----###-----",itemtIP.section,itemtIP.row,itemIndex);
+        JCFuncChartVC *chartVC = [[JCFuncChartVC alloc]init];
+        chartVC.titleName = array[itemIndex];
+        chartVC.objectId = Idarray[itemIndex];
+        [self.navigationController pushViewController:chartVC animated:YES];
     };
     
     //    cell.textLabel.text = [NSString stringWithFormat:@"%ld -> %ld",indexPath.section,indexPath.row];
@@ -92,13 +105,17 @@ static NSString *kCellIdentifier = @"kCellIdentifier";
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     static NSString *HeaderIdentifier = @"header";
     UITableViewHeaderFooterView * headerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:HeaderIdentifier];
+    CGFloat labelWidth = [self getTextWithWhenDrawWithText:self.allkeys[section]];
     if( headerView == nil)
     {
         headerView = [[UITableViewHeaderFooterView alloc] initWithReuseIdentifier:HeaderIdentifier];
-        UILabel * titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, 80, 25)];
+        UILabel * titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, labelWidth, 25)];
         titleLabel.tag = 1;
         titleLabel.backgroundColor = [UIColor clearColor];
         titleLabel.textColor = grayColor;
+        UILabel * viewLabel = [[UILabel alloc]initWithFrame:CGRectMake(labelWidth+20, 12.5, KScreenW - (labelWidth+20) - 15, 0.5)];
+        viewLabel.backgroundColor = middlegrayColor;
+        [headerView.contentView addSubview:viewLabel];
         [headerView.contentView addSubview:titleLabel];
     }
     headerView.contentView.backgroundColor = whitegrayColor;
@@ -110,7 +127,13 @@ static NSString *kCellIdentifier = @"kCellIdentifier";
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 30;
 }
-
+- (CGFloat)getTextWithWhenDrawWithText:(NSString *)text{
+    
+    NSDictionary *attrs = @{NSFontAttributeName : [UIFont boldSystemFontOfSize:15]};
+    CGSize size=[text sizeWithAttributes:attrs];
+    
+    return size.width;
+}
 //-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
 //    return self.allkeys[section];
 //}

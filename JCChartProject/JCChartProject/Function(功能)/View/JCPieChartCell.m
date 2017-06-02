@@ -226,26 +226,29 @@
         }
     }
         for (int i = 0; i < arr.count; i++) {
-            UILabel *label = [[UILabel alloc]init];
+            UIView *label = [[UIView alloc]init];
             label.tag = i;
-            label.backgroundColor = colorArr[i];
-            //根据计算文字的大小
             label.layer.cornerRadius = 5;
             label.layer.masksToBounds = YES;
-            //为button赋值
-            label.text = arr[i];
-            label.font = [UIFont systemFontOfSize:15];
-            label.textAlignment = NSTextAlignmentCenter;
-            //设置button的frame
             float width = [self getTextWithWhenDrawWithText:arr[i]];
-            label.frame = CGRectMake(15 + w, h, width+10, 30);
+            label.frame = CGRectMake(15 + w, h, width+28, 30);
             //当button的位置超出屏幕边缘时换行 320 只是button所在父视图的宽度
-            if(10 + w + width+10 > KScreenW-20){
+            if(10 + w + width+28 > KScreenW-20){
                 w = 0; //换行时将w置为0
                 h = h + label.frame.size.height + 10;//距离父视图也变化
-                label.frame = CGRectMake(15 + w, h, width+10, 30);//重设button的frame
+                label.frame = CGRectMake(15 + w, h, width+28, 30);//重设button的frame
             }
             w = label.frame.size.width + label.frame.origin.x;
+            
+            UILabel *title = [[UILabel alloc]initWithFrame:CGRectMake(18, 0, width, 25)];
+            title.text = arr[i];
+            title.font = [UIFont systemFontOfSize:15];
+            title.textAlignment = NSTextAlignmentCenter;
+            [label addSubview:title];
+            
+            UIView *colorView = [[UIView alloc]initWithFrame:CGRectMake(0, 6, 13, 13)];
+            colorView.backgroundColor = colorArr[i];
+            [label addSubview:colorView];
             
             [self.detailView addSubview:label];
         }

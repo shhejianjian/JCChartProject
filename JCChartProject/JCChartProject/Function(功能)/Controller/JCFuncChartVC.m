@@ -25,14 +25,14 @@ static NSString *dashboardID=@"JCDashboardChartCell";
 
 
 
-
-@interface JCFuncChartVC ()
+@interface JCFuncChartVC () <JCBarChartCellDelegate>
 
 
 @property (strong, nonatomic) IBOutlet UITableView *myTableView;
 @property (nonatomic, strong) NSMutableArray *chartCountArr;
 @property (nonatomic, strong) NSMutableArray *testArr;
 
+@property (nonatomic, assign) CGFloat barheight;
 
 @end
 
@@ -68,6 +68,7 @@ static NSString *dashboardID=@"JCDashboardChartCell";
             [self.chartCountArr addObject:xmodel];
         }
         [self.myTableView reloadData];
+
     } failure:^(NSError *error) {
         NSLog(@"%@",error);
     }];
@@ -97,6 +98,7 @@ static NSString *dashboardID=@"JCDashboardChartCell";
         }
         barCell.firstObjectId = self.objectId;
         barCell.chartModel = self.testArr[indexPath.row];
+        barCell.delegate = self;
         cell = barCell;
     } else if ([chartTypeModel.chartType isEqualToString:@"line"]) {
         JCLineChartCell *lineCell=[tableView dequeueReusableCellWithIdentifier:lineID];
@@ -146,25 +148,26 @@ static NSString *dashboardID=@"JCDashboardChartCell";
     return cell;
     
 }
-//- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath
-//{
-//    JCChartModel *chartTypeModel = self.chartCountArr[indexPath.row];
-//    if ([chartTypeModel.chartType isEqualToString:@"pie"]) {
-//        JCPieChartCell *cell = (JCPieChartCell *)[self tableView:self.myTableView cellForRowAtIndexPath:indexPath];
-//        cell.isShow = YES;
-//    }
-//}
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 
-{
-    return 500;
+- (void)passValueForCellHeight:(CGFloat)height{
+    self.barheight = height;
+    [self.myTableView reloadData];
 }
 
 
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    JCChartModel *chartTypeModel = self.chartCountArr[indexPath.row];
+    if ([chartTypeModel.chartType isEqualToString:@"bar"]) {
+        if (self.barheight != 0) {
+            return self.barheight+80;
+        }
+    } else {
+        return 500;
+    }
+    return 100;
 }
+
 
 
 - (NSMutableArray *)chartCountArr {
