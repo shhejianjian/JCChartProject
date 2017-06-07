@@ -4,4 +4,7 @@ target 'JCChartProject' do
 use_frameworks!
 pod 'AFNetworking','~> 3.0'
 pod 'MJExtension'
+pod 'lottie-ios','~>1.5.0'
+pod 'MBProgressHUD'
+
 end

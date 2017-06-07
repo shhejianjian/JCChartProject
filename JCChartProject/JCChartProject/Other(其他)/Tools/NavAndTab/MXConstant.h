@@ -39,5 +39,6 @@
 #import "JCBaseModel.h"
 #import "UIView+Frame.h"
 #import "UIColor+Expanded.h"
+#import "MBProgressHUD+MJ.h"
 
 #endif /* MXConstant_h */

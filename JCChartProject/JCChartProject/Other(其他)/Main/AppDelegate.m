@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+Jpush.h"
+#import "IQKeyboardManager.h"
+
 @interface AppDelegate ()
 
 @end
@@ -17,12 +19,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-//    MXTabBarController *tabC = [[MXTabBarController alloc] init];
-//    self.window.rootViewController = tabC;
-//    [self.window makeKeyAndVisible];
     [self setupJpush:launchOptions];
-    
+    IQKeyboardManager *manager = [IQKeyboardManager sharedManager];
+    manager.enable = YES;
+    manager.shouldResignOnTouchOutside = YES;
+    manager.shouldToolbarUsesTextFieldTintColor = YES;
+    manager.enableAutoToolbar = YES;
     return YES;
 }
 

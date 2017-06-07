@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JCLeftVC">
+            <connections>
+                <outlet property="touchLabelConstraint" destination="oie-Xr-fc7" id="MKB-YZ-gws"/>
+                <outlet property="useTouchIDLabel" destination="dT7-7H-oJD" id="Lba-V5-9Q3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgound" translatesAutoresizingMaskIntoConstraints="NO" id="9Qg-qb-hsC">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="启用指纹" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dT7-7H-oJD">
+                    <rect key="frame" x="25" y="80" width="70" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="WKo-yw-Xjx"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trq-1d-Lq7">
+                    <rect key="frame" x="25" y="125" width="70" height="33"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="修改密码">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="updatePassword:" destination="-1" eventType="touchUpInside" id="iZM-fQ-OmO"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="9Qg-qb-hsC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="69X-HZ-OM6"/>
+                <constraint firstItem="trq-1d-Lq7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="DN0-zB-HCk"/>
+                <constraint firstAttribute="trailing" secondItem="9Qg-qb-hsC" secondAttribute="trailing" id="HJV-qk-7N1"/>
+                <constraint firstAttribute="bottom" secondItem="9Qg-qb-hsC" secondAttribute="bottom" id="Zw4-3h-o8u"/>
+                <constraint firstItem="trq-1d-Lq7" firstAttribute="top" secondItem="dT7-7H-oJD" secondAttribute="bottom" constant="20" id="cVt-2Q-5PP"/>
+                <constraint firstItem="9Qg-qb-hsC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lKB-3d-7jZ"/>
+                <constraint firstItem="dT7-7H-oJD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="oie-Xr-fc7"/>
+                <constraint firstItem="dT7-7H-oJD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="rdC-Tb-Bru"/>
+            </constraints>
+            <point key="canvasLocation" x="25.5" y="52.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backgound" width="640" height="1136"/>
+    </resources>
+</document>

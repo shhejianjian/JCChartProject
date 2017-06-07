@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JCStrategyVC">
             <connections>
+                <outlet property="myTableView" destination="A3g-no-AIV" id="9IJ-Qe-x6z"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,20 +20,22 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Ikx-ZW-sNq">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A3g-no-AIV">
+                    <rect key="frame" x="0.0" y="48" width="375" height="619"/>
+                    <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="4FL-t3-m12"/>
+                        <outlet property="delegate" destination="-1" id="RXE-fi-yML"/>
+                    </connections>
+                </tableView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Ikx-ZW-sNq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="AFp-O6-gLq"/>
-                <constraint firstItem="Ikx-ZW-sNq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dPX-NA-iwy"/>
-                <constraint firstAttribute="trailing" secondItem="Ikx-ZW-sNq" secondAttribute="trailing" id="g0I-FY-0QA"/>
-                <constraint firstAttribute="bottom" secondItem="Ikx-ZW-sNq" secondAttribute="bottom" id="orT-OO-REb"/>
+                <constraint firstItem="A3g-no-AIV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="48" id="1dA-e6-P4d"/>
+                <constraint firstAttribute="bottom" secondItem="A3g-no-AIV" secondAttribute="bottom" id="d9K-27-q6H"/>
+                <constraint firstAttribute="trailing" secondItem="A3g-no-AIV" secondAttribute="trailing" id="g7l-7b-f7X"/>
+                <constraint firstItem="A3g-no-AIV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oG8-jn-j6A"/>
             </constraints>
         </view>
     </objects>
-    <resources>
-        <image name="background" width="1080" height="1921"/>
-    </resources>
 </document>

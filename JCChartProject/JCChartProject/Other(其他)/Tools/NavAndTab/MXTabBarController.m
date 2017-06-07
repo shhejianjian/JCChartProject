@@ -47,6 +47,7 @@
     MoreVC.title = @"更多";
     
     self.viewControllers = @[firstNaC,secondNaC,thirdNaC,fourthNaC];
+
 }
 
 

@@ -9,6 +9,8 @@
 #import "XHHttpTool.h"
 #import "AFNetworking.h"
 #import "XHConst.h"
+#import "MBProgressHUD+MJ.h"
+
 @implementation XHHttpTool
 + (void)get:(NSString *)url params:(NSDictionary *)params success:(void(^)(id json))success failure:(void(^)(NSError *error)) failure
 {
@@ -23,6 +25,7 @@
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (failure) {
+            [MBProgressHUD showError:@"网络连接不稳定，请稍后再试"];
             failure(error);
         }
     }];
@@ -42,6 +45,7 @@
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (failure) {
+            [MBProgressHUD showError:@"网络连接不稳定，请稍后再试"];
             failure(error);
         }
     }];
@@ -61,17 +65,20 @@
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (failure) {
+            [MBProgressHUD showError:@"网络连接不稳定，请稍后再试"];
             failure(error);
         }
     }];
  }
-+ (void)put:(NSString *)url params:(id)params success:(void(^)(id json))success failure:(void(^)(NSError *error)) failure
++ (void)put:(NSString *)url params:(id)params jessionid:(NSString *)jessionid success:(void(^)(id json))success failure:(void(^)(NSError *error)) failure
 {
     AFHTTPSessionManager  *manager=[AFHTTPSessionManager  manager];
 
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json",@"text/javascript",@"text/plain", nil];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"JSESSIONID=%@",jessionid] forHTTPHeaderField:@"Cookie"];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [manager.requestSerializer setValue:@"IOS" forHTTPHeaderField:@"Client-Type"];
     NSString *urlStr = [NSString stringWithFormat:@"%@/%@",BaseUrl,url];
     [manager PUT:urlStr parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
       if (success) {
@@ -79,6 +86,7 @@
         }
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (failure) {
+            [MBProgressHUD showError:@"网络连接不稳定，请稍后再试"];
           failure(error);
         }
      }];

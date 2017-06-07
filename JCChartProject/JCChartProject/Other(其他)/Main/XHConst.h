@@ -24,3 +24,9 @@ extern NSString *const ChartDataUrl;
 
 /** 钻取图表配置 */
 extern NSString *const SubChartDetailUrl;
+
+/** 修改密码 */
+extern NSString *const updatePasswordUrl;
+
+/** 策略列表 */
+extern NSString *const StrategyListUrl;
