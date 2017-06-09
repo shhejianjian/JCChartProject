@@ -231,7 +231,7 @@
 {
     CGContextSetShadow(context, CGSizeMake(0.05, 0.05), 2.0);
     UIFont* font = [UIFont fontWithName:@"HelveticaNeue-Light" size:0.09];
-    NSDictionary* stringAttrs = @{ NSFontAttributeName : font, NSForegroundColorAttributeName : RGB(90, 255, 211) };
+    NSDictionary* stringAttrs = @{ NSFontAttributeName : font, NSForegroundColorAttributeName : [UIColor blackColor] };
     NSAttributedString* attrStr = [[NSAttributedString alloc] initWithString:_unitOfMeasurement attributes:stringAttrs];
     CGSize fontWidth = [_unitOfMeasurement sizeWithAttributes:stringAttrs];
     [attrStr drawAtPoint:CGPointMake(0.5 - fontWidth.width / 2.0, 0.6)];

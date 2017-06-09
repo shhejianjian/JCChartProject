@@ -19,7 +19,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MJRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-JCChartProject.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,7 +42,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2BC9D79C575FF19A1EC6827C68EECC56</key>
+		<key>1E793377FF99EF0E23050BBA91BD2FF6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,12 +57,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>AEC8909E4EC9D178C42461946F18F2BF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>B5C29066B32BC3DBA7CD2538B4ED3A47</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D2285516AB072BB001F242EC2FB6BA5A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

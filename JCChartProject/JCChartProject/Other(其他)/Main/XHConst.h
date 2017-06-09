@@ -30,3 +30,12 @@ extern NSString *const updatePasswordUrl;
 
 /** 策略列表 */
 extern NSString *const StrategyListUrl;
+
+/** 其他-异常数据列表 */
+extern NSString *const abnomarlDataListUrl;
+
+/** 其他-文档查询列表 */
+extern NSString *const wordSearchListUrl;
+
+/** 其他-文档下载 */
+extern NSString *const wordDownloadUrl;

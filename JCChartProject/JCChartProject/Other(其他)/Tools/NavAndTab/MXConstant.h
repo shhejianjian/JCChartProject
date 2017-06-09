@@ -40,5 +40,6 @@
 #import "UIView+Frame.h"
 #import "UIColor+Expanded.h"
 #import "MBProgressHUD+MJ.h"
+#import "MJRefresh.h"
 
 #endif /* MXConstant_h */

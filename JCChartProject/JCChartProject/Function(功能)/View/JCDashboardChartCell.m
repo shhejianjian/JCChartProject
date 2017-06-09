@@ -33,8 +33,8 @@
 - (void)setUI {
     
     _gaugeView.showRangeLabels = YES;
-    _gaugeView.rangeColors = @[ RGB(90, 255, 211),RGB(231, 32, 43)];
-    
+    _gaugeView.rangeColors = @[ RGB(128,206,128),RGB(90,197,235),RGB(244,27,77)];
+    _gaugeView.showScaleShadow = NO;
     _gaugeView.showUnitOfMeasurement = YES;
     _gaugeView.showInnerBackground = NO;
     _gaugeView.needleStyle = WMGaugeViewNeedleStyleFlatThin;
@@ -50,8 +50,9 @@
     
     int maxValue = jsonDataModel.maxValue.intValue;
     _gaugeView.maxValue = maxValue;
-    int range1 = jsonDataModel.maxValue.intValue * 0.8;
-    _gaugeView.rangeValues = @[ @(range1),@(maxValue)];
+    int range1 = jsonDataModel.maxValue.intValue * 0.25;
+    int range2 = jsonDataModel.maxValue.intValue * 0.75;
+    _gaugeView.rangeValues = @[@(range1),@(range2),@(maxValue)];
     _gaugeView.value = 3157;
     NSArray *yArr = [JCChartModel mj_objectArrayWithKeyValuesArray:jsonDataModel.dataPoints];
     for (JCChartModel *model in yArr) {

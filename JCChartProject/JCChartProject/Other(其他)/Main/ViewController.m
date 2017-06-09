@@ -37,8 +37,6 @@
     context= [[LAContext alloc] init];
     [self setUI];
     
-    
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)setUI{
@@ -187,6 +185,8 @@
             [[NSUserDefaults standardUserDefaults]setObject:baseModel.userId forKey:@"userId"];
             [[NSUserDefaults standardUserDefaults]setObject:fields[@"jsessionid"] forKey:@"jsessionid"];
             MXTabBarController *tabC = [[MXTabBarController alloc] init];
+            
+            //加载侧滑控制器
             YRSideViewController *sideVc = [[YRSideViewController alloc]init];
             JCLeftVC *leftVC = [[JCLeftVC alloc]init];
             sideVc.rootViewController = tabC;
@@ -201,10 +201,13 @@
             NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
             JCModifyModel *modifyModel = [JCModifyModel mj_objectWithKeyValues:jsonDict];
             [MBProgressHUD showError:modifyModel.message];
+            self.loginView.hidden = NO;
+            self.touchIDView.hidden = YES;
         }
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+        [MBProgressHUD hideHUDForView:self.view];
+        [MBProgressHUD showError:@"网络连接不稳定，请稍后再试"];
         NSLog(@"登录失败%@",error);
     }];
 }

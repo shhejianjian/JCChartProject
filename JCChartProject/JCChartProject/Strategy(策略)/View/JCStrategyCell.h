@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "JCStrategyListModel.h"
-
+#import "JCMoreModel.h"
 @interface JCStrategyCell : UITableViewCell
 @property (nonatomic, strong) JCStrategyListModel *strategyListModel;
+@property (nonatomic, strong) JCMoreModel *abnormalDataModel;
+@property (nonatomic, strong) JCMoreModel *wordDataModel;
+
 @end

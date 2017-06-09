@@ -21,32 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V8n-vU-hEO">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="使用指纹登录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OkR-JA-3JO">
-                                        <rect key="frame" x="20" y="50" width="335" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请识别指纹" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3y-az-gmQ">
-                                        <rect key="frame" x="20" y="94" width="335" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.14117647058823529" green="0.14901960784313725" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="f3y-az-gmQ" firstAttribute="top" secondItem="OkR-JA-3JO" secondAttribute="bottom" constant="20" id="9tB-vj-yXX"/>
-                                    <constraint firstAttribute="trailing" secondItem="f3y-az-gmQ" secondAttribute="trailing" constant="20" id="HNu-w0-lue"/>
-                                    <constraint firstAttribute="trailing" secondItem="OkR-JA-3JO" secondAttribute="trailing" constant="20" id="ZgE-8J-GR3"/>
-                                    <constraint firstItem="OkR-JA-3JO" firstAttribute="top" secondItem="V8n-vU-hEO" secondAttribute="top" constant="50" id="kME-be-VE7"/>
-                                    <constraint firstItem="f3y-az-gmQ" firstAttribute="leading" secondItem="V8n-vU-hEO" secondAttribute="leading" constant="20" id="oFb-zm-34y"/>
-                                    <constraint firstItem="OkR-JA-3JO" firstAttribute="leading" secondItem="V8n-vU-hEO" secondAttribute="leading" constant="20" id="x6T-Cm-hcc"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fmQ-Bs-RNj">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
@@ -165,6 +139,32 @@
                                     <constraint firstItem="XLa-KW-jd9" firstAttribute="top" secondItem="1VO-sa-fdg" secondAttribute="bottom" constant="15" id="smn-fs-LWv"/>
                                     <constraint firstItem="YuC-DG-ZZh" firstAttribute="leading" secondItem="fmQ-Bs-RNj" secondAttribute="leading" constant="20" id="yTW-sc-a8f"/>
                                     <constraint firstItem="1VO-sa-fdg" firstAttribute="leading" secondItem="fmQ-Bs-RNj" secondAttribute="leading" constant="20" id="zZX-xz-wxZ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V8n-vU-hEO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="使用指纹登录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OkR-JA-3JO">
+                                        <rect key="frame" x="20" y="50" width="335" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请识别指纹" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3y-az-gmQ">
+                                        <rect key="frame" x="20" y="94" width="335" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.14117647058823529" green="0.14901960784313725" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="f3y-az-gmQ" firstAttribute="top" secondItem="OkR-JA-3JO" secondAttribute="bottom" constant="20" id="9tB-vj-yXX"/>
+                                    <constraint firstAttribute="trailing" secondItem="f3y-az-gmQ" secondAttribute="trailing" constant="20" id="HNu-w0-lue"/>
+                                    <constraint firstAttribute="trailing" secondItem="OkR-JA-3JO" secondAttribute="trailing" constant="20" id="ZgE-8J-GR3"/>
+                                    <constraint firstItem="OkR-JA-3JO" firstAttribute="top" secondItem="V8n-vU-hEO" secondAttribute="top" constant="50" id="kME-be-VE7"/>
+                                    <constraint firstItem="f3y-az-gmQ" firstAttribute="leading" secondItem="V8n-vU-hEO" secondAttribute="leading" constant="20" id="oFb-zm-34y"/>
+                                    <constraint firstItem="OkR-JA-3JO" firstAttribute="leading" secondItem="V8n-vU-hEO" secondAttribute="leading" constant="20" id="x6T-Cm-hcc"/>
                                 </constraints>
                             </view>
                         </subviews>

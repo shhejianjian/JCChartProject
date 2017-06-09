@@ -15,6 +15,7 @@
 
 
 + (void)get:(NSString *)url params:(NSDictionary *)params jessionid:(NSString *)jessionid success:(void(^)(id json))success failure:(void(^)(NSError *error)) failure;
++ (void)post:(NSString *)url params:(NSDictionary *)params jessionid:(NSString *)jessionid success:(void(^)(id json))success failure:(void(^)(NSError *error)) failure;
 
 
 @end

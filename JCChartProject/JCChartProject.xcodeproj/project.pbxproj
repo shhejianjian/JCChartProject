@@ -15,6 +15,8 @@
 		1E074C1D1EE6791B00AF7FB8 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E074C1C1EE6791B00AF7FB8 /* loader.json */; };
 		1E074C1F1EE679AB00AF7FB8 /* autoconnect_loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E074C1E1EE679AB00AF7FB8 /* autoconnect_loading.json */; };
 		1E074C261EE682D400AF7FB8 /* NSData+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E074C251EE682D400AF7FB8 /* NSData+AES.m */; };
+		1E07BEDA1EE933F70055474C /* AFN_Download_Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E07BED91EE933F70055474C /* AFN_Download_Tool.m */; };
+		1E07BEDD1EE93E940055474C /* HWProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E07BEDC1EE93E940055474C /* HWProgressView.m */; };
 		1E21B7DE1EC93A4300D69E9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E21B7DD1EC93A4300D69E9D /* main.m */; };
 		1E21B7E71EC93A4300D69E9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E21B7E51EC93A4300D69E9D /* Main.storyboard */; };
 		1E21B7E91EC93A4300D69E9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E21B7E81EC93A4300D69E9D /* Assets.xcassets */; };
@@ -226,6 +228,11 @@
 		1ED5F4E91EE7B7F80060633F /* JCStrategyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED5F4E71EE7B7F80060633F /* JCStrategyCell.m */; };
 		1ED5F4EA1EE7B7F80060633F /* JCStrategyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ED5F4E81EE7B7F80060633F /* JCStrategyCell.xib */; };
 		1ED5F4ED1EE7BBBA0060633F /* JCStrategyListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED5F4EC1EE7BBBA0060633F /* JCStrategyListModel.m */; };
+		1ED5F4FD1EE7D77F0060633F /* XFSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED5F4FC1EE7D77F0060633F /* XFSegmentView.m */; };
+		1ED5F5001EE7D9DB0060633F /* JCMoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED5F4FF1EE7D9DB0060633F /* JCMoreModel.m */; };
+		1ED5F5041EE7DF0E0060633F /* LGLSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED5F5031EE7DF0E0060633F /* LGLSearchBar.m */; };
+		1EE03D501EE9115200504B4D /* JCWordWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EE03D4E1EE9115200504B4D /* JCWordWebView.m */; };
+		1EE03D511EE9115200504B4D /* JCWordWebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EE03D4F1EE9115200504B4D /* JCWordWebView.xib */; };
 		EFDF6386875B3A7F2102933C /* Pods_JCChartProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71573704D25BCDB60B7DF22F /* Pods_JCChartProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -294,6 +301,10 @@
 		1E074C1E1EE679AB00AF7FB8 /* autoconnect_loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = autoconnect_loading.json; sourceTree = "<group>"; };
 		1E074C241EE682D400AF7FB8 /* NSData+AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AES.h"; sourceTree = "<group>"; };
 		1E074C251EE682D400AF7FB8 /* NSData+AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES.m"; sourceTree = "<group>"; };
+		1E07BED81EE933F70055474C /* AFN_Download_Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFN_Download_Tool.h; sourceTree = "<group>"; };
+		1E07BED91EE933F70055474C /* AFN_Download_Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFN_Download_Tool.m; sourceTree = "<group>"; };
+		1E07BEDB1EE93E940055474C /* HWProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWProgressView.h; sourceTree = "<group>"; };
+		1E07BEDC1EE93E940055474C /* HWProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWProgressView.m; sourceTree = "<group>"; };
 		1E21B7D91EC93A4300D69E9D /* JCChartProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JCChartProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E21B7DD1EC93A4300D69E9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1E21B7E61EC93A4300D69E9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -646,6 +657,15 @@
 		1ED5F4E81EE7B7F80060633F /* JCStrategyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCStrategyCell.xib; sourceTree = "<group>"; };
 		1ED5F4EB1EE7BBBA0060633F /* JCStrategyListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCStrategyListModel.h; sourceTree = "<group>"; };
 		1ED5F4EC1EE7BBBA0060633F /* JCStrategyListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCStrategyListModel.m; sourceTree = "<group>"; };
+		1ED5F4FB1EE7D77F0060633F /* XFSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSegmentView.h; sourceTree = "<group>"; };
+		1ED5F4FC1EE7D77F0060633F /* XFSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSegmentView.m; sourceTree = "<group>"; };
+		1ED5F4FE1EE7D9DB0060633F /* JCMoreModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCMoreModel.h; sourceTree = "<group>"; };
+		1ED5F4FF1EE7D9DB0060633F /* JCMoreModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCMoreModel.m; sourceTree = "<group>"; };
+		1ED5F5021EE7DF0E0060633F /* LGLSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGLSearchBar.h; sourceTree = "<group>"; };
+		1ED5F5031EE7DF0E0060633F /* LGLSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGLSearchBar.m; sourceTree = "<group>"; };
+		1EE03D4D1EE9115200504B4D /* JCWordWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCWordWebView.h; sourceTree = "<group>"; };
+		1EE03D4E1EE9115200504B4D /* JCWordWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCWordWebView.m; sourceTree = "<group>"; };
+		1EE03D4F1EE9115200504B4D /* JCWordWebView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCWordWebView.xib; sourceTree = "<group>"; };
 		71573704D25BCDB60B7DF22F /* Pods_JCChartProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JCChartProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B40B3194CC02ECD0285EC4 /* Pods-JCChartProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCChartProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-JCChartProject/Pods-JCChartProject.release.xcconfig"; sourceTree = "<group>"; };
 		B61BFE7DE238B953A245FAB9 /* Pods-JCChartProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCChartProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JCChartProject/Pods-JCChartProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -901,6 +921,9 @@
 				1E21B8711EC97ECE00D69E9D /* JCMoreVC.h */,
 				1E21B8721EC97ECE00D69E9D /* JCMoreVC.m */,
 				1E21B8731EC97ECE00D69E9D /* JCMoreVC.xib */,
+				1EE03D4D1EE9115200504B4D /* JCWordWebView.h */,
+				1EE03D4E1EE9115200504B4D /* JCWordWebView.m */,
+				1EE03D4F1EE9115200504B4D /* JCWordWebView.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -908,6 +931,8 @@
 		1E21B82F1EC97DF900D69E9D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1ED5F4FE1EE7D9DB0060633F /* JCMoreModel.h */,
+				1ED5F4FF1EE7D9DB0060633F /* JCMoreModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -956,6 +981,10 @@
 				1E21B83A1EC97DF900D69E9D /* XHConst.m */,
 				1E21B83B1EC97DF900D69E9D /* XHHttpTool.h */,
 				1E21B83C1EC97DF900D69E9D /* XHHttpTool.m */,
+				1E07BED81EE933F70055474C /* AFN_Download_Tool.h */,
+				1E07BED91EE933F70055474C /* AFN_Download_Tool.m */,
+				1E07BEDB1EE93E940055474C /* HWProgressView.h */,
+				1E07BEDC1EE93E940055474C /* HWProgressView.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -963,6 +992,8 @@
 		1E21B83D1EC97DF900D69E9D /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				1ED5F5011EE7DF0E0060633F /* SearchBar */,
+				1ED5F4FA1EE7D77F0060633F /* XFSegmentView */,
 				1ED5F4DB1EE79E120060633F /* MBProgressHUDFile */,
 				1ED5F4A61EE79CB30060633F /* IQKeyBoardManager */,
 				1E074C201EE682A700AF7FB8 /* HJAES */,
@@ -1661,6 +1692,24 @@
 			path = MBProgressHUDFile;
 			sourceTree = "<group>";
 		};
+		1ED5F4FA1EE7D77F0060633F /* XFSegmentView */ = {
+			isa = PBXGroup;
+			children = (
+				1ED5F4FB1EE7D77F0060633F /* XFSegmentView.h */,
+				1ED5F4FC1EE7D77F0060633F /* XFSegmentView.m */,
+			);
+			path = XFSegmentView;
+			sourceTree = "<group>";
+		};
+		1ED5F5011EE7DF0E0060633F /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				1ED5F5021EE7DF0E0060633F /* LGLSearchBar.h */,
+				1ED5F5031EE7DF0E0060633F /* LGLSearchBar.m */,
+			);
+			path = SearchBar;
+			sourceTree = "<group>";
+		};
 		A9F5F75D46C72511BFC15148 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1896,6 +1945,7 @@
 				1EC2018F1ECAB46E0013E173 /* app_item_bg.png in Resources */,
 				1EC201941ECAB46E0013E173 /* more_icon_cancle_deal@2x.png in Resources */,
 				1EC201961ECAB46E0013E173 /* more_icon_Credit-card-@2x.png in Resources */,
+				1EE03D511EE9115200504B4D /* JCWordWebView.xib in Resources */,
 				1E80EEC61EDFE17800BEE91B /* JCFuncVC.xib in Resources */,
 				1ED5F4A51EE794D60060633F /* PasswordAlertView.xib in Resources */,
 				1E21B7E91EC93A4300D69E9D /* Assets.xcassets in Resources */,
@@ -1980,6 +2030,7 @@
 				1ED5F4CD1EE79CB30060633F /* IQUIScrollView+Additions.m in Sources */,
 				1E80EEB01EDFAC0400BEE91B /* CustomSearchView.m in Sources */,
 				1E074C261EE682D400AF7FB8 /* NSData+AES.m in Sources */,
+				1ED5F5041EE7DF0E0060633F /* LGLSearchBar.m in Sources */,
 				1EC202561ECACF470013E173 /* ZFRadarChart.m in Sources */,
 				1ED5F4CC1EE79CB30060633F /* IQNSArray+Sort.m in Sources */,
 				1EC2013B1ECA94620013E173 /* JCFunctionCell.m in Sources */,
@@ -2015,6 +2066,7 @@
 				1E80EEC51EDFE17800BEE91B /* JCFuncVC.m in Sources */,
 				1EC2018C1ECAB46E0013E173 /* GridView.m in Sources */,
 				1E446D311ED55A4200346199 /* YTDatePicker_DateModel.m in Sources */,
+				1E07BEDA1EE933F70055474C /* AFN_Download_Tool.m in Sources */,
 				1EC201D31ECACAA10013E173 /* JHChart.m in Sources */,
 				1EC201DD1ECACAA10013E173 /* JHTableChart.m in Sources */,
 				1E21B85A1EC97E1F00D69E9D /* MXBarButtonItem.m in Sources */,
@@ -2026,12 +2078,14 @@
 				1E80EEC11EDFE12A00BEE91B /* LXTestViewController.m in Sources */,
 				1EC2023B1ECACF470013E173 /* UIColor+Zirkfied.m in Sources */,
 				1ED5F4CE1EE79CB30060633F /* IQUITextFieldView+Additions.m in Sources */,
+				1EE03D501EE9115200504B4D /* JCWordWebView.m in Sources */,
 				1EC202581ECACF470013E173 /* ZFWaveChart.m in Sources */,
 				1EB2309D1ED6C6AA00DF403C /* HCGDatePicker.m in Sources */,
 				1EC2025B1ECAD28D0013E173 /* JCChartModel.m in Sources */,
 				1EC2024B1ECACF470013E173 /* ZFHorizontalAxis.m in Sources */,
 				1E21B7DE1EC93A4300D69E9D /* main.m in Sources */,
 				1ED5F4D31EE79CB30060633F /* IQKeyboardReturnKeyHandler.m in Sources */,
+				1ED5F5001EE7D9DB0060633F /* JCMoreModel.m in Sources */,
 				1ED5F4D51EE79CB30060633F /* IQBarButtonItem.m in Sources */,
 				1EC2023C1ECACF470013E173 /* UIView+Zirkfied.m in Sources */,
 				1EC202541ECACF470013E173 /* ZFPolygon.m in Sources */,
@@ -2049,6 +2103,7 @@
 				1E21B85C1EC97E1F00D69E9D /* MXNavigationController.m in Sources */,
 				1EC202471ECACF470013E173 /* ZFCirque.m in Sources */,
 				1EC201D91ECACAA10013E173 /* JHRadarChart.m in Sources */,
+				1ED5F4FD1EE7D77F0060633F /* XFSegmentView.m in Sources */,
 				1EC202401ECACF470013E173 /* ZFYAxisLine.m in Sources */,
 				1E074C171EE6682E00AF7FB8 /* LQXSwitch.m in Sources */,
 				1EC201311ECA88C10013E173 /* JCFuncBaseModel.m in Sources */,
@@ -2096,6 +2151,7 @@
 				1ED5F4D41EE79CB30060633F /* IQTextView.m in Sources */,
 				1EC202501ECACF470013E173 /* ZFLineChart.m in Sources */,
 				1EC2024A1ECACF470013E173 /* ZFGenericChart.m in Sources */,
+				1E07BEDD1EE93E940055474C /* HWProgressView.m in Sources */,
 				1EC201881ECAB46E0013E173 /* UILabel+LXLabel.m in Sources */,
 				1E446D121ED54C5D00346199 /* AlertView.m in Sources */,
 				1EC2024E1ECACF470013E173 /* ZFCircle.m in Sources */,

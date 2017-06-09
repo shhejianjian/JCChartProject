@@ -29,5 +29,11 @@ NSString *const SubChartDetailUrl = @"api/v1/aems/dataPoint/relation?";
 /** 策略列表 */
 NSString *const StrategyListUrl = @"api/v1/appService/strategyActivation/query";
 
+/** 其他-异常数据列表 */
+NSString *const abnomarlDataListUrl = @"api/v1/appService/dataPointExceptionLog/query";
 
+/** 其他-文档查询列表 */
+NSString *const wordSearchListUrl = @"api/v1/appService/officeDocument/query";
 
+/** 其他-文档下载 */
+NSString *const wordDownloadUrl = @"api/v1/appService/officeDocument/download";

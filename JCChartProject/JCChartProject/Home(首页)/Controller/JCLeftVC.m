@@ -12,6 +12,7 @@
 #import "PasswordAlertView.h"
 #import "JCModifyModel.h"
 #import <LocalAuthentication/LocalAuthentication.h>
+#import "NSData+AES.h"
 
 @interface JCLeftVC ()
 {
@@ -56,12 +57,10 @@
         }
     }
     if (swit.on) {
-        
         [[NSUserDefaults standardUserDefaults]setObject:@"yes" forKey:@"touchID"];
     }else{
         [[NSUserDefaults standardUserDefaults]setObject:@"no" forKey:@"touchID"];
     }
-    
 }
 
 - (IBAction)updatePassword:(id)sender {
@@ -86,6 +85,10 @@
                     [MBProgressHUD showSuccess:@"密码修改成功"];
                     [self.bGView removeFromSuperview];
                     [weakSelf hide:YES];
+                    //加密
+                    NSData *passwordPlain = [weakSelf.firstNewPassword.text dataUsingEncoding:NSUTF8StringEncoding];
+                    NSData *passwordCipher = [passwordPlain AES256EncryptWithKey:@"password"];
+                    [[NSUserDefaults standardUserDefaults]setObject:passwordCipher forKey:@"aes-password"];
                     
                 } else if ([thirdModel.success isEqualToString:@"0"]){
                     [MBProgressHUD showError:thirdModel.message];
@@ -94,10 +97,9 @@
                 NSLog(@"error:%@",error);
             }];
         }
-        
-        
     };
 }
+
 -(void)createBackgroundView{
     self.bGView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, MAINSCREENwidth, MAINSCREENheight)];
     self.bGView.backgroundColor = [UIColor blackColor];

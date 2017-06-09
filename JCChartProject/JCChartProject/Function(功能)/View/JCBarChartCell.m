@@ -246,9 +246,9 @@
         NSString *jsessionid = [[NSUserDefaults standardUserDefaults]objectForKey:@"jsessionid"];
         NSString *menuDetailUrl = [NSString stringWithFormat:@"%@%@",MenuDetailUrl,objectid];
         [XHHttpTool get:menuDetailUrl params:nil jessionid:jsessionid success:^(id json) {
-            //        JCChartModel *mainModel = [JCChartModel mj_objectWithKeyValues:json];
-            //        NSArray *arr = [JCChartModel mj_objectArrayWithKeyValuesArray:mainModel.appCustomMenuItemList];
-            NSArray *arr = [JCChartModel mj_objectArrayWithKeyValuesArray:json];
+                    JCChartModel *mainModel = [JCChartModel mj_objectWithKeyValues:json];
+                    NSArray *arr = [JCChartModel mj_objectArrayWithKeyValuesArray:mainModel.appCustomMenuItemList];
+//            NSArray *arr = [JCChartModel mj_objectArrayWithKeyValuesArray:json];
             for (JCChartModel *chartModel in arr) {
                 JCChartModel *xmodel = [JCChartModel mj_objectWithKeyValues:chartModel.jsonData];
                 if ([xmodel.chartType isEqualToString:@"bar"]) {
