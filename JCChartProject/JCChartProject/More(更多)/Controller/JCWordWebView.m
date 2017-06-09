@@ -10,7 +10,8 @@
 #import "MXConstant.h"
 
 
-@interface JCWordWebView ()
+@interface JCWordWebView ()<UIDocumentInteractionControllerDelegate>
+@property (nonatomic, strong) UIDocumentInteractionController *documentInteractionController;
 
 @property (strong, nonatomic) IBOutlet UIWebView *myWebView;
 @end
@@ -20,6 +21,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.mxNavigationItem.title = self.titleName;
+    self.mxNavigationItem.rightItem = [[MXBarButtonItem alloc]initWIthImage:@"更多" handler:^{
+        [self btnClick];
+    }];
+    
+    
     self.myWebView.layer.cornerRadius = 5;
     self.myWebView.layer.masksToBounds = YES;
     self.myWebView.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
@@ -30,11 +36,22 @@
     self.myWebView.opaque = NO;
     [self loadwebView];
     NSLog(@"filepath:%@",self.filePath);
-    
-//    NSURLRequest *request=[NSURLRequest requestWithURL:self.filePath];
-//    [self.myWebView loadRequest:request];
 
 }
+
+- (void)btnClick{
+    NSURL *url = [NSURL fileURLWithPath:self.filePath];
+    _documentInteractionController = [UIDocumentInteractionController
+                                      interactionControllerWithURL:url];
+    [_documentInteractionController setDelegate:self];
+    
+    [_documentInteractionController presentOpenInMenuFromRect:CGRectZero inView:self.view animated:YES];
+
+}
+
+
+
+
 - (void) loadwebView {
     //    NSString *txtPath=[[NSBundle mainBundle]pathForResource:@"city_list" ofType:@"txt"];
     //

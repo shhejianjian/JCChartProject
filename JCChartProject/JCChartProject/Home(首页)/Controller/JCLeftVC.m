@@ -100,6 +100,32 @@
     };
 }
 
+
+- (IBAction)removeFile:(id)sender {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *path = [NSString stringWithFormat:@"%@/Caches",[paths objectAtIndex:0]];
+//    NSString *path = [NSString stringWithFormat:@"%@/Caches",NSHomeDirectory()];
+    NSFileManager *fileMgr = [NSFileManager defaultManager];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"清理缓存将清理您下载的所有文件哦" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        return;
+    }];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [fileMgr removeItemAtPath:path error:nil];
+        BOOL bRet = [fileMgr fileExistsAtPath:path];
+        if (!bRet) {
+            [MBProgressHUD showSuccess:@"缓存清理成功"];
+        }
+    }];
+    [alertController addAction:cancelAction];
+    [alertController addAction:okAction];
+    [self presentViewController:alertController animated:YES completion:nil];  
+}
+
+
+
+
+
 -(void)createBackgroundView{
     self.bGView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, MAINSCREENwidth, MAINSCREENheight)];
     self.bGView.backgroundColor = [UIColor blackColor];

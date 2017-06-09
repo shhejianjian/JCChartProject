@@ -70,6 +70,8 @@
 		1E80EECD1EDFE79300BEE91B /* GFMCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E80EEC91EDFE79300BEE91B /* GFMCTableViewCell.m */; };
 		1E80EECE1EDFE79300BEE91B /* GFMCTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E80EECA1EDFE79300BEE91B /* GFMCTableViewCell.xib */; };
 		1E80EECF1EDFE79300BEE91B /* GFMultipleColumnsTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E80EECC1EDFE79300BEE91B /* GFMultipleColumnsTVCell.m */; };
+		1EAD4F3D1EEA7CC0007BDA35 /* JCMainHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAD4F3B1EEA7CC0007BDA35 /* JCMainHomeVC.m */; };
+		1EAD4F3E1EEA7CC0007BDA35 /* JCMainHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EAD4F3C1EEA7CC0007BDA35 /* JCMainHomeVC.xib */; };
 		1EB2309D1ED6C6AA00DF403C /* HCGDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2309A1ED6C6AA00DF403C /* HCGDatePicker.m */; };
 		1EB2309E1ED6C6AA00DF403C /* HCGDatePickerAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2309C1ED6C6AA00DF403C /* HCGDatePickerAppearance.m */; };
 		1EB230A31ED7BA6A00DF403C /* LTPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB230A11ED7BA6A00DF403C /* LTPickerView.m */; };
@@ -203,6 +205,10 @@
 		1EC404611EE1470200A9259B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC404601EE1470200A9259B /* Foundation.framework */; };
 		1EC404631EE1470D00A9259B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC404621EE1470D00A9259B /* CoreGraphics.framework */; };
 		1EC4046C1EE14CD500A9259B /* AppDelegate+Jpush.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4046B1EE14CD500A9259B /* AppDelegate+Jpush.m */; };
+		1EC7D9C41EEA43AD0009D152 /* JCTopChartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC7D9C21EEA43AD0009D152 /* JCTopChartCell.m */; };
+		1EC7D9C51EEA43AD0009D152 /* JCTopChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EC7D9C31EEA43AD0009D152 /* JCTopChartCell.xib */; };
+		1EC7D9CA1EEA43BA0009D152 /* JCBottomViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC7D9C81EEA43BA0009D152 /* JCBottomViewCell.m */; };
+		1EC7D9CB1EEA43BA0009D152 /* JCBottomViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EC7D9C91EEA43BA0009D152 /* JCBottomViewCell.xib */; };
 		1ED215541ED3C6B1003219D5 /* SFGaugeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED215531ED3C6B1003219D5 /* SFGaugeView.m */; };
 		1ED215581ED3C9ED003219D5 /* WMGaugeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED215571ED3C9ED003219D5 /* WMGaugeView.m */; };
 		1ED5F4A21EE794C30060633F /* PasswordAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED5F4A11EE794C30060633F /* PasswordAlertView.m */; };
@@ -401,6 +407,9 @@
 		1E80EECA1EDFE79300BEE91B /* GFMCTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GFMCTableViewCell.xib; sourceTree = "<group>"; };
 		1E80EECB1EDFE79300BEE91B /* GFMultipleColumnsTVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFMultipleColumnsTVCell.h; sourceTree = "<group>"; };
 		1E80EECC1EDFE79300BEE91B /* GFMultipleColumnsTVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFMultipleColumnsTVCell.m; sourceTree = "<group>"; };
+		1EAD4F3A1EEA7CC0007BDA35 /* JCMainHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCMainHomeVC.h; sourceTree = "<group>"; };
+		1EAD4F3B1EEA7CC0007BDA35 /* JCMainHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCMainHomeVC.m; sourceTree = "<group>"; };
+		1EAD4F3C1EEA7CC0007BDA35 /* JCMainHomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCMainHomeVC.xib; sourceTree = "<group>"; };
 		1EB230991ED6C6AA00DF403C /* HCGDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCGDatePicker.h; sourceTree = "<group>"; };
 		1EB2309A1ED6C6AA00DF403C /* HCGDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCGDatePicker.m; sourceTree = "<group>"; };
 		1EB2309B1ED6C6AA00DF403C /* HCGDatePickerAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCGDatePickerAppearance.h; sourceTree = "<group>"; };
@@ -608,6 +617,12 @@
 		1EC4046A1EE14CD500A9259B /* AppDelegate+Jpush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Jpush.h"; sourceTree = "<group>"; };
 		1EC4046B1EE14CD500A9259B /* AppDelegate+Jpush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Jpush.m"; sourceTree = "<group>"; };
 		1EC4046D1EE14D5D00A9259B /* JCChartProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JCChartProject.entitlements; sourceTree = "<group>"; };
+		1EC7D9C11EEA43AD0009D152 /* JCTopChartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCTopChartCell.h; sourceTree = "<group>"; };
+		1EC7D9C21EEA43AD0009D152 /* JCTopChartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCTopChartCell.m; sourceTree = "<group>"; };
+		1EC7D9C31EEA43AD0009D152 /* JCTopChartCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCTopChartCell.xib; sourceTree = "<group>"; };
+		1EC7D9C71EEA43BA0009D152 /* JCBottomViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCBottomViewCell.h; sourceTree = "<group>"; };
+		1EC7D9C81EEA43BA0009D152 /* JCBottomViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCBottomViewCell.m; sourceTree = "<group>"; };
+		1EC7D9C91EEA43BA0009D152 /* JCBottomViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCBottomViewCell.xib; sourceTree = "<group>"; };
 		1ED215521ED3C6B1003219D5 /* SFGaugeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFGaugeView.h; sourceTree = "<group>"; };
 		1ED215531ED3C6B1003219D5 /* SFGaugeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFGaugeView.m; sourceTree = "<group>"; };
 		1ED215561ED3C9ED003219D5 /* WMGaugeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMGaugeView.h; sourceTree = "<group>"; };
@@ -885,6 +900,9 @@
 				1E074C0F1EE6590200AF7FB8 /* JCLeftVC.h */,
 				1E074C101EE6590200AF7FB8 /* JCLeftVC.m */,
 				1E074C111EE6590200AF7FB8 /* JCLeftVC.xib */,
+				1EAD4F3A1EEA7CC0007BDA35 /* JCMainHomeVC.h */,
+				1EAD4F3B1EEA7CC0007BDA35 /* JCMainHomeVC.m */,
+				1EAD4F3C1EEA7CC0007BDA35 /* JCMainHomeVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -901,6 +919,12 @@
 		1E21B82C1EC97DF900D69E9D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1EC7D9C11EEA43AD0009D152 /* JCTopChartCell.h */,
+				1EC7D9C21EEA43AD0009D152 /* JCTopChartCell.m */,
+				1EC7D9C31EEA43AD0009D152 /* JCTopChartCell.xib */,
+				1EC7D9C71EEA43BA0009D152 /* JCBottomViewCell.h */,
+				1EC7D9C81EEA43BA0009D152 /* JCBottomViewCell.m */,
+				1EC7D9C91EEA43BA0009D152 /* JCBottomViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1889,6 +1913,7 @@
 				1EC2018D1ECAB46E0013E173 /* add_businesses.png in Resources */,
 				1EC201AA1ECAB46E0013E173 /* more_icon_Settlement@2x.png in Resources */,
 				1EC201A01ECAB46E0013E173 /* more_icon_Mall@2x.png in Resources */,
+				1EC7D9C51EEA43AD0009D152 /* JCTopChartCell.xib in Resources */,
 				1EC201AB1ECAB46E0013E173 /* more_icon_Settlement@3x.png in Resources */,
 				1EC201A51ECAB46E0013E173 /* more_icon_Prepaidcard@3x.png in Resources */,
 				1EC202721ECBD76F0013E173 /* JCPieChartCell.xib in Resources */,
@@ -1932,6 +1957,7 @@
 				1EC201AD1ECAB46E0013E173 /* more_icon_shouyin@3x.png in Resources */,
 				1E21B8701EC97EBF00D69E9D /* JCStrategyVC.xib in Resources */,
 				1EC201A41ECAB46E0013E173 /* more_icon_Prepaid-card@2x.png in Resources */,
+				1EC7D9CB1EEA43BA0009D152 /* JCBottomViewCell.xib in Resources */,
 				1EC2013C1ECA94620013E173 /* JCFunctionCell.xib in Resources */,
 				1EC201A11ECAB46E0013E173 /* more_icon_Mall@3x.png in Resources */,
 				1EC201981ECAB46E0013E173 /* more_icon_d1@2x.png in Resources */,
@@ -1953,6 +1979,7 @@
 				1EC2018E1ECAB46E0013E173 /* app_item_add.png in Resources */,
 				1EC202631ECBD7410013E173 /* JCBarChartCell.xib in Resources */,
 				1E21B7E71EC93A4300D69E9D /* Main.storyboard in Resources */,
+				1EAD4F3E1EEA7CC0007BDA35 /* JCMainHomeVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2104,6 +2131,7 @@
 				1EC202471ECACF470013E173 /* ZFCirque.m in Sources */,
 				1EC201D91ECACAA10013E173 /* JHRadarChart.m in Sources */,
 				1ED5F4FD1EE7D77F0060633F /* XFSegmentView.m in Sources */,
+				1EC7D9C41EEA43AD0009D152 /* JCTopChartCell.m in Sources */,
 				1EC202401ECACF470013E173 /* ZFYAxisLine.m in Sources */,
 				1E074C171EE6682E00AF7FB8 /* LQXSwitch.m in Sources */,
 				1EC201311ECA88C10013E173 /* JCFuncBaseModel.m in Sources */,
@@ -2134,6 +2162,7 @@
 				1EC2018B1ECAB46E0013E173 /* GridButton.m in Sources */,
 				1EC202491ECACF470013E173 /* ZFGenericAxis.m in Sources */,
 				1E21B86F1EC97EBF00D69E9D /* JCStrategyVC.m in Sources */,
+				1EAD4F3D1EEA7CC0007BDA35 /* JCMainHomeVC.m in Sources */,
 				1ED215581ED3C9ED003219D5 /* WMGaugeView.m in Sources */,
 				1ED5F4A21EE794C30060633F /* PasswordAlertView.m in Sources */,
 				1E80EEC01EDFE12A00BEE91B /* LXScrollContentView.m in Sources */,
@@ -2142,6 +2171,7 @@
 				1EC2024D1ECACF470013E173 /* ZFHorizontalBarChart.m in Sources */,
 				1EC202621ECBD7410013E173 /* JCBarChartCell.m in Sources */,
 				1E21B85F1EC97E1F00D69E9D /* NSString+Add.m in Sources */,
+				1EC7D9CA1EEA43BA0009D152 /* JCBottomViewCell.m in Sources */,
 				1EC4046C1EE14CD500A9259B /* AppDelegate+Jpush.m in Sources */,
 				1EC202761ECBD7840013E173 /* JCDashboardChartCell.m in Sources */,
 				1E21B85E1EC97E1F00D69E9D /* MXTabBarController.m in Sources */,

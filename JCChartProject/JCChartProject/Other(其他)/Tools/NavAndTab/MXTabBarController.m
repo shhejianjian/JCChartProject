@@ -12,6 +12,7 @@
 #import "JCStrategyVC.h"
 #import "JCMoreVC.h"
 #import "JCFuncVC.h"
+#import "JCMainHomeVC.h"
 
 
 @interface MXTabBarController ()
@@ -30,7 +31,7 @@
 
 - (void)setUpChildViews
 {
-    JCHomeVC *homeC = [[JCHomeVC alloc] init];
+    JCMainHomeVC *homeC = [[JCMainHomeVC alloc] init];
     MXNavigationController *firstNaC = [[MXNavigationController alloc] initWithRootViewController:homeC];
     homeC.title = @"首页";
     

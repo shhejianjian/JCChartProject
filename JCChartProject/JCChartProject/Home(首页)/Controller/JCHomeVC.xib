@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JCHomeVC">
             <connections>
+                <outlet property="myTableView" destination="cYH-3K-Du3" id="Hv1-Nr-gMJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,8 +19,24 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cYH-3K-Du3">
+                    <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="dGV-Hx-DKq"/>
+                        <outlet property="delegate" destination="-1" id="3Y8-iT-8lj"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <point key="canvasLocation" x="25.5" y="51.5"/>
+            <constraints>
+                <constraint firstItem="cYH-3K-Du3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3yu-Lp-T1p"/>
+                <constraint firstAttribute="trailing" secondItem="cYH-3K-Du3" secondAttribute="trailing" id="QM1-fS-aat"/>
+                <constraint firstAttribute="bottom" secondItem="cYH-3K-Du3" secondAttribute="bottom" id="Y0q-W2-RZ4"/>
+                <constraint firstItem="cYH-3K-Du3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="44" id="qtr-eM-83G"/>
+            </constraints>
+            <point key="canvasLocation" x="-149" y="3"/>
         </view>
     </objects>
 </document>

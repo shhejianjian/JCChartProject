@@ -26,12 +26,25 @@
                            pregress(1.0 *downloadProgress.completedUnitCount/downloadProgress.totalUnitCount,1.0 *downloadProgress.totalUnitCount,1.0 *downloadProgress.completedUnitCount);
                     } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
 //                           返回一个NSURL，文件路径
-                        NSString *path = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
-                        path = [path stringByAppendingString:[NSString stringWithFormat:@"%@.%@",filename,fileType]];
-                        return [NSURL fileURLWithPath:path];//转化为文件路径
+//                        NSString *path = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
+//                        path = [path stringByAppendingString:[NSString stringWithFormat:@"%@.%@",filename,fileType]];
+                        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+                        NSString *imageDir = [NSString stringWithFormat:@"%@/Caches/downloadFile",[paths objectAtIndex:0]];
+//                        NSString *imageDir = [NSString stringWithFormat:@"%@/Caches/downloadFile",NSHomeDirectory()];
+                        BOOL isDir = NO;
+                        NSFileManager *fileManager = [NSFileManager defaultManager];
+                        BOOL existed = [fileManager fileExistsAtPath:imageDir isDirectory:&isDir];
+                        if ( !(isDir == YES && existed == YES) )
+                        {
+                            [fileManager createDirectoryAtPath:imageDir withIntermediateDirectories:YES attributes:nil error:nil];
+                        }
+                        NSLog(@"imageDir:%@",imageDir);
+                        imageDir = [imageDir stringByAppendingString:[NSString stringWithFormat:@"%@.%@",filename,fileType]];
+                        
+                        return [NSURL fileURLWithPath:imageDir];//转化为文件路径
                        } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
 //                           若是下载的是压缩包，可以在这里进行解压
-                           
+                           NSLog(@"文件路径---%@",filePath);
                            NSString *message = nil;
 //                           下载成功
                            if (error == nil) {

@@ -1,0 +1,24 @@
+//
+//  JCBottomViewCell.m
+//  JCChartProject
+//
+//  Created by 何键键 on 17/6/9.
+//  Copyright © 2017年 JC. All rights reserved.
+//
+
+#import "JCBottomViewCell.h"
+
+@implementation JCBottomViewCell
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    // Initialization code
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
+}
+
+@end

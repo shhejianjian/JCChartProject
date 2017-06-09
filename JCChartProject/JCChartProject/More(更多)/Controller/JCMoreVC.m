@@ -157,28 +157,32 @@ static NSString *ID=@"JCStrategyCell";
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     JCMoreModel *model = self.moreListArr[indexPath.row];
     NSLog(@"objectid:%@--%@",model.objectId,model.officeDocumentName);
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *path = [NSString stringWithFormat:@"%@/Caches/downloadFile",[paths objectAtIndex:0]];
+//    NSString *path = [NSString stringWithFormat:@"%@/Caches/downloadFile",NSHomeDirectory()];
+    path = [path stringByAppendingString:[NSString stringWithFormat:@"%@.%@",model.objectId,model.documentType]];
     
-    NSString *path = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
-    path = [path stringByAppendingString:[NSString stringWithFormat:@"%@.%@",model.officeDocumentName,model.documentType]];
-    
-    NSLog(@"path=====%@",path);
     NSInteger fileSize = [self fileSizeAtPath:path];
-    NSLog(@"size====%ld",fileSize);
+    NSLog(@"size====%ld",(long)fileSize
+          );
     if (fileSize == [model.fileSize integerValue]) {
         JCWordWebView *wordVC = [[JCWordWebView alloc]init];
         wordVC.filePath = path;
         wordVC.titleName = model.officeDocumentName;
         [self.navigationController pushViewController:wordVC animated:YES];
     } else{
-        
-        
+        NSFileManager *fileMgr = [NSFileManager defaultManager];
+        BOOL bRet = [fileMgr fileExistsAtPath:path];
+        if (bRet) {
+            NSError *err;
+            [fileMgr removeItemAtPath:path error:&err];
+        }
         
         NSString *urlStr = [NSString stringWithFormat:@"%@/%@?objectId=%@",BaseUrl,wordDownloadUrl,model.objectId];
         [self hudTipWillShow:YES];
-        NSURLSessionDownloadTask *task = [AFN_Download_Tool downloadFileWithUrl:urlStr andFileName:model.officeDocumentName andFileType:model.documentType downloadProgress:^(CGFloat progress, CGFloat total, CGFloat current) {
+        NSURLSessionDownloadTask *task = [AFN_Download_Tool downloadFileWithUrl:urlStr andFileName:model.objectId andFileType:model.documentType downloadProgress:^(CGFloat progress, CGFloat total, CGFloat current) {
             //               回到主线程更新进度条
             dispatch_async(dispatch_get_main_queue(), ^{
-                NSLog(@"progress:%f",progress);
                 self.downProgress = progress;
                 self.progressView.progress = progress;
             });
