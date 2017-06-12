@@ -10,7 +10,7 @@
 #import "ZFColor.h"
 @implementation JCCombineChart
 
-- (void)setCombineBarChart:(CombinedChartView *)combineChart lineTitle:(NSString *)lineTitle bar1Title:(NSString *)bar1Title
+- (void)setCombineBarChart:(CombinedChartView *)combineChart lineTitle:(NSArray *)lineTitleArr bar1Title:(NSArray *)bar1TitleArr
 {
     combineChart.descriptionText = @"";
     combineChart.pinchZoomEnabled = YES;
@@ -73,10 +73,10 @@
     //设置数据
     CombinedChartData *data = [[CombinedChartData alloc] init];
     if (self.lineValueArr.count > 0) {
-        data.lineData = [self generateLineData:self.lineValueArr lineTitle:lineTitle];
+        data.lineData = [self generateLineData:self.lineValueArr lineTitle:lineTitleArr];
     }
     if (self.barValueArr.count > 0) {
-        data.barData = [self generateCombineBarData:self.barValueArr title1:bar1Title];
+        data.barData = [self generateCombineBarData:self.barValueArr title1:bar1TitleArr];
     } else{
         NSLog(@"nobar");
     }
@@ -90,7 +90,7 @@
     [combineChart animateWithYAxisDuration:1.0];//添加Y轴动画
 }
 //生成折线的数据
-- (LineChartData *)generateLineData:(NSArray *)lineValues lineTitle:(NSString *)lineTitle
+- (LineChartData *)generateLineData:(NSArray *)lineValues lineTitle:(NSArray *)lineTitle
 {
     NSMutableArray *entries = [NSMutableArray array];
     NSArray *colorArr = @[ ZFColor(45, 92, 34, 1), ZFGrassGreen,ZFColor(253, 203, 76, 1),ZFColor(78, 250, 188, 1), ZFColor(214, 205, 153, 1),ZFColor(71, 204, 255, 1),  ZFColor(16, 140, 39, 1),ZFGold];
@@ -103,7 +103,7 @@
             ChartDataEntry *entry = [[ChartDataEntry alloc] initWithX:i y:[lineArr[i] floatValue]];
             [entries addObject:entry];
         }
-        LineChartDataSet *dataSet = [[LineChartDataSet alloc] initWithValues:entries label:lineTitle];
+        LineChartDataSet *dataSet = [[LineChartDataSet alloc] initWithValues:entries label:lineTitle[j]];
         [dataSet setColor:colorArr[j]];
         [dataSet setCircleColor:colorArr[j]];
         dataSet.fillColor = colorArr[j];
@@ -122,7 +122,7 @@
     return lineData;
 }
 //生成复杂的组合柱图的数据（两根重叠的柱和折线的图）
-- (BarChartData *)generateCombineBarData:(NSArray *)bar1Values title1:(NSString *)bar1Title
+- (BarChartData *)generateCombineBarData:(NSArray *)bar1Values title1:(NSArray *)bar1Title
 {
     NSMutableArray *bar1Entries = [NSMutableArray array];
     NSMutableArray *barSetArr = [NSMutableArray array];
@@ -135,7 +135,7 @@
             BarChartDataEntry *barEntry = [[BarChartDataEntry alloc] initWithX:i y:[barArr[i] floatValue]];
             [bar1Entries addObject:barEntry];
         }
-        BarChartDataSet *dataSet1 = [[BarChartDataSet alloc]  initWithValues:bar1Entries label:bar1Title];
+        BarChartDataSet *dataSet1 = [[BarChartDataSet alloc]  initWithValues:bar1Entries label:bar1Title[j]];
         dataSet1.colors = @[colorArr[j]];
         dataSet1.valueColors = @[[UIColor orangeColor]];
         dataSet1.axisDependency = AxisDependencyLeft;

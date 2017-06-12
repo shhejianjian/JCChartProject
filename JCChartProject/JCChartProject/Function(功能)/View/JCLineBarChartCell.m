@@ -31,6 +31,10 @@
 
 @property (nonatomic, strong) NSMutableArray *linebarXValueArr;
 
+@property (nonatomic, strong) NSMutableArray *lineDescrArr;
+@property (nonatomic, strong) NSMutableArray *barDescrArr;
+
+
 
 @end
 
@@ -71,6 +75,8 @@
     [self.linebarPointGroupArr removeAllObjects];
     [self.linebarObjectIdArr removeAllObjects];
     [self.linebarDescrArr removeAllObjects];
+    [self.lineDescrArr removeAllObjects];
+    [self.barDescrArr removeAllObjects];
     [self.linebarLineIdArr removeAllObjects];
     [self.linebarBarIdArr removeAllObjects];
     for (JCChartModel *yModel in yArr) {
@@ -82,9 +88,11 @@
         if ([chartType isEqualToString:@"linebar"]) {
             if ([yModel.group isEqualToString:@"bar"]) {
                 [self.linebarBarIdArr addObject:yModel.objectId];
+                [self.barDescrArr addObject:yModel.name];
             }
             if ([yModel.group isEqualToString:@"line"]){
                 [self.linebarLineIdArr addObject:yModel.objectId];
+                [self.lineDescrArr addObject:yModel.name];
             }
         }
     }
@@ -100,7 +108,7 @@
         helper.lineValueArr =self.linebarLineValueArr;
         helper.XValueArr =self.linebarXValueArr;
         helper.barValueArr =self.linebarBarValueArr;
-        [helper setCombineBarChart:self.combineChartView lineTitle:@"line" bar1Title:@"bar1"];
+        [helper setCombineBarChart:self.combineChartView lineTitle:self.lineDescrArr bar1Title:self.barDescrArr];
     });
 
     
@@ -402,6 +410,20 @@
 		_linebarBarValueArr = [[NSMutableArray alloc] init];
 	}
 	return _linebarBarValueArr;
+}
+
+- (NSMutableArray *)lineDescrArr {
+	if(_lineDescrArr == nil) {
+		_lineDescrArr = [[NSMutableArray alloc] init];
+	}
+	return _lineDescrArr;
+}
+
+- (NSMutableArray *)barDescrArr {
+	if(_barDescrArr == nil) {
+		_barDescrArr = [[NSMutableArray alloc] init];
+	}
+	return _barDescrArr;
 }
 
 @end

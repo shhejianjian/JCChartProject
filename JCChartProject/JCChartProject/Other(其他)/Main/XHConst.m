@@ -4,10 +4,10 @@
 
 //url 192.168.7.207:8000
 /** 根目录地址 */
-NSString *const BaseUrl = @"http://192.168.7.71:8008/aems";
+NSString *const BaseUrl = @"http://192.168.7.207:8000/aems";
 
 /** 用户登录 */
-NSString *const LoginUrl = @"http://192.168.7.71:8008/aems/login";
+NSString *const LoginUrl = @"http://192.168.7.207:8000/aems/login";
 
 /** 修改密码 */
 NSString *const updatePasswordUrl = @"api/v1/appService/modifyPassword";

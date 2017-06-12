@@ -29,5 +29,5 @@
  */
 
 
-- (void)setCombineBarChart:(CombinedChartView *)combineChart lineTitle:(NSString *)lineTitle bar1Title:(NSString *)bar1Title;
+- (void)setCombineBarChart:(CombinedChartView *)combineChart lineTitle:(NSArray *)lineTitleArr bar1Title:(NSArray *)bar1TitleArr;
 @end
