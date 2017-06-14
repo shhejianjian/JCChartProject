@@ -11,6 +11,8 @@
 @protocol GridViewDelegate<NSObject>
 -(void)updateHeight:(CGFloat)height;
 -(void)clickGridView:(GridButton *)item;
+-(void)showChangeView;
+
 @end
 @interface GridView : UIView
 -(instancetype)initWithFrame:(CGRect)frame showGridTitleArray:(NSMutableArray *)showGridTitleArray showImageGridArray:(NSMutableArray *) showImageGridArray showGridIDArray:(NSMutableArray *)showGridIDArray;

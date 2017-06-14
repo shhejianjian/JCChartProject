@@ -12,8 +12,8 @@
 #import "JCStrategyVC.h"
 #import "JCMoreVC.h"
 #import "JCFuncVC.h"
+#import "JCMyCenterVC.h"
 #import "JCMainHomeVC.h"
-
 
 @interface MXTabBarController ()
 
@@ -47,7 +47,11 @@
     MXNavigationController *fourthNaC = [[MXNavigationController alloc] initWithRootViewController:MoreVC];
     MoreVC.title = @"更多";
     
-    self.viewControllers = @[firstNaC,secondNaC,thirdNaC,fourthNaC];
+    JCMyCenterVC *myCenterVC = [[JCMyCenterVC alloc]init];
+    MXNavigationController *fifthNaC = [[MXNavigationController alloc]initWithRootViewController:myCenterVC];
+    myCenterVC.title = @"个人";
+    
+    self.viewControllers = @[firstNaC,secondNaC,thirdNaC,fourthNaC,fifthNaC];
 
 }
 

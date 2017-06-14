@@ -19,10 +19,10 @@ static NSString *kCellIdentifier = @"kCellIdentifier";
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic,strong) NSMutableDictionary * dataDictionary;
 @property (nonatomic,strong) NSMutableDictionary * objectIdDictionary;
+@property (nonatomic,strong) NSMutableDictionary * iconDictionary;
 
 @property (nonatomic,strong) NSMutableArray * allkeys;
 @property (nonatomic,strong) NSMutableArray * secondMenuArr;
-
 @end
 
 @implementation LXTestViewController
@@ -43,16 +43,26 @@ static NSString *kCellIdentifier = @"kCellIdentifier";
     
     self.dataDictionary = [NSMutableDictionary dictionary];
     self.objectIdDictionary = [NSMutableDictionary dictionary];
+    self.iconDictionary = [NSMutableDictionary dictionary];
     for (JCFuncBaseModel *subModel in subArr) {
         NSArray *arr = [JCFuncBaseModel mj_objectArrayWithKeyValuesArray:subModel.childList];
         NSMutableArray * array = [NSMutableArray array];
         NSMutableArray *objectidArr = [NSMutableArray array];
+        NSMutableArray *iconArr = [NSMutableArray array];
         for (JCFuncBaseModel *thirdModel in arr) {
+            if (thirdModel.icon) {
+                NSString *newStr = [thirdModel.icon substringFromIndex:3];
+                [iconArr addObject:newStr];
+            } else{
+                [iconArr addObject:@"fa-bolt"];
+            }
+            
             [array addObject:thirdModel.name];
             [objectidArr addObject:thirdModel.objectId];
         }
         [self.objectIdDictionary setObject:objectidArr forKey:subModel.name];
         [self.dataDictionary setObject:array forKey:subModel.name];
+        [self.iconDictionary setObject:iconArr forKey:subModel.name];
     }
     
     self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
@@ -60,6 +70,7 @@ static NSString *kCellIdentifier = @"kCellIdentifier";
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
+    
 }
 
 - (void)viewWillLayoutSubviews{
@@ -90,8 +101,9 @@ static NSString *kCellIdentifier = @"kCellIdentifier";
     NSString * keyStr = self.allkeys[indexPath.section];
     NSArray * array = [self.dataDictionary objectForKey:keyStr];
     cell.dataArray = array;
-    NSString * IdkeyStr = self.allkeys[indexPath.section];
-    NSArray * Idarray = [self.objectIdDictionary objectForKey:IdkeyStr];
+    NSArray * Idarray = [self.objectIdDictionary objectForKey:keyStr];
+    NSArray * iconarray = [self.iconDictionary objectForKey:keyStr];
+    cell.iconArray = iconarray;
     cell.tvCellView.ReturnClickItemIndex = ^(NSIndexPath * itemtIP ,NSInteger itemIndex){
         JCFuncChartVC *chartVC = [[JCFuncChartVC alloc]init];
         chartVC.titleName = array[itemIndex];
@@ -109,19 +121,23 @@ static NSString *kCellIdentifier = @"kCellIdentifier";
     if( headerView == nil)
     {
         headerView = [[UITableViewHeaderFooterView alloc] initWithReuseIdentifier:HeaderIdentifier];
-        UILabel * titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, labelWidth, 25)];
+        UILabel * titleLabel = [[UILabel alloc] init];
         titleLabel.tag = 1;
         titleLabel.backgroundColor = [UIColor clearColor];
         titleLabel.textColor = grayColor;
-        UILabel * viewLabel = [[UILabel alloc]initWithFrame:CGRectMake(labelWidth+20, 12.5, KScreenW - (labelWidth+20) - 15, 0.5)];
+        UILabel * viewLabel = [[UILabel alloc]init];
+        viewLabel.tag = 2;
         viewLabel.backgroundColor = middlegrayColor;
         [headerView.contentView addSubview:viewLabel];
         [headerView.contentView addSubview:titleLabel];
     }
     headerView.contentView.backgroundColor = whitegrayColor;
     UILabel *label = (UILabel *)[headerView viewWithTag:1];
+    label.frame = CGRectMake(15, 0, labelWidth, 25);
     label.font = [UIFont systemFontOfSize:15];
     label.text = self.allkeys[section];
+    UILabel *lineLabel = (UILabel *)[headerView viewWithTag:2];
+    lineLabel.frame = CGRectMake(labelWidth+20, 12.5, KScreenW-(labelWidth+20), 0.5);
     return headerView;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -134,12 +150,6 @@ static NSString *kCellIdentifier = @"kCellIdentifier";
     
     return size.width;
 }
-//-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-//    return self.allkeys[section];
-//}
-//-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-//    return 2;
-//}
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     CGFloat cellHt = 0.0;
@@ -152,11 +162,22 @@ static NSString *kCellIdentifier = @"kCellIdentifier";
     }
     return cellHt;
 }
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (scrollView == self.tableView)
+    {
+        CGFloat sectionHeaderHeight = 30;
+        if (scrollView.contentOffset.y<=sectionHeaderHeight&&scrollView.contentOffset.y>=0) {
+            scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+        } else if (scrollView.contentOffset.y>=sectionHeaderHeight) {
+            scrollView.contentInset = UIEdgeInsetsMake(-sectionHeaderHeight, 0, 0, 0);
+        } 
+    }
+}
 - (NSMutableArray *)allkeys {
 	if(_allkeys == nil) {
 		_allkeys = [[NSMutableArray alloc] init];

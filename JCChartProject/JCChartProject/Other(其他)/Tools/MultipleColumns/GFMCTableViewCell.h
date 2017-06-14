@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet GFMultipleColumnsTVCell *tvCellView;
 
 @property (nonatomic,strong) NSArray * dataArray;
+@property (nonatomic,strong) NSArray * iconArray;
+
 @property (nonatomic,strong) NSIndexPath * indexPath;
 
 @end

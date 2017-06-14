@@ -17,22 +17,7 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="238"/>
                 <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DKE-To-JXM">
-                        <rect key="frame" x="0.0" y="10" width="320" height="228"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </subviews>
-                <constraints>
-                    <constraint firstAttribute="bottom" secondItem="DKE-To-JXM" secondAttribute="bottom" id="8Kd-mH-MHq"/>
-                    <constraint firstItem="DKE-To-JXM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="C3p-5P-SvE"/>
-                    <constraint firstAttribute="trailing" secondItem="DKE-To-JXM" secondAttribute="trailing" id="ex4-Qx-YO3"/>
-                    <constraint firstItem="DKE-To-JXM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="x2P-Zj-kaL"/>
-                </constraints>
             </tableViewCellContentView>
-            <connections>
-                <outlet property="detailView" destination="DKE-To-JXM" id="pfn-Sj-kaX"/>
-            </connections>
             <point key="canvasLocation" x="43" y="-38.5"/>
         </tableViewCell>
     </objects>

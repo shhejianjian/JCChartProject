@@ -7,10 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GridButton.h"
+
+@protocol JCBottomViewCellDelegate <NSObject>
+
+-(void)changeGridView;
+- (void)clickGridBtn:(GridButton *)item;
+@end
+
 
 @interface JCBottomViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UILabel *bottomTitle;
 @property (strong, nonatomic) IBOutlet UIProgressView *bottomProgress;
 @property (strong, nonatomic) IBOutlet UILabel *bottomValue;
+@property (nonatomic, weak) id <JCBottomViewCellDelegate> delegate;
+
+@property (nonatomic, assign) CGFloat cellHeight;
 
 @end

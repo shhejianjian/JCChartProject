@@ -67,9 +67,9 @@
             [self addSubview:deleteBtn];
             self.deleteBtn = deleteBtn;
             //添加长按手势
-//            UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(gridLongPress:)];
-//            [self addGestureRecognizer:longPressGesture];
-//            longPressGesture = nil;
+            UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(gridLongPress:)];
+            [self addGestureRecognizer:longPressGesture];
+            longPressGesture = nil;
         }
     }
     return self;

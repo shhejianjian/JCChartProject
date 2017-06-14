@@ -12,10 +12,12 @@ extern NSString *const BaseUrl;
 
 /** 用户登录 */
 extern NSString *const LoginUrl;
-
+/** 检查更新 */
+extern NSString *const updateAppVersionUrl;
 /** 功能菜单 */
 extern NSString *const MenuUrl;
-
+/** 订阅菜单 */
+extern NSString *const favoriteMenuUrl;
 /** 图标配置 */
 extern NSString *const MenuDetailUrl;
 

@@ -12,6 +12,8 @@
 
 //需要有数据源
 @property (nonatomic,strong) NSArray * dataArray;
+@property (nonatomic,strong) NSArray * iconArray;
+
 @property (nonatomic,assign) NSInteger dataArrayCount;
 
 //点击时返回下标

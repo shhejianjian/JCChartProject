@@ -11,6 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JCMainHomeVC">
             <connections>
+                <outlet property="allBtn" destination="Cvr-m8-nFU" id="4za-4I-YHy"/>
+                <outlet property="detailView" destination="tFd-mt-40m" id="8kn-Wm-VAF"/>
+                <outlet property="myScrollView" destination="UCS-MH-XcO" id="EYu-8y-h8P"/>
+                <outlet property="scrollViewConstraint" destination="Gsy-37-Ykp" id="7bI-l2-9WT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,7 +27,7 @@
                     <rect key="frame" x="0.0" y="44" width="375" height="937"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tFd-mt-40m">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="936"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="1537"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本月总能耗" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Is8-qW-Dhm">
                                     <rect key="frame" x="15" y="8" width="345" height="18"/>
@@ -113,7 +117,7 @@
                         <constraint firstAttribute="trailing" secondItem="tFd-mt-40m" secondAttribute="trailing" id="3ns-8f-Oqh"/>
                         <constraint firstItem="tFd-mt-40m" firstAttribute="top" secondItem="UCS-MH-XcO" secondAttribute="top" id="Gd4-yx-mgn"/>
                         <constraint firstItem="tFd-mt-40m" firstAttribute="leading" secondItem="UCS-MH-XcO" secondAttribute="leading" id="Gq3-gV-Ihh"/>
-                        <constraint firstItem="tFd-mt-40m" firstAttribute="centerY" secondItem="UCS-MH-XcO" secondAttribute="centerY" id="Gsy-37-Ykp"/>
+                        <constraint firstItem="tFd-mt-40m" firstAttribute="centerY" secondItem="UCS-MH-XcO" secondAttribute="centerY" constant="300" id="Gsy-37-Ykp"/>
                         <constraint firstAttribute="trailing" secondItem="tFd-mt-40m" secondAttribute="trailing" id="Puw-h4-GR7"/>
                         <constraint firstItem="tFd-mt-40m" firstAttribute="leading" secondItem="UCS-MH-XcO" secondAttribute="leading" id="nJM-Vn-NSV"/>
                         <constraint firstItem="tFd-mt-40m" firstAttribute="centerX" secondItem="UCS-MH-XcO" secondAttribute="centerX" id="qfi-fI-C3Q"/>

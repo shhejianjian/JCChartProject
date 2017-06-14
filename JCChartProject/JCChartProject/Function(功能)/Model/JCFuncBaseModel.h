@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface JCFuncBaseModel : NSObject
+@property (nonatomic, copy) NSString *icon;
+@property (nonatomic, copy) NSString *favorite;
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *objectId;

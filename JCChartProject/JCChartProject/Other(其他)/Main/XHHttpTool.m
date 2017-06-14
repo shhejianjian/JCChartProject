@@ -78,7 +78,7 @@
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json",@"text/javascript",@"text/plain", nil];
     manager.responseSerializer=[AFHTTPResponseSerializer serializer];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [manager.requestSerializer setValue:@"IOS" forHTTPHeaderField:@"Client-Type"];
+    [manager.requestSerializer setValue:@"iOS" forHTTPHeaderField:@"Client-Type"];
     NSString *urlStr = [NSString stringWithFormat:@"%@/%@",BaseUrl,url];
     [manager POST:urlStr parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
         if (success) {

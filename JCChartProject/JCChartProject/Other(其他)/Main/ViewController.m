@@ -186,14 +186,14 @@
             [[NSUserDefaults standardUserDefaults]setObject:fields[@"jsessionid"] forKey:@"jsessionid"];
             MXTabBarController *tabC = [[MXTabBarController alloc] init];
             
-            //加载侧滑控制器
-            YRSideViewController *sideVc = [[YRSideViewController alloc]init];
-            JCLeftVC *leftVC = [[JCLeftVC alloc]init];
-            sideVc.rootViewController = tabC;
-            sideVc.leftViewController = leftVC;
-            sideVc.leftViewShowWidth = [[UIScreen mainScreen] bounds].size.width * 0.7;
-            sideVc.needSwipeShowMenu = true;//默认开启的可滑动展示
-            [self presentViewController:sideVc animated:YES completion:nil];
+//            //加载侧滑控制器
+//            YRSideViewController *sideVc = [[YRSideViewController alloc]init];
+//            JCLeftVC *leftVC = [[JCLeftVC alloc]init];
+//            sideVc.rootViewController = tabC;
+//            sideVc.leftViewController = leftVC;
+//            sideVc.leftViewShowWidth = [[UIScreen mainScreen] bounds].size.width * 0.7;
+//            sideVc.needSwipeShowMenu = true;//默认开启的可滑动展示
+            [self presentViewController:tabC animated:YES completion:nil];
             
         } else {
             NSString *result = [[NSString alloc] initWithData:responseObject  encoding:NSUTF8StringEncoding];

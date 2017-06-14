@@ -22,8 +22,12 @@
     _dataArray = dataArray;
     self.tvCellView.indexPath = self.indexPath;
     self.tvCellView.dataArray = _dataArray;
+    
 }
-
+-(void)setIconArray:(NSArray *)iconArray{
+    _iconArray = iconArray;
+    self.tvCellView.iconArray = _iconArray;
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

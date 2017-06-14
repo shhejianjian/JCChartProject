@@ -10,11 +10,11 @@
 #import "MXConstant.h"
 #import "JCTopChartCell.h"
 #import "JCBottomViewCell.h"
-
+#import "JCFirstMenuVC.h"
 static NSString *topID=@"JCTopChartCell";
 static NSString *bottomID=@"JCBottomViewCell";
 
-@interface JCHomeVC ()
+@interface JCHomeVC () <JCBottomViewCellDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *myTableView;
 
 @end
@@ -27,9 +27,24 @@ static NSString *bottomID=@"JCBottomViewCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.mxNavigationItem.title = @"首页";
+//    [self checkAppVersion];
     [self.myTableView registerNib:[UINib nibWithNibName:@"JCTopChartCell" bundle:nil] forCellReuseIdentifier:topID];
     [self.myTableView registerNib:[UINib nibWithNibName:@"JCBottomViewCell" bundle:nil] forCellReuseIdentifier:bottomID];
+}
+
+- (void) checkAppVersion{
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    NSString *appCurVersion = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"version"] = appCurVersion;
+    params[@"appType"] = @"iOS";
+    NSString *jsessionid = [[NSUserDefaults standardUserDefaults]objectForKey:@"jsessionid"];
+    [XHHttpTool get:updateAppVersionUrl params:params jessionid:jsessionid success:^(id json) {
+        NSLog(@"json::%@",json);
+    } failure:^(NSError *error) {
+        NSLog(@"error:%@",error);
+    }];
 }
 
 
@@ -40,12 +55,8 @@ static NSString *bottomID=@"JCBottomViewCell";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if (section == 0) {
-        return 1;
-    } else if (section == 1){
-        return 4;
-    }
-    return 0;
+    
+    return 1;
     
 }
 
@@ -72,26 +83,7 @@ static NSString *bottomID=@"JCBottomViewCell";
             bottomCell=[[JCBottomViewCell alloc]init];
             
         }
-        if (indexPath.row == 0) {
-            bottomCell.bottomProgress.progress = 1;
-        } else if (indexPath.row == 1) {
-            bottomCell.bottomProgress.progress = 0.4;
-            bottomCell.bottomProgress.progressTintColor = LBColor(71, 204, 255);
-            bottomCell.bottomTitle.text = @"电能耗值";
-            bottomCell.bottomValue.text = @"4000.0";
-        } else if (indexPath.row == 2) {
-            bottomCell.bottomProgress.progress = 0.5;
-            bottomCell.bottomProgress.progressTintColor = LBColor(253, 203, 76);
-            bottomCell.bottomTitle.text = @"水能耗值";
-            bottomCell.bottomValue.text = @"5000.0";
-        } else if (indexPath.row == 3) {
-            bottomCell.bottomProgress.progress = 0.1;
-            bottomCell.bottomProgress.progressTintColor = LBColor(214, 205, 153);
-            bottomCell.bottomTitle.text = @"气能耗值";
-            bottomCell.bottomValue.text = @"1000.0";
-        }
-        
-        
+        bottomCell.delegate = self;
         cell = bottomCell;
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -99,15 +91,26 @@ static NSString *bottomID=@"JCBottomViewCell";
     
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-
-{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{    
     if (indexPath.section == 0) {
         return 400;
     } else if (indexPath.section == 1){
-        return 60;
+        JCBottomViewCell *cell = (JCBottomViewCell *)[self tableView:self.myTableView cellForRowAtIndexPath:indexPath];
+        return cell.cellHeight+49;
     }
     return 0;
+}
+
+- (void)clickGridBtn:(GridButton *)item{
+    NSLog(@"%@",item.gridTitle);
+    if ([item.gridTitle isEqualToString:@"更多"]) {
+        JCFirstMenuVC *firstMenuVC = [[JCFirstMenuVC alloc]init];
+        [self.navigationController pushViewController:firstMenuVC animated:YES];
+    }
+}
+
+- (void)changeGridView{
+    [self.myTableView reloadData];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
@@ -133,6 +136,7 @@ static NSString *bottomID=@"JCBottomViewCell";
     label.text = titleArr[section];
     return headerView;
 }
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 30;
 }
@@ -140,13 +144,20 @@ static NSString *bottomID=@"JCBottomViewCell";
     
     NSDictionary *attrs = @{NSFontAttributeName : [UIFont boldSystemFontOfSize:15]};
     CGSize size=[text sizeWithAttributes:attrs];
-    
     return size.width;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    
-    
 }
-
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (scrollView == self.myTableView)
+    {
+        CGFloat sectionHeaderHeight = 30;
+        if (scrollView.contentOffset.y<=sectionHeaderHeight&&scrollView.contentOffset.y>=0) {
+            scrollView.contentInset = UIEdgeInsetsMake(30, 0, 0, 0);
+        } else if (scrollView.contentOffset.y>=sectionHeaderHeight) {
+            scrollView.contentInset = UIEdgeInsetsMake(-sectionHeaderHeight, 0, 0, 0);
+        }
+    }
+}
 @end

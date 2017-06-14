@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FontAwesomeKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,7 +47,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1E793377FF99EF0E23050BBA91BD2FF6</key>
+		<key>03206D286B2F522AE205DCBED3B7A132</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,7 +62,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AEC8909E4EC9D178C42461946F18F2BF</key>
+		<key>9CF270815FD8F0B4E859D56A4601FEA5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A8E1DFAA9703A5C068D915A4C272EA21</key>
 		<dict>
 			<key>primary</key>
 			<true/>

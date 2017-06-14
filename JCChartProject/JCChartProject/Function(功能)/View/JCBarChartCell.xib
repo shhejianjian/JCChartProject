@@ -31,7 +31,7 @@
                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Fd-GD-LjZ">
                         <rect key="frame" x="29" y="6" width="34" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="back"/>
+                        <state key="normal" title="返回"/>
                         <connections>
                             <action selector="backBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="uMZ-UV-oJv"/>
                         </connections>
@@ -51,7 +51,7 @@
                 <outlet property="detailView" destination="X7R-tm-85M" id="Z6Y-qt-yqJ"/>
                 <outlet property="titleLabel" destination="3nY-pn-5MP" id="lkN-O0-3aV"/>
             </connections>
-            <point key="canvasLocation" x="-457" y="-57"/>
+            <point key="canvasLocation" x="-630" y="73"/>
         </tableViewCell>
     </objects>
 </document>

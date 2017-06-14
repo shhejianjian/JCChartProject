@@ -55,7 +55,7 @@
     for (NSInteger index = 0; index < self.showGridTitleArray.count; index++) {
         NSString *gridTitle = _showGridTitleArray[index];
         NSString *gridImage = self.showImageGridArray[index];
-        NSInteger gridID = [self.showGridIDArray[index] integerValue];
+        NSInteger gridID = index;
         NSString *objectId = self.showGridIDArray[index];
         BOOL isAddDelete = YES;
         if ([gridTitle isEqualToString:@"更多"]) {
@@ -71,7 +71,6 @@
 #pragma mark---点击格子---
 -(void)gridItemDidClicked:(GridButton *)clickItem
 {
-//    NSLog(@"您点击的格子id是：%ld", (long)clickItem.objectId);
     
     //查看是否有选中的格子，并且比较点击的格子是否就是选中的格子
     for (NSInteger i = 0; i < [_gridListArray count]; i++) {
@@ -128,7 +127,7 @@
 {
     NSLog(@"长按.........");
     NSLog(@"isSelected: %d", isSelected);
-    
+    [self.gridViewDelegate showChangeView];
     //判断格子是否已经被选中并且是否可移动状态,如果选中就加一个放大的特效
     if (isSelected && gird.isChecked) {
         gird.transform = CGAffineTransformMakeScale(1.1, 1.1);
